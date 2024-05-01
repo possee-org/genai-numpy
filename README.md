@@ -6,7 +6,7 @@ This project aims to develop AI-assisted tools that can enhance the code-base of
 
 ### 1. AI-Assisted Docstring Suggestions
 
-Implement a proof-of-concept (POC) for an AI-assisted tool capable of suggesting docstrings and improvements for existing code-base functions and modules. The tool should generate PRs that undergo review by students and tech leads to ensure accuracy and usefulness before being proposed to OSS maintainers for inclusion.
+Implement a proof-of-concept (POC) for an AI-assisted tool capable of suggesting docstrings and improvements for existing code-base functions and modules. This tool will suggest docstrings and potential enhancements for existing functions and modules. The generated pull requests (PRs) will undergo a review process by students and tech leads to guarantee both accuracy and practical value before being presented for potential integration into open-source software (OSS) projects.
 
 ### 2. AI-Assisted Test Coverage Improvement
 
