@@ -176,5 +176,6 @@ make: Leaving directory '/workspaces/numpy/doc'
 
 I'm still trying to reproduce exactly what causes this error. Luckily, this error does not stop the docs from building. You can still view the updated docs and verify they are correct.
 
+This appears to be a recent issue that started in March this years.  A merge was made, but the same warning errors appears. See https://github.com/numpy/numpy/pull/26125. 
 
 
