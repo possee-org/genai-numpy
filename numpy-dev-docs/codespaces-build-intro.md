@@ -15,7 +15,7 @@ That should do it. You can spin up a webserver to view the docs using
 
 ```
 npm i -g http-server
-$ http-server
+http-server
 ```
 
 - The command `spin build` will take 10-20 minutes the first time you build NumPy. Afterwards, it's very fast if you don't need to rebuild all the C code. 
