@@ -176,5 +176,5 @@ make: Leaving directory '/workspaces/numpy/doc'
 
 Luckily, this error does not stop the docs from building. The error message is caused by the two warnings. You can still view the updated docs and verify they are correct. Using `spin docs -j1` avoids the issue.
 
-This appears to be a recent issue that started in March this years.  A [merge](https://github.com/numpy/numpy/pull/26125) was made that fixes the CI build, which uses `make` instead of `spin`. I'll document [here](https://github.com/possee-org/genai-numpy/issues/20) how I used AI to identify the issue and create a PR. 
+This appears to be a recent issue that started in March this year.  A [merge](https://github.com/numpy/numpy/pull/26125) was made that fixes the CI build, which uses `make` instead of `spin`. I'll document [here](https://github.com/possee-org/genai-numpy/issues/20) how I used AI to identify the issue and create a PR. 
 
