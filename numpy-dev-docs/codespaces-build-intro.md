@@ -9,7 +9,7 @@ conda activate numpy-dev
 pip install -r requirements/build_requirements.txt
 spin build
 pip install --pre --force-reinstall --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple -r requirements/doc_requirements.txt
-spin docs
+spin docs -j1
 ```
 That should do it. You can spin up a webserver to view the docs using 
 
@@ -19,7 +19,7 @@ http-server
 ```
 
 - The command `spin build` will take 10-20 minutes the first time you build NumPy. Afterwards, it's very fast if you don't need to rebuild all the C code. 
-- The command `spin docs` will take about 5-10 minutes each time you build the docs. 
+- The command `spin docs -j1` will take about 5-10 minutes.  
 
 ## More details
 
@@ -90,10 +90,10 @@ Let's discuss building NumPy and the docs in codespaces with a bit more detail.
    pip install --pre --force-reinstall --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple -r requirements/doc_requirements.txt
    ```
 
-   Now build the docs (takes about 5-10 minutes).
+   Now build the docs (takes about 5-10 minutes). The `-j1` tells your computer to use one processor and is needed to avoid a (hopefully temporary) warning message.
 
    ```
-   spin docs
+   spin docs -j1
    ```
 
    That's it. You can leave the `numpy-dev` environment by using 
@@ -145,7 +145,7 @@ Let's discuss building NumPy and the docs in codespaces with a bit more detail.
    Then I built the docs (another 5-10 minute wait). 
 
    ```
-   spin docs
+   spin docs -j1
    ```
 
    After using `http-server`, sure enough my change is visible. 
@@ -174,8 +174,7 @@ make: *** [Makefile:144: html-build] Error 1
 make: Leaving directory '/workspaces/numpy/doc'
 ```
 
-I'm still trying to reproduce exactly what causes this error. Luckily, this error does not stop the docs from building. You can still view the updated docs and verify they are correct.
+Luckily, this error does not stop the docs from building. The error message is caused by the two two warnings. You can still view the updated docs and verify they are correct. Using `spin docs -j1` avoids the issue.
 
-This appears to be a recent issue that started in March this years.  A merge was made, but the same warning errors appears. See https://github.com/numpy/numpy/pull/26125. 
-
+This appears to be a recent issue that started in March this years.  A [merge](https://github.com/numpy/numpy/pull/26125) was made that fixes the CI build, which uses `make` instead of `spin`. I'll document [here](https://github.com/possee-org/genai-numpy/issues/20) how I used AI to identify the issue and create a PR. 
 
