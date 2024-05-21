@@ -9,7 +9,7 @@ conda activate numpy-dev
 pip install -r requirements/build_requirements.txt
 spin build
 pip install --pre --force-reinstall --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple -r requirements/doc_requirements.txt
-spin docs -j1
+spin docs
 ```
 That should do it. You can spin up a webserver to view the docs using 
 
@@ -19,7 +19,7 @@ http-server
 ```
 
 - The command `spin build` will take 10-20 minutes the first time you build NumPy. Afterwards, it's very fast if you don't need to rebuild all the C code. 
-- The command `spin docs -j1` will take about 5-10 minutes.  
+- The command `spin docs` will take about 5-10 minutes.  
 
 ## More details
 
@@ -90,10 +90,10 @@ Let's discuss building NumPy and the docs in codespaces with a bit more detail.
    pip install --pre --force-reinstall --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple -r requirements/doc_requirements.txt
    ```
 
-   Now build the docs (takes about 5-10 minutes). The `-j1` tells your computer to use one processor and is needed to avoid a (hopefully temporary) warning message.
+   Now build the docs (takes about 5-10 minutes).
 
    ```
-   spin docs -j1
+   spin docs
    ```
 
    That's it. You can leave the `numpy-dev` environment by using 
@@ -117,9 +117,9 @@ Let's discuss building NumPy and the docs in codespaces with a bit more detail.
    http-server
    ```
 
-   Follow the link that shows up in the lower right corner of codespaces. Then navigate to the `docs/build/html` folder. 
-
-8. Now let's make a small change and verify that our build works. 
+   Follow the link that shows up in the lower right corner of codespaces. Then navigate to the `docs/build/html` folder.
+   
+9. Now let's make a small change and verify that our build works. 
    Remember that we need to be in the `numpy-dev` environment for 
    our commands to work. If you deactivated that environment above,
    then reactivate it now. 
@@ -145,12 +145,10 @@ Let's discuss building NumPy and the docs in codespaces with a bit more detail.
    Then I built the docs (another 5-10 minute wait). 
 
    ```
-   spin docs -j1
+   spin docs
    ```
 
-   After using `http-server`, sure enough my change is visible. 
-
-
+   After using `http-server`, sure enough my change is visible.
 
 ## Warning and Error messages
 
@@ -160,21 +158,14 @@ I have encountered the following error message near the end of the build process
 WARNING: the pydata_sphinx_theme extension is not safe for parallel writing
 WARNING: doing serial write
 preparing documents... done
-copying assets... copying static files... done
-copying extra files... done
-done
-writing output... [100%] user/whatisnumpy
-generating indices... genindex done
-writing additional pages... search done
-copying images... [100%] ../build/plot_directive/user/quickstart-2.png
-dumping search index in English (code: en)... done
+... (more stuff)
 dumping object inventory... done
 build finished with problems, 2 warnings.
 make: *** [Makefile:144: html-build] Error 1
 make: Leaving directory '/workspaces/numpy/doc'
 ```
 
-Luckily, this error does not stop the docs from building. The error message is caused by the two warnings. You can still view the updated docs and verify they are correct. Using `spin docs -j1` avoids the issue.
+This error does not stop the docs from building. The error message is caused by the two warnings, and the fact that NumPy's doc build was hard coded to throw an error on warnings. You can still view the updated docs and verify they are correct.
 
-This appears to be a recent issue that started in March this year.  A [merge](https://github.com/numpy/numpy/pull/26125) was made that fixes the CI build, which uses `make` instead of `spin`. I'll document [here](https://github.com/possee-org/genai-numpy/issues/20) how I used AI to identify the issue and create a PR. 
+This appears to be a recent issue that started in March 2024.  A [merge](https://github.com/numpy/numpy/pull/26125) was made that fixes the CI build, which uses `make` instead of `spin`. I'll document [here](https://github.com/possee-org/genai-numpy/issues/20) how I used AI to identify the issue and create a [PR](https://github.com/numpy/numpy/pull/26478) that resolved the issue. 
 
