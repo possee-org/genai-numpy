@@ -106,19 +106,19 @@ python -c "import numpy as np; print(np.__version__)"
 We've got a development version. Yay! 
 
 >   **_NOTE:_** This version of NumPy is installed inside your virtual environment.
-    Try leaving your virtual environment and verify that a different version of NumPy is installed.
+>   Try leaving your virtual environment and verify that a different version of NumPy is installed.
 >
 >   ```
-    deactivate
-    python -c "import numpy as np; print(np.__version__)"
-    # 1.26.4
-    ```
+>   deactivate
+>   python -c "import numpy as np; print(np.__version__)"
+>   # 1.26.4
+>   ```
 >
 >   Don't forget to reactivate your virtual environment.
 >
->    ```
-    source numpy-dev/bin/activate
-    ```
+>   ```
+>   source numpy-dev/bin/activate
+>   ```
 
 ### Build the docs
 
