@@ -107,13 +107,16 @@ We've got a development version. Yay!
 
 >   **_NOTE:_** This version of NumPy is installed inside your virtual environment.
     Try leaving your virtual environment and verify that a different version of NumPy is installed.
-    ```
+>
+>   ```
     deactivate
     python -c "import numpy as np; print(np.__version__)"
     # 1.26.4
     ```
-    Don't forget to reactivate your virtual environment.
-    ```
+>
+>   Don't forget to reactivate your virtual environment.
+>
+>    ```
     source numpy-dev/bin/activate
     ```
 
@@ -167,7 +170,7 @@ The last item on that tab is `Open VS Code`.
 When VS code opened for me, I needed to reload the three environments.
 ```
 conda activate analyst-ragna
-conda activate --stack analyst-ragna
+conda activate --stack analyst-numpy-dev
 source ~/numpy-dev/bin/activate
 ```
 Now I have a working VS Code environment.
