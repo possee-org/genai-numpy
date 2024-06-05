@@ -9,7 +9,7 @@ We can do this on Nebari.
 
 All environments use Python 3.11.9, so we can stack these environments on each other to get all at the same time.
  
-## Walkthrough
+## Setup Conda Environments and Build NumPy
 
 The setup process below does not require a high powered machine. 
 When you are building code and working with NumPy, use the small instance to minimize costs.
@@ -64,14 +64,14 @@ git pull upstream main --tags
 git submodule update --init
 ```
 
->   **Note:** At this point, I see the following in my terminal:
-    ```
-    (numpy-dev) (analyst-numpy-dev) bwoodruff:~/repos/numpy[main]
-    ```
-    This means I'm on branch `main`,
-    in the conda environment `analyst-numpy-dev`,
-    using the virtual environment `numpy-dev`.
-    The fact that we are stacked on top of `analyst-ragna` is not visible.
+>    **Note:** At this point, I see the following in my terminal:
+>    ```
+>    (numpy-dev) (analyst-numpy-dev) bwoodruff:~/repos/numpy[main]
+>    ```
+>    This means I'm on branch `main`,
+>    in the conda environment `analyst-numpy-dev`,
+>    using the virtual environment `numpy-dev`.
+>    The fact that we are stacked on top of `analyst-ragna` is not visible.
 
 ### Install NumPy requirements in your virtual environment
 
@@ -101,7 +101,7 @@ The problem is that we're in the NumPy base directory. Head back to your base di
 ```
 cd
 python -c "import numpy as np; print(np.__version__)"
-# 2.1.0.dev0+git20240531.da5a779
+# 2.1.0.dev0+git20240604.24cdc31
 ```
 We've got a development version. Yay! 
 
@@ -117,7 +117,7 @@ We've got a development version. Yay!
 >   Don't forget to reactivate your virtual environment.
 >
 >   ```
->   source numpy-dev/bin/activate
+>   source ~/numpy-dev/bin/activate
 >   ```
 
 ### Build the docs
@@ -128,62 +128,210 @@ cd ~/repos/numpy
 spin docs
 ```
 >   **Note:** that `spin docs` automatically builds NumPy if it is not yet built.
-    The `--clean` argument wipes any previous NumPy build. This is sometimes needed to see docstring changes.
-    ```
-    spin docs --clean
-    ```
+>    The `--clean` argument wipes any previous NumPy build. This is sometimes needed to see docstring changes.
+>   ```
+>   spin docs --clean
+>   ```
 
-### Run the codebase tests   
+You can view the docs as HTML.
 
-Now let's run the [tests](https://numpy.org/devdocs/dev/development_environment.html#testing-builds) on the codebase. 
+```
+cd /repos/numpy/doc/build/html
+python -m http.server
+```
+
+Then head to `https://possee.openteams.com/user/bwoodruff/proxy/8000/` (replace `bwoodruff` with your username). It's the same base URL that use for Ragna. I have it bookmarked, and just swap the 31477 to 8000. Use `Cntr+C` to terminate the server in the terminal when you're ready to move on.
+
+### Run the codebase tests
+
+Let's run the codebase [tests](https://numpy.org/devdocs/dev/development_environment.html#testing-builds). 
+
 ```
 spin test
 ```
+
 When this finishes, you'll see something like
+
 ```
 46703 passed, 2291 skipped, 2786 deselected, 34 xfailed, 5 xpassed in 301.23s (0:05:01)
 ```
-The `xfailed` and `xpassed` are designed to do this. We won't be changing the codebase much, so we may not need to run this test again. 
 
-### Test the docstrings
+The `xfailed` and `xpassed` are designed to do this. We'll only need to run this again if we change the code base (more than just the docs). 
 
-We will be updating documentation. 
-We test changes to an `.rst` file.
+### Test examples in the docs
+
+We will be updating documentation, of which there are `.rst` files and docstrings. 
+Here's how we test changes to both.
 
 ```
 python tools/refguide_check.py --rst
-```
-We can also test changes to any docstrings.
-
-```
 python tools/refguide_check.py --doctests
 ```
 
->   **Note:** Currently, one of the doctests [fails on ma.power](https://github.com/numpy/numpy/commit/2059dd9e6dce61d4c52571b3865faebd8fd5ccec#commitcomment-142702689). We can ignore this. 
+There are versions of these commands which will test specific files and functions.
 
-That's all the stuff we need to check with regards to our NumPy development environment. We'll need to configure a GitHub PAT on the machine so that you can push changes to your fork, but for now you can work on Nebari while doing things. 
+>   **Note:** Currently, one of the doctests [fails on ma.power](https://github.com/numpy/numpy/commit/2059dd9e6dce61d4c52571b3865faebd8fd5ccec#commitcomment142702689). We can ignore this. 
 
-## Using VS Code 
+That's all the stuff we need to check with regards to our NumPy development environment. 
 
-The second to last tab at the top is `Services`.
+## VS Code and Jupyter Notebooks
+
+### Using VS Code 
+
+The second to last tab at the top of the JupyterLab window is `Services`.
 The last item on that tab is `Open VS Code`.
-When VS code opened for me, I needed to reload the three environments.
+Please open VS code.
+When it opened for me, I needed to reload the three environments.
+
+```
+conda activate analyst-ragna
+conda activate --stack analyst-numpy-dev
+source ~/numpy-dev/bin/activate
+
+```
+
+Now we have a working VS Code environment. You can work in this environment regularly. Remember to use the small instance if you're not doing anything that will require VRAM. You can pick a starting directory from the browser's URL. 
+
+I'm going to open a terminal (icon in upper right corner) and test the NumPy version.
+
+```
+cd
+python -c "import numpy as np; print(np.__version__)"
+# 2.1.0.dev0+git20240604.24cdc31
+```
+
+### Syncronize pip packages across three environments
+
+The stacked conda environments provide the virtual enviroment `numpy-dev` with the needed system structure. However, the pip installed resources are not shared. For example, from the terminal in VS Code try running
+
+```
+python -c "import panel as pn; print(pn.__version__)"
+```
+
+This should fail, saying `ModuleNotFoundError: No module named 'panel'`.  This package is needed for the Llama 3 panel chat. Let's resolve this. 
+
+In VS Code, navigate to the following directory. 
+
+```
+cd ~/numpy-dev/lib/python3.11/site-packages
+```
+
+In this directory, create a new file called `conda_packages.pth`. Add these two lines to that file and save it. 
+
+```
+/home/conda/analyst/envs/analyst-numpy-dev/lib/python3.11/site-packages
+/home/conda/analyst/envs/analyst-ragna/lib/python3.11/site-packages
+```
+
+When you load the `numpy-dev` virtual enviroment, each line of `conda_packages.pth` extends the `sys.path` in python, enabling access to the pip installed resources from each conda environment. After saving, we can now test that things are working with:
+
+```
+python -c "import panel as pn; print(pn.__version__)"
+# 1.3.8
+```
+
+I think it's worth seeing how things are connected a bit more.  Note that `panel` is not included in the `analyst-numpy-dev` environment. We can deactivate the `numpy-dev` virtual environment, and then while in the `analyst-numpy-dev` conda environment we should get an error. 
+
+```
+deactivate # closes virtual environment
+python -c "import panel as pn; print(pn.__version__)"
+# ModuleNotFoundError: No module named 'panel'
+```
+
+To remove the stacked environment, we use `conda deactivate`, returning us to `analyst-ragna`.
+
+```
+conda deactivate # closes analyst-numpy-dev
+python -c "import panel as pn; print(pn.__version__)"
+# 1.3.8
+```
+### Configure Jupyter to recognize your virtual environment
+
+Close VS Code and return to JupyterLab.
+
+We're just about done. We have to tell Juypter that your new `numpy-dev` virtual environment is an option for starting a kernel. Make sure your virtual environment is loaded (on the stack conda environment), and then in the terminal run:
+
+```
+python -m ipykernel install --user --name numpy-dev --display-name "numpy-dev"
+```
+
+The package `ipykernel` is running from the `analyst-ragna` environment. If you encounter a "not installed" issue, then go back up and check your environments. 
+
+You can verify that your `numpy-dev` environment is now an option for Jupyter notebook kernels by running:
+
+```
+jupyter kernelspec list
+# Available kernels:
+#   numpy-dev    /home/bwoodruff/.local/share/jupyter/kernels/numpy-dev
+#   python3      /home/conda/analyst/a59d6f5f-1717525483-12-numpy-dev/share/jupyter/kernels/python3
+```
+
+If you mess up, or need to make changes, remember to uninstall the wrong kernel (whatever name you gave it).
+
+```
+jupyter kernelspec uninstall numpy-dev
+```
+
+Now open another tab and you should see `numpy-dev` as an option for starting a new notebook.  Start a new notebook with your new environment, and then verify the following:
+
+```
+>>> import numpy as np
+>>> np.__version__
+'2.1.0.dev0+git20240604.24cdc31' # may vary
+>>> import panel as pn
+>>> pn.__version__
+'1.3.8' 
+```
+
+### Using Llama 3 and Ragna
+
+You're ready to start using Nebari for all your work. Feel free to power down your instance, and then launch a T4 1x to test Llama 8B and Ragna. Remember to start every session by enabling the virtual environment inside a stacked conda environment. 
+
 ```
 conda activate analyst-ragna
 conda activate --stack analyst-numpy-dev
 source ~/numpy-dev/bin/activate
 ```
-Now I have a working VS Code environment.
+
+I've tried the panel chat (Jupyter Notebook running Llama 3), an example-generator (`.py` files ran with `python name.py`), and followed the instructions to load Ragna. 
+
 ```
-cd ~
-python -c "import numpy as np; print(np.__version__)"
-# 2.1.0.dev0+git20240531.da5a779
+export PYTHONPATH=$PYTHONPATH:'/shared/analyst/ragna/'
+ragna api &  # takes ~30s before it's ready
+ragna ui --no-start-api  # takes ~30s before it's ready
 ```
-And we can work as normal. You can run python files just fine in this environment.
 
-## Using Jupyter Notebooks (coming soon)
+All of these seem to work fine, despite the following ominous error message.
 
-Close the VS Code window to return to JupyterLab.  
+### An Ominous Error Message
 
-UGH.... MORE TO BE ADDED.  I still have to figure out configuring Jupyter for a virtual environment on top of two stacked conda environments.  Hopefully we'll soon have a simple button click inside Juypter files that lets you run this. More coming soon.
+Because we are using a NumPy 2.1 dev version, we'll encounter this error message: 
 
+```
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.1.0.dev0 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+```
+
+I've seen it show up in the panel chat, and the inference example, but it didn't appear when running Ragna. I ignored the error, and things seem to work fine regardless.  This could become a bigger issue (hopefully not).
+
+### Using Jupyter Notebooks - beware of `.ipynb_checkpoints` folders
+
+Every time you open a file in Jupyter Lab, the autosave feature creates a `ipynb_checkpoints` folder, and a copy of what you're doing is stored there. This is great for versioning, but causes problems once you create one of these folders in your NumPy repo.  If you end up creating such folder in the NumPy repo, then you'll have to remove it. You can manually delete the directory using. 
+
+```
+rm -rf .ipynb_checkpoints/
+```
+
+I use VS Code when I want to edit a file that isn't a Jupyter notebook. This stops the issue.
+
+
+
+## GitHub PAT - more needed
+
+We'll need to configure a GitHub PAT on Nebari so that we can push changes our personal fork of NumPy. I'll add details soon.
