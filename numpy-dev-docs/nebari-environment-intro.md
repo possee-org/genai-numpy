@@ -88,8 +88,9 @@ pip install --pre --force-reinstall --extra-index-url https://pypi.anaconda.org/
 We now build NumPy.
 ```
 spin build
+pip install .
 ```
-When that completes, let's see if the development version is installed. 
+The `pip install .` makes sure that pip installs this development build. When the above completes, let's see if the development version is installed. 
 ```
 python -c "import numpy as np; print(np.__version__)"
 ```
@@ -164,6 +165,7 @@ We will be updating documentation, of which there are `.rst` files and docstring
 Here's how we test changes to both.
 
 ```
+pip install . # If you didn't do this after spin build 
 python tools/refguide_check.py --rst
 python tools/refguide_check.py --doctests
 ```
