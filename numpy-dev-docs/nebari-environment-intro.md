@@ -332,6 +332,65 @@ I use VS Code when I want to edit a file that isn't a Jupyter notebook. This sto
 
 
 
-## GitHub PAT - more needed
+## GitHub fine-grained PAT for automatic authentication
 
-We'll need to configure a GitHub PAT on Nebari so that we can push changes our personal fork of NumPy. I'll add details soon.
+It would be nice to not have to authenticate with GitHub each time you want to push changes. 
+We'll can configure a GitHub PAT on Nebari so that we can push changes our personal fork of NumPy and genai-numpy. 
+Open a terminal in Jupyter Lab (not VS code).
+
+Start by making sure you set your GitHub [username](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git?platform=linux) and [email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address?platform=linux#setting-your-email-address-for-every-repository-on-your-computer) on Nebari. Change `YOUR_USERNAME` and `YOUR_EMAIL` below.
+
+```
+git config --global user.name "YOUR_USERNAME"
+git config --global user.email "YOUR_EMAIL"
+```
+
+We'll can create a personal access token (PAT) for this project. 
+I chose to use a [fine grained PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#fine-grained-personal-access-tokens), because then I can restrict access to my forks of numpy and genai-numpy.
+Follow the [instructions for creating a fine-grained PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token). 
+All options were turned off at the start of creating the token. 
+
+- I chose "Only select repositories" and specifically chose "bmwoodruff/numpy" and "bmwoodruff/genai-numpy" as the two repos that could be accessed. You'll want to adjust those to your username. 
+- I chose to enable all 27 repository permission (probably way more than needed).
+- I didn't enable any account permissions.
+- After generating your token, save it somewhere temporarily. The PAT will start with `github_pat_` followed by numbers and letters. 
+
+Let's get that token saved on Nebari so you never need to authenticate again.
+First we have to tell git how you'll store your PAT.
+
+```
+git config --global credential.helper store
+```
+
+This tells git that you want to appropriately store your PAT in a plain text file in your home directory, namely `~/.git-credentials`. 
+
+>    **Note:** This is a plain text file, so anyone with root access to the machine will be able to see this PAT. Because this is a fine-grained PAT that only has access to two repositories, I'm not worried about security issues. 
+
+We now need to trigger an action that will cause git to ask for your username and password (our PAT). 
+Pushing something to a repo will do.
+I cloned `bmwoodruff/genai-numpy` to my `repos` folder, made a brach `git checkout -b testing-pat`, then pushed this branch `git push origin testing-pat`. When I pushed, I was asked for my username, and then password (I used my PAT here). 
+
+```
+bwoodruff:~/repos/genai-numpy[main] 
+13:17 $ git checkout -b testing-pat
+Switched to a new branch 'testing-pat'
+bwoodruff:~/repos/genai-numpy[testing-pat] 
+13:17 $ git push origin testing-pat
+Username for 'https://github.com': bmwoodruff
+Password for 'https://bmwoodruff@github.com': {paste your PAT}
+```
+
+You can view the newly created `.git-credentials` by opening it. If you haven't turned on "Show Hidden Files" yet, you'll have to do that from the "View" menu on Nebari. The file will look something like this.
+
+```
+https://bmwoodruff:{YOUR_PAT_IS_HERE}@github.com
+```
+
+That's it. You won't have to enter your username and password again while working on this machine.  Try creating another branch, push to your repo, and you'll see that authentication is automatic. At this point, I suggest delete these testing branches both on your machine, and online. 
+
+I finished the editing of this document and pushed the changes, all from within Nebari.
+
+
+
+
+
