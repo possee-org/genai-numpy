@@ -1,3 +1,11 @@
+---
+name: Task
+about: Create and assign a task for yourself and/or others
+title: 'Task: '
+labels: task
+assignees: ''
+
+---
 **Description:**
 
 <!--*Please detail what this issue entails and refer to other existing issues by their number if applicable.*
