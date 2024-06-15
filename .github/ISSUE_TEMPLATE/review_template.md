@@ -1,6 +1,6 @@
 ---
 name: Review
-about: Create and assign a task for yourself and/or others
+about: Submit a branch of your fork to a tech lead for review
 title: 'Review: AI Gen Examples for '
 labels: review
 assignees: 'bmwoodruff'
