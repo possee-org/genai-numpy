@@ -1,6 +1,6 @@
 ---
 name: Review
-about: Submit a branch of your fork to a tech lead for review
+about: Submit a branch on your fork to a tech lead for review
 title: 'Review: AI Gen Examples for '
 labels: review
 assignees: 'bmwoodruff'
@@ -8,7 +8,7 @@ assignees: 'bmwoodruff'
 ---
 **Link to your fork:**
 
-<!-- Includee a link to your fork -->
+<!-- Include a link to the branch on your fork that contains your committed changes. -->
 
 
 
