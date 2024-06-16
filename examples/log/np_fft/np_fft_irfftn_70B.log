@@ -1,0 +1,285 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the irfftn function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.fft.irfftn. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Computes the inverse of `rfftn`.
+
+    This function computes the inverse of the N-dimensional discrete
+    Fourier Transform for real input over any number of axes in an
+    M-dimensional array by means of the Fast Fourier Transform (FFT).  In
+    other words, ``irfftn(rfftn(a), a.shape) == a`` to within numerical
+    accuracy. (The ``a.shape`` is necessary like ``len(a)`` is for `irfft`,
+    and for the same reason.)
+
+    The input should be ordered in the same way as is returned by `rfftn`,
+    i.e. as for `irfft` for the final transformation axis, and as for `ifftn`
+    along all the other axes.
+
+    Parameters
+    ----------
+    a : array_like
+        Input array.
+    s : sequence of ints, optional
+        Shape (length of each transformed axis) of the output
+        (``s[0]`` refers to axis 0, ``s[1]`` to axis 1, etc.). `s` is also the
+        number of input points used along this axis, except for the last axis,
+        where ``s[-1]//2+1`` points of the input are used.
+        Along any axis, if the shape indicated by `s` is smaller than that of
+        the input, the input is cropped.  If it is larger, the input is padded
+        with zeros.
+
+        .. versionchanged:: 2.0
+
+            If it is ``-1``, the whole input is used (no padding/trimming).
+
+        If `s` is not given, the shape of the input along the axes
+        specified by axes is used. Except for the last axis which is taken to
+        be ``2*(m-1)`` where ``m`` is the length of the input along that axis.
+
+        .. deprecated:: 2.0
+
+            If `s` is not ``None``, `axes` must not be ``None`` either.
+
+        .. deprecated:: 2.0
+
+            `s` must contain only ``int`` s, not ``None`` values. ``None``
+            values currently mean that the default value for ``n`` is used
+            in the corresponding 1-D transform, but this behaviour is
+            deprecated.
+
+    axes : sequence of ints, optional
+        Axes over which to compute the inverse FFT. If not given, the last
+        `len(s)` axes are used, or all axes if `s` is also not specified.
+        Repeated indices in `axes` means that the inverse transform over that
+        axis is performed multiple times.
+
+        .. deprecated:: 2.0
+
+            If `s` is specified, the corresponding `axes` to be transformed
+            must be explicitly specified too.
+
+    norm : {"backward", "ortho", "forward"}, optional
+        .. versionadded:: 1.10.0
+
+        Normalization mode (see `numpy.fft`). Default is "backward".
+        Indicates which direction of the forward/backward pair of transforms
+        is scaled and with what normalization factor.
+
+        .. versionadded:: 1.20.0
+
+            The "backward", "forward" values were added.
+
+    out : ndarray, optional
+        If provided, the result will be placed in this array. It should be
+        of the appropriate shape and dtype for the last transformation.
+
+        .. versionadded:: 2.0.0
+
+    Returns
+    -------
+    out : ndarray
+        The truncated or zero-padded input, transformed along the axes
+        indicated by `axes`, or by a combination of `s` or `a`,
+        as explained in the parameters section above.
+        The length of each transformed axis is as given by the corresponding
+        element of `s`, or the length of the input in every axis except for the
+        last one if `s` is not given.  In the final transformed axis the length
+        of the output when `s` is not given is ``2*(m-1)`` where ``m`` is the
+        length of the final transformed axis of the input.  To get an odd
+        number of output points in the final axis, `s` must be specified.
+
+    Raises
+    ------
+    ValueError
+        If `s` and `axes` have different length.
+    IndexError
+        If an element of `axes` is larger than than the number of axes of `a`.
+
+    See Also
+    --------
+    rfftn : The forward n-dimensional FFT of real input,
+            of which `ifftn` is the inverse.
+    fft : The one-dimensional FFT, with definitions and conventions used.
+    irfft : The inverse of the one-dimensional FFT of real input.
+    irfft2 : The inverse of the two-dimensional FFT of real input.
+
+    Notes
+    -----
+    See `fft` for definitions and conventions used.
+
+    See `rfft` for definitions and conventions used for real input.
+
+    The correct interpretation of the hermitian input depends on the shape of
+    the original data, as given by `s`. This is because each input shape could
+    correspond to either an odd or even length signal. By default, `irfftn`
+    assumes an even output length which puts the last entry at the Nyquist
+    frequency; aliasing with its symmetric counterpart. When performing the
+    final complex to real transform, the last value is thus treated as purely
+    real. To avoid losing information, the correct shape of the real input
+    **must** be given.
+
+    Examples
+    --------
+    >>> a = np.zeros((3, 2, 2))
+    >>> a[0, 0, 0] = 3 * 2 * 2
+    >>> np.fft.irfftn(a)
+    array([[[1.,  1.],
+            [1.,  1.]],
+           [[1.,  1.],
+            [1.,  1.]],
+           [[1.,  1.],
+            [1.,  1.]]])
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Computes the inverse of `rfftn`.
+
+    This function computes the inverse of the N-dimensional discrete
+    Fourier Transform for real input over any number of axes in an
+    M-dimensional array by means of the Fast Fourier Transform (FFT).  In
+    other words, ``irfftn(rfftn(a), a.shape) == a`` to within numerical
+    accuracy. (The ``a.shape`` is necessary like ``len(a)`` is for `irfft`,
+    and for the same reason.)
+
+    The input should be ordered in the same way as is returned by `rfftn`,
+    i.e. as for `irfft` for the final transformation axis, and as for `ifftn`
+    along all the other axes.
+
+    Parameters
+    ----------
+    a : array_like
+        Input array.
+    s : sequence of ints, optional
+        Shape (length of each transformed axis) of the output
+        (``s[0]`` refers to axis 0, ``s[1]`` to axis 1, etc.). `s` is also the
+        number of input points used along this axis, except for the last axis,
+        where ``s[-1]//2+1`` points of the input are used.
+        Along any axis, if the shape indicated by `s` is smaller than that of
+        the input, the input is cropped.  If it is larger, the input is padded
+        with zeros.
+
+        .. versionchanged:: 2.0
+
+            If it is ``-1``, the whole input is used (no padding/trimming).
+
+        If `s` is not given, the shape of the input along the axes
+        specified by axes is used. Except for the last axis which is taken to
+        be ``2*(m-1)`` where ``m`` is the length of the input along that axis.
+
+        .. deprecated:: 2.0
+
+            If `s` is not ``None``, `axes` must not be ``None`` either.
+
+        .. deprecated:: 2.0
+
+            `s` must contain only ``int`` s, not ``None`` values. ``None``
+            values currently mean that the default value for ``n`` is used
+            in the corresponding 1-D transform, but this behaviour is
+            deprecated.
+
+    axes : sequence of ints, optional
+        Axes over which to compute the inverse FFT. If not given, the last
+        `len(s)` axes are used, or all axes if `s` is also not specified.
+        Repeated indices in `axes` means that the inverse transform over that
+        axis is performed multiple times.
+
+        .. deprecated:: 2.0
+
+            If `s` is specified, the corresponding `axes` to be transformed
+            must be explicitly specified too.
+
+    norm : {"backward", "ortho", "forward"}, optional
+        .. versionadded:: 1.10.0
+
+        Normalization mode (see `numpy.fft`). Default is "backward".
+        Indicates which direction of the forward/backward pair of transforms
+        is scaled and with what normalization factor.
+
+        .. versionadded:: 1.20.0
+
+            The "backward", "forward" values were added.
+
+    out : ndarray, optional
+        If provided, the result will be placed in this array. It should be
+        of the appropriate shape and dtype for the last transformation.
+
+        .. versionadded:: 2.0.0
+
+    Returns
+    -------
+    out : ndarray
+        The truncated or zero-padded input, transformed along the axes
+        indicated by `axes`, or by a combination of `s` or `a`,
+        as explained in the parameters section above.
+        The length of each transformed axis is as given by the corresponding
+        element of `s`, or the length of the input in every axis except for the
+        last one if `s` is not given.  In the final transformed axis the length
+        of the output when `s` is not given is ``2*(m-1)`` where ``m`` is the
+        length of the final transformed axis of the input.  To get an odd
+        number of output points in the final axis, `s` must be specified.
+
+    Raises
+    ------
+    ValueError
+        If `s` and `axes` have different length.
+    IndexError
+        If an element of `axes` is larger than than the number of axes of `a`.
+
+    See Also
+    --------
+    rfftn : The forward n-dimensional FFT of real input,
+            of which `ifftn` is the inverse.
+    fft : The one-dimensional FFT, with definitions and conventions used.
+    irfft : The inverse of the one-dimensional FFT of real input.
+    irfft2 : The inverse of the two-dimensional FFT of real input.
+
+    Notes
+    -----
+    See `fft` for definitions and conventions used.
+
+    See `rfft` for definitions and conventions used for real input.
+
+    The correct interpretation of the hermitian input depends on the shape of
+    the original data, as given by `s`. This is because each input shape could
+    correspond to either an odd or even length signal. By default, `irfftn`
+    assumes an even output length which puts the last entry at the Nyquist
+    frequency; aliasing with its symmetric counterpart. When performing the
+    final complex to real transform, the last value is thus treated as purely
+    real. To avoid losing information, the correct shape of the real input
+    **must** be given.
+
+    Examples
+    --------
+    >>> a = np.zeros((3, 2, 2))
+    >>> a[0, 0, 0] = 3 * 2 * 2
+    >>> np.fft.irfftn(a)
+    array([[[1.,  1.],
+            [1.,  1.]],
+           [[1.,  1.],
+            [1.,  1.]],
+           [[1.,  1.],
+            [1.,  1.]]])
+
+    >>> a = np.zeros((4, 4))
+    >>> a[0, 0] = 4 * 4
+    >>> np.fft.irfftn(a, s=(4, 4))
+    array([[1., 1., 1., 1.],
+           [1., 1., 1., 1.],
+           [1., 1., 1., 1.],
+           [1., 1., 1., 1.]])
+Response generated in 382.30 seconds, with a max_new_tokens = 2000.

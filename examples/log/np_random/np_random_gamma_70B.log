@@ -1,0 +1,124 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the gamma function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.gamma. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        gamma(shape, scale=1.0, size=None)
+
+        Draw samples from a Gamma distribution.
+
+        Samples are drawn from a Gamma distribution with specified parameters,
+        `shape` (sometimes designated "k") and `scale` (sometimes designated
+        "theta"), where both parameters are > 0.
+
+        .. note::
+            New code should use the `~numpy.random.Generator.gamma`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        shape : float or array_like of floats
+            The shape of the gamma distribution. Must be non-negative.
+        scale : float or array_like of floats, optional
+            The scale of the gamma distribution. Must be non-negative.
+            Default is equal to 1.
+        size : int or tuple of ints, optional
+            Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+            ``m * n * k`` samples are drawn.  If size is ``None`` (default),
+            a single value is returned if ``shape`` and ``scale`` are both scalars.
+            Otherwise, ``np.broadcast(shape, scale).size`` samples are drawn.
+
+        Returns
+        -------
+        out : ndarray or scalar
+            Drawn samples from the parameterized gamma distribution.
+
+        See Also
+        --------
+        scipy.stats.gamma : probability density function, distribution or
+            cumulative density function, etc.
+        random.Generator.gamma: which should be used for new code.
+
+        Notes
+        -----
+        The probability density for the Gamma distribution is
+
+        .. math:: p(x) = x^{k-1}\frac{e^{-x/\theta}}{\theta^k\Gamma(k)},
+
+        where :math:`k` is the shape and :math:`\theta` the scale,
+        and :math:`\Gamma` is the Gamma function.
+
+        The Gamma distribution is often used to model the times to failure of
+        electronic components, and arises naturally in processes for which the
+        waiting times between Poisson distributed events are relevant.
+
+        References
+        ----------
+        .. [1] Weisstein, Eric W. "Gamma Distribution." From MathWorld--A
+               Wolfram Web Resource.
+               https://mathworld.wolfram.com/GammaDistribution.html
+        .. [2] Wikipedia, "Gamma distribution",
+               https://en.wikipedia.org/wiki/Gamma_distribution
+
+        Examples
+        --------
+        Draw samples from the distribution:
+
+        >>> shape, scale = 2., 2.  # mean=4, std=2*sqrt(2)
+        >>> s = np.random.gamma(shape, scale, 1000)
+
+        Display the histogram of the samples, along with
+        the probability density function:
+
+        >>> import matplotlib.pyplot as plt
+        >>> import scipy.special as sps  # doctest: +SKIP
+        >>> count, bins, ignored = plt.hist(s, 50, density=True)
+        >>> y = bins**(shape-1)*(np.exp(-bins/scale) /  # doctest: +SKIP
+        ...                      (sps.gamma(shape)*scale**shape))
+        >>> plt.plot(bins, y, linewidth=2, color='r')  # doctest: +SKIP
+        >>> plt.show()
+
+        
+assistant
+
+Here is the updated examples section of the docstring:
+
+Examples
+--------
+Draw samples from the distribution:
+
+>>> shape, scale = 2., 2.  # mean=4, std=2*sqrt(2)
+>>> s = np.random.gamma(shape, scale, 1000)
+
+Display the histogram of the samples, along with
+the probability density function:
+
+>>> import matplotlib.pyplot as plt
+>>> import scipy.special as sps  # doctest: +SKIP
+>>> count, bins, ignored = plt.hist(s, 50, density=True)
+>>> y = bins**(shape-1)*(np.exp(-bins/scale) /  # doctest: +SKIP
+...                      (sps.gamma(shape)*scale**shape))
+>>> plt.plot(bins, y, linewidth=2, color='r')  # doctest: +SKIP
+>>> plt.show()
+
+Different shape and scale parameters:
+
+>>> shape, scale = 1., 1.  # mean=1, std=1
+>>> s = np.random.gamma(shape, scale, 1000)
+
+I decided to add an example to show how the function behaves with different shape and scale parameters. This example demonstrates that the function can be used with different parameters to generate samples from different distributions.
+
+I stopped adding examples because the existing examples already demonstrate the basic usage of the function, and the additional example I added provides further insight into how the function behaves with different parameters.
+Response generated in 78.83 seconds, with a max_new_tokens = 2000.

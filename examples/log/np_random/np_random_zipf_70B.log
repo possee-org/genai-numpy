@@ -1,0 +1,144 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the zipf function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.zipf. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        zipf(a, size=None)
+
+        Draw samples from a Zipf distribution.
+
+        Samples are drawn from a Zipf distribution with specified parameter
+        `a` > 1.
+
+        The Zipf distribution (also known as the zeta distribution) is a
+        discrete probability distribution that satisfies Zipf's law: the
+        frequency of an item is inversely proportional to its rank in a
+        frequency table.
+
+        .. note::
+            New code should use the `~numpy.random.Generator.zipf`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        a : float or array_like of floats
+            Distribution parameter. Must be greater than 1.
+        size : int or tuple of ints, optional
+            Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+            ``m * n * k`` samples are drawn.  If size is ``None`` (default),
+            a single value is returned if ``a`` is a scalar. Otherwise,
+            ``np.array(a).size`` samples are drawn.
+
+        Returns
+        -------
+        out : ndarray or scalar
+            Drawn samples from the parameterized Zipf distribution.
+
+        See Also
+        --------
+        scipy.stats.zipf : probability density function, distribution, or
+            cumulative density function, etc.
+        random.Generator.zipf: which should be used for new code.
+
+        Notes
+        -----
+        The probability density for the Zipf distribution is
+
+        .. math:: p(k) = \frac{k^{-a}}{\zeta(a)},
+
+        for integers :math:`k \geq 1`, where :math:`\zeta` is the Riemann Zeta
+        function.
+
+        It is named for the American linguist George Kingsley Zipf, who noted
+        that the frequency of any word in a sample of a language is inversely
+        proportional to its rank in the frequency table.
+
+        References
+        ----------
+        .. [1] Zipf, G. K., "Selected Studies of the Principle of Relative
+               Frequency in Language," Cambridge, MA: Harvard Univ. Press,
+               1932.
+
+        Examples
+        --------
+        Draw samples from the distribution:
+
+        >>> a = 4.0
+        >>> n = 20000
+        >>> s = np.random.zipf(a, n)
+
+        Display the histogram of the samples, along with
+        the expected histogram based on the probability
+        density function:
+
+        >>> import matplotlib.pyplot as plt
+        >>> from scipy.special import zeta  # doctest: +SKIP
+
+        `bincount` provides a fast histogram for small integers.
+
+        >>> count = np.bincount(s)
+        >>> k = np.arange(1, s.max() + 1)
+
+        >>> plt.bar(k, count[1:], alpha=0.5, label='sample count')
+        >>> plt.plot(k, n*(k**-a)/zeta(a), 'k.-', alpha=0.5,
+        ...          label='expected count')   # doctest: +SKIP
+        >>> plt.semilogy()
+        >>> plt.grid(alpha=0.4)
+        >>> plt.legend()
+        >>> plt.title(f'Zipf sample, a={a}, size={n}')
+        >>> plt.show()
+
+        
+assistant
+
+Here is the updated examples section of the docstring:
+
+        Examples
+        --------
+        Draw samples from the distribution:
+
+        >>> a = 4.0
+        >>> n = 20000
+        >>> s = np.random.zipf(a, n)
+
+        Display the histogram of the samples, along with
+        the expected histogram based on the probability
+        density function:
+
+        >>> import matplotlib.pyplot as plt
+        >>> from scipy.special import zeta  # doctest: +SKIP
+
+        `bincount` provides a fast histogram for small integers.
+
+        >>> count = np.bincount(s)
+        >>> k = np.arange(1, s.max() + 1)
+
+        >>> plt.bar(k, count[1:], alpha=0.5, label='sample count')
+        >>> plt.plot(k, n*(k**-a)/zeta(a), 'k.-', alpha=0.5,
+        ...          label='expected count')   # doctest: +SKIP
+        >>> plt.semilogy()
+        >>> plt.grid(alpha=0.4)
+        >>> plt.legend()
+        >>> plt.title(f'Zipf sample, a={a}, size={n}')
+        >>> plt.show()
+
+        Draw multiple samples from the distribution:
+
+        
+        >>> a = [2.0, 3.0, 4.0]
+        >>> s = np.random.zipf(a, size=(2, 3))
+        >>> s.shape
+        (2, 3)
+Response generated in 81.61 seconds, with a max_new_tokens = 2000.

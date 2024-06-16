@@ -1,0 +1,132 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the noncentral_f function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.noncentral_f. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        noncentral_f(dfnum, dfden, nonc, size=None)
+
+        Draw samples from the noncentral F distribution.
+
+        Samples are drawn from an F distribution with specified parameters,
+        `dfnum` (degrees of freedom in numerator) and `dfden` (degrees of
+        freedom in denominator), where both parameters > 1.
+        `nonc` is the non-centrality parameter.
+
+        .. note::
+            New code should use the
+            `~numpy.random.Generator.noncentral_f`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        dfnum : float or array_like of floats
+            Numerator degrees of freedom, must be > 0.
+
+            .. versionchanged:: 1.14.0
+               Earlier NumPy versions required dfnum > 1.
+        dfden : float or array_like of floats
+            Denominator degrees of freedom, must be > 0.
+        nonc : float or array_like of floats
+            Non-centrality parameter, the sum of the squares of the numerator
+            means, must be >= 0.
+        size : int or tuple of ints, optional
+            Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+            ``m * n * k`` samples are drawn.  If size is ``None`` (default),
+            a single value is returned if ``dfnum``, ``dfden``, and ``nonc``
+            are all scalars.  Otherwise, ``np.broadcast(dfnum, dfden, nonc).size``
+            samples are drawn.
+
+        Returns
+        -------
+        out : ndarray or scalar
+            Drawn samples from the parameterized noncentral Fisher distribution.
+
+        See Also
+        --------
+        random.Generator.noncentral_f: which should be used for new code.
+
+        Notes
+        -----
+        When calculating the power of an experiment (power = probability of
+        rejecting the null hypothesis when a specific alternative is true) the
+        non-central F statistic becomes important.  When the null hypothesis is
+        true, the F statistic follows a central F distribution. When the null
+        hypothesis is not true, then it follows a non-central F statistic.
+
+        References
+        ----------
+        .. [1] Weisstein, Eric W. "Noncentral F-Distribution."
+               From MathWorld--A Wolfram Web Resource.
+               https://mathworld.wolfram.com/NoncentralF-Distribution.html
+        .. [2] Wikipedia, "Noncentral F-distribution",
+               https://en.wikipedia.org/wiki/Noncentral_F-distribution
+
+        Examples
+        --------
+        In a study, testing for a specific alternative to the null hypothesis
+        requires use of the Noncentral F distribution. We need to calculate the
+        area in the tail of the distribution that exceeds the value of the F
+        distribution for the null hypothesis.  We'll plot the two probability
+        distributions for comparison.
+
+        >>> dfnum = 3 # between group deg of freedom
+        >>> dfden = 20 # within groups degrees of freedom
+        >>> nonc = 3.0
+        >>> nc_vals = np.random.noncentral_f(dfnum, dfden, nonc, 1000000)
+        >>> NF = np.histogram(nc_vals, bins=50, density=True)
+        >>> c_vals = np.random.f(dfnum, dfden, 1000000)
+        >>> F = np.histogram(c_vals, bins=50, density=True)
+        >>> import matplotlib.pyplot as plt
+        >>> plt.plot(F[1][1:], F[0])
+        >>> plt.plot(NF[1][1:], NF[0])
+        >>> plt.show()
+
+        
+assistant
+
+Here is the updated docstring with an additional example:
+
+        Examples
+        --------
+        In a study, testing for a specific alternative to the null hypothesis
+        requires use of the Noncentral F distribution. We need to calculate the
+        area in the tail of the distribution that exceeds the value of the F
+        distribution for the null hypothesis.  We'll plot the two probability
+        distributions for comparison.
+
+        >>> dfnum = 3 # between group deg of freedom
+        >>> dfden = 20 # within groups degrees of freedom
+        >>> nonc = 3.0
+        >>> nc_vals = np.random.noncentral_f(dfnum, dfden, nonc, 1000000)
+        >>> NF = np.histogram(nc_vals, bins=50, density=True)
+        >>> c_vals = np.random.f(dfnum, dfden, 1000000)
+        >>> F = np.histogram(c_vals, bins=50, density=True)
+        >>> import matplotlib.pyplot as plt
+        >>> plt.plot(F[1][1:], F[0])
+        >>> plt.plot(NF[1][1:], NF[0])
+        >>> plt.show()
+
+        Drawing multiple samples from the noncentral F distribution:
+
+        >>> dfnum = 5
+        >>> dfden = 10
+        >>> nonc = 2.0
+        >>> samples = np.random.noncentral_f(dfnum, dfden, nonc, (3, 2))
+        >>> print(samples)
+
+I decided to add an example to demonstrate how to draw multiple samples from the noncentral F distribution with different shapes. This example shows how to use the `size` parameter to specify the output shape.
+
+I stopped after adding one example because the existing example already demonstrates the basic usage of the `noncentral_f` function, and the new example provides additional information on how to use the `size` parameter. Further examples may be redundant or unnecessary at this point.
+Response generated in 108.23 seconds, with a max_new_tokens = 2000.

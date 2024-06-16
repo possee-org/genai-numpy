@@ -1,0 +1,102 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the frexp function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.frexp. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+frexp(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+
+Decompose the elements of x into mantissa and twos exponent.
+
+Returns (`mantissa`, `exponent`), where ``x = mantissa * 2**exponent``.
+The mantissa lies in the open interval(-1, 1), while the twos
+exponent is a signed integer.
+
+Parameters
+----------
+x : array_like
+    Array of numbers to be decomposed.
+out1 : ndarray, optional
+    Output array for the mantissa. Must have the same shape as `x`.
+out2 : ndarray, optional
+    Output array for the exponent. Must have the same shape as `x`.
+out : ndarray, None, or tuple of ndarray and None, optional
+    A location into which the result is stored. If provided, it must have
+    a shape that the inputs broadcast to. If not provided or None,
+    a freshly-allocated array is returned. A tuple (possible only as a
+    keyword argument) must have length equal to the number of outputs.
+where : array_like, optional
+    This condition is broadcast over the input. At locations where the
+    condition is True, the `out` array will be set to the ufunc result.
+    Elsewhere, the `out` array will retain its original value.
+    Note that if an uninitialized `out` array is created via the default
+    ``out=None``, locations within it where the condition is False will
+    remain uninitialized.
+**kwargs
+    For other keyword-only arguments, see the
+    :ref:`ufunc docs <ufuncs.kwargs>`.
+
+Returns
+-------
+mantissa : ndarray
+    Floating values between -1 and 1.
+    This is a scalar if `x` is a scalar.
+exponent : ndarray
+    Integer exponents of 2.
+    This is a scalar if `x` is a scalar.
+
+See Also
+--------
+ldexp : Compute ``y = x1 * 2**x2``, the inverse of `frexp`.
+
+Notes
+-----
+Complex dtypes are not supported, they will raise a TypeError.
+
+Examples
+--------
+>>> x = np.arange(9)
+>>> y1, y2 = np.frexp(x)
+>>> y1
+array([ 0.   ,  0.5  ,  0.5  ,  0.75 ,  0.5  ,  0.625,  0.75 ,  0.875,
+        0.5  ])
+>>> y2
+array([0, 1, 2, 2, 3, 3, 3, 3, 4])
+>>> y1 * 2**y2
+array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.])
+assistant
+
+Here is the updated docstring with an additional example:
+
+Examples
+--------
+>>> x = np.arange(9)
+>>> y1, y2 = np.frexp(x)
+>>> y1
+array([ 0.   ,  0.5  ,  0.5  ,  0.75 ,  0.5  ,  0.625,  0.75 ,  0.875,
+        0.5  ])
+>>> y2
+array([0, 1, 2, 2, 3, 3, 3, 3, 4])
+>>> y1 * 2**y2
+array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.])
+
+Decomposition of a negative number:
+ 
+>>> x = -3.5
+>>> y1, y2 = np.frexp(x)
+>>> y1
+-0.875
+>>> y2
+2
+>>> y1 * 2**y2
+-3.5
+Response generated in 63.52 seconds, with a max_new_tokens = 2000.

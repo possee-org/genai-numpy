@@ -1,0 +1,148 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the outer function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.ma.outer. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+Compute the outer product of two vectors.
+
+Given two vectors `a` and `b` of length ``M`` and ``N``, respectively,
+the outer product [1]_ is::
+
+  [[a_0*b_0  a_0*b_1 ... a_0*b_{N-1} ]
+   [a_1*b_0    .
+   [ ...          .
+   [a_{M-1}*b_0            a_{M-1}*b_{N-1} ]]
+
+Parameters
+----------
+a : (M,) array_like
+    First input vector.  Input is flattened if
+    not already 1-dimensional.
+b : (N,) array_like
+    Second input vector.  Input is flattened if
+    not already 1-dimensional.
+out : (M, N) ndarray, optional
+    A location where the result is stored
+
+    .. versionadded:: 1.9.0
+
+Returns
+-------
+out : (M, N) ndarray
+    ``out[i, j] = a[i] * b[j]``
+
+See also
+--------
+inner
+einsum : ``einsum('i,j->ij', a.ravel(), b.ravel())`` is the equivalent.
+ufunc.outer : A generalization to dimensions other than 1D and other
+              operations. ``np.multiply.outer(a.ravel(), b.ravel())``
+              is the equivalent.
+linalg.outer : An Array API compatible variation of ``np.outer``,
+               which accepts 1-dimensional inputs only.
+tensordot : ``np.tensordot(a.ravel(), b.ravel(), axes=((), ()))``
+            is the equivalent.
+
+References
+----------
+.. [1] G. H. Golub and C. F. Van Loan, *Matrix Computations*, 3rd
+       ed., Baltimore, MD, Johns Hopkins University Press, 1996,
+       pg. 8.
+
+Examples
+--------
+Make a (*very* coarse) grid for computing a Mandelbrot set:
+
+>>> rl = np.outer(np.ones((5,)), np.linspace(-2, 2, 5))
+>>> rl
+array([[-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.]])
+>>> im = np.outer(1j*np.linspace(2, -2, 5), np.ones((5,)))
+>>> im
+array([[0.+2.j, 0.+2.j, 0.+2.j, 0.+2.j, 0.+2.j],
+       [0.+1.j, 0.+1.j, 0.+1.j, 0.+1.j, 0.+1.j],
+       [0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
+       [0.-1.j, 0.-1.j, 0.-1.j, 0.-1.j, 0.-1.j],
+       [0.-2.j, 0.-2.j, 0.-2.j, 0.-2.j, 0.-2.j]])
+>>> grid = rl + im
+>>> grid
+array([[-2.+2.j, -1.+2.j,  0.+2.j,  1.+2.j,  2.+2.j],
+       [-2.+1.j, -1.+1.j,  0.+1.j,  1.+1.j,  2.+1.j],
+       [-2.+0.j, -1.+0.j,  0.+0.j,  1.+0.j,  2.+0.j],
+       [-2.-1.j, -1.-1.j,  0.-1.j,  1.-1.j,  2.-1.j],
+       [-2.-2.j, -1.-2.j,  0.-2.j,  1.-2.j,  2.-2.j]])
+
+An example using a "vector" of letters:
+
+>>> x = np.array(['a', 'b', 'c'], dtype=object)
+>>> np.outer(x, [1, 2, 3])
+array([['a', 'aa', 'aaa'],
+       ['b', 'bb', 'bbb'],
+       ['c', 'cc', 'ccc']], dtype=object)
+
+Notes
+-----
+Masked values are replaced by 0.
+
+assistant
+
+Here is the updated docstring with an additional example:
+
+Examples
+--------
+Make a (*very* coarse) grid for computing a Mandelbrot set:
+
+>>> rl = np.ma.outer(np.ones((5,)), np.linspace(-2, 2, 5))
+>>> rl
+array([[-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.],
+       [-2., -1.,  0.,  1.,  2.]])
+
+>>> im = np.ma.outer(1j*np.linspace(2, -2, 5), np.ones((5,)))
+>>> im
+array([[0.+2.j, 0.+2.j, 0.+2.j, 0.+2.j, 0.+2.j],
+       [0.+1.j, 0.+1.j, 0.+1.j, 0.+1.j, 0.+1.j],
+       [0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
+       [0.-1.j, 0.-1.j, 0.-1.j, 0.-1.j, 0.-1.j],
+       [0.-2.j, 0.-2.j, 0.-2.j, 0.-2.j, 0.-2.j]])
+
+>>> grid = rl + im
+>>> grid
+array([[-2.+2.j, -1.+2.j,  0.+2.j,  1.+2.j,  2.+2.j],
+       [-2.+1.j, -1.+1.j,  0.+1.j,  1.+1.j,  2.+1.j],
+       [-2.+0.j, -1.+0.j,  0.+0.j,  1.+0.j,  2.+0.j],
+       [-2.-1.j, -1.-1.j,  0.-1.j,  1.-1.j,  2.-1.j],
+       [-2.-2.j, -1.-2.j,  0.-2.j,  1.-2.j,  2.-2.j]])
+
+An example using a "vector" of letters:
+
+>>> x = np.array(['a', 'b', 'c'], dtype=object)
+>>> np.ma.outer(x, [1, 2, 3])
+array([['a', 'aa', 'aaa'],
+       ['b', 'bb', 'bbb'],
+       ['c', 'cc', 'ccc']], dtype=object)
+
+Simple example with two arrays:
+
+>>> a = np.array([1, 2, 3])
+>>> b = np.array([4, 5, 6])
+>>> np.ma.outer(a, b)
+array([[ 4,  5,  6],
+       [ 8, 10, 12],
+       [12, 15, 18]])
+Response generated in 184.36 seconds, with a max_new_tokens = 2000.

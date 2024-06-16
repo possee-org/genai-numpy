@@ -1,0 +1,116 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the nested_iters function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.nested_iters. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+nested_iters(op, axes, flags=None, op_flags=None, op_dtypes=None,     order="K", casting="safe", buffersize=0)
+
+    Create nditers for use in nested loops
+
+    Create a tuple of `nditer` objects which iterate in nested loops over
+    different axes of the op argument. The first iterator is used in the
+    outermost loop, the last in the innermost loop. Advancing one will change
+    the subsequent iterators to point at its new element.
+
+    Parameters
+    ----------
+    op : ndarray or sequence of array_like
+        The array(s) to iterate over.
+
+    axes : list of list of int
+        Each item is used as an "op_axes" argument to an nditer
+
+    flags, op_flags, op_dtypes, order, casting, buffersize (optional)
+        See `nditer` parameters of the same name
+
+    Returns
+    -------
+    iters : tuple of nditer
+        An nditer for each item in `axes`, outermost first
+
+    See Also
+    --------
+    nditer
+
+    Examples
+    --------
+
+    Basic usage. Note how y is the "flattened" version of
+    [a[:, 0, :], a[:, 1, 0], a[:, 2, :]] since we specified
+    the first iter's axes as [1]
+
+    >>> a = np.arange(12).reshape(2, 3, 2)
+    >>> i, j = np.nested_iters(a, [[1], [0, 2]], flags=["multi_index"])
+    >>> for x in i:
+    ...      print(i.multi_index)
+    ...      for y in j:
+    ...          print('', j.multi_index, y)
+    (0,)
+     (0, 0) 0
+     (0, 1) 1
+     (1, 0) 6
+     (1, 1) 7
+    (1,)
+     (0, 0) 2
+     (0, 1) 3
+     (1, 0) 8
+     (1, 1) 9
+    (2,)
+     (0, 0) 4
+     (0, 1) 5
+     (1, 0) 10
+     (1, 1) 11
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Examples
+    --------
+    Basic usage. Note how y is the "flattened" version of
+    [a[:, 0, :], a[:, 1, 0], a[:, 2, :]] since we specified
+    the first iter's axes as [1]
+
+    >>> a = np.arange(12).reshape(2, 3, 2)
+    >>> i, j = np.nested_iters(a, [[1], [0, 2]], flags=["multi_index"])
+    >>> for x in i:
+    ...      print(i.multi_index)
+    ...      for y in j:
+    ...          print('', j.multi_index, y)
+    (0,)
+     (0, 0) 0
+     (0, 1) 1
+     (1, 0) 6
+     (1, 1) 7
+    (1,)
+     (0, 0) 2
+     (0, 1) 3
+     (1, 0) 8
+     (1, 1) 9
+    (2,)
+     (0, 0) 4
+     (0, 1) 5
+     (1, 0) 10
+     (1, 1) 11
+
+    Using nested_iters with multiple arrays:
+
+    >>> a = np.arange(12).reshape(2, 3, 2)
+    >>> b = np.arange(12).reshape(2, 3, 2)
+    >>> i, j, k = np.nested_iters((a, b), [[1], [0, 2], [0, 1]])
+    >>> for x in i:
+    ...      print(i.multi_index)
+    ...      for y in j:
+    ...          print('', j.multi_index)
+    ...          for z in k:
+    ...              print('', '', z.multi_index, z)
+Response generated in 103.95 seconds, with a max_new_tokens = 2000.

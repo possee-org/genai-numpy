@@ -1,0 +1,194 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the pinv function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.linalg.pinv. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Compute the (Moore-Penrose) pseudo-inverse of a matrix.
+
+    Calculate the generalized inverse of a matrix using its
+    singular-value decomposition (SVD) and including all
+    *large* singular values.
+
+    .. versionchanged:: 1.14
+       Can now operate on stacks of matrices
+
+    Parameters
+    ----------
+    a : (..., M, N) array_like
+        Matrix or stack of matrices to be pseudo-inverted.
+    rcond : (...) array_like of float, optional
+        Cutoff for small singular values.
+        Singular values less than or equal to
+        ``rcond * largest_singular_value`` are set to zero.
+        Broadcasts against the stack of matrices. Default: ``1e-15``.
+    hermitian : bool, optional
+        If True, `a` is assumed to be Hermitian (symmetric if real-valued),
+        enabling a more efficient method for finding singular values.
+        Defaults to False.
+
+        .. versionadded:: 1.17.0
+    rtol : (...) array_like of float, optional
+        Same as `rcond`, but it's an Array API compatible parameter name.
+        Only `rcond` or `rtol` can be set at a time. If none of them are
+        provided then NumPy's ``1e-15`` default is used. If ``rtol=None``
+        is passed then the API standard default is used.
+
+        .. versionadded:: 2.0.0
+
+    Returns
+    -------
+    B : (..., N, M) ndarray
+        The pseudo-inverse of `a`. If `a` is a `matrix` instance, then so
+        is `B`.
+
+    Raises
+    ------
+    LinAlgError
+        If the SVD computation does not converge.
+
+    See Also
+    --------
+    scipy.linalg.pinv : Similar function in SciPy.
+    scipy.linalg.pinvh : Compute the (Moore-Penrose) pseudo-inverse of a
+                         Hermitian matrix.
+
+    Notes
+    -----
+    The pseudo-inverse of a matrix A, denoted :math:`A^+`, is
+    defined as: "the matrix that 'solves' [the least-squares problem]
+    :math:`Ax = b`," i.e., if :math:`\bar{x}` is said solution, then
+    :math:`A^+` is that matrix such that :math:`\bar{x} = A^+b`.
+
+    It can be shown that if :math:`Q_1 \Sigma Q_2^T = A` is the singular
+    value decomposition of A, then
+    :math:`A^+ = Q_2 \Sigma^+ Q_1^T`, where :math:`Q_{1,2}` are
+    orthogonal matrices, :math:`\Sigma` is a diagonal matrix consisting
+    of A's so-called singular values, (followed, typically, by
+    zeros), and then :math:`\Sigma^+` is simply the diagonal matrix
+    consisting of the reciprocals of A's singular values
+    (again, followed by zeros). [1]_
+
+    References
+    ----------
+    .. [1] G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando,
+           FL, Academic Press, Inc., 1980, pp. 139-142.
+
+    Examples
+    --------
+    The following example checks that ``a * a+ * a == a`` and
+    ``a+ * a * a+ == a+``:
+
+    >>> rng = np.random.default_rng()
+    >>> a = rng.normal(size=(9, 6))
+    >>> B = np.linalg.pinv(a)
+    >>> np.allclose(a, np.dot(a, np.dot(B, a)))
+    True
+    >>> np.allclose(B, np.dot(B, np.dot(a, B)))
+    True
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Compute the (Moore-Penrose) pseudo-inverse of a matrix.
+
+    Calculate the generalized inverse of a matrix using its
+    singular-value decomposition (SVD) and including all
+    *large* singular values.
+
+    .. versionchanged:: 1.14
+       Can now operate on stacks of matrices
+
+    Parameters
+    ----------
+    a : (..., M, N) array_like
+        Matrix or stack of matrices to be pseudo-inverted.
+    rcond : (...) array_like of float, optional
+        Cutoff for small singular values.
+        Singular values less than or equal to
+        ``rcond * largest_singular_value`` are set to zero.
+        Broadcasts against the stack of matrices. Default: ``1e-15``.
+    hermitian : bool, optional
+        If True, `a` is assumed to be Hermitian (symmetric if real-valued),
+        enabling a more efficient method for finding singular values.
+        Defaults to False.
+
+        .. versionadded:: 1.17.0
+    rtol : (...) array_like of float, optional
+        Same as `rcond`, but it's an Array API compatible parameter name.
+        Only `rcond` or `rtol` can be set at a time. If none of them are
+        provided then NumPy's ``1e-15`` default is used. If ``rtol=None``
+        is passed then the API standard default is used.
+
+        .. versionadded:: 2.0.0
+
+    Returns
+    -------
+    B : (..., N, M) ndarray
+        The pseudo-inverse of `a`. If `a` is a `matrix` instance, then so
+        is `B`.
+
+    Raises
+    ------
+    LinAlgError
+        If the SVD computation does not converge.
+
+    See Also
+    --------
+    scipy.linalg.pinv : Similar function in SciPy.
+    scipy.linalg.pinvh : Compute the (Moore-Penrose) pseudo-inverse of a
+                         Hermitian matrix.
+
+    Notes
+    -----
+    The pseudo-inverse of a matrix A, denoted :math:`A^+`, is
+    defined as: "the matrix that 'solves' [the least-squares problem]
+    :math:`Ax = b`," i.e., if :math:`\bar{x}` is said solution, then
+    :math:`A^+` is that matrix such that :math:`\bar{x} = A^+b`.
+
+    It can be shown that if :math:`Q_1 \Sigma Q_2^T = A` is the singular
+    value decomposition of A, then
+    :math:`A^+ = Q_2 \Sigma^+ Q_1^T`, where :math:`Q_{1,2}` are
+    orthogonal matrices, :math:`\Sigma` is a diagonal matrix consisting
+    of A's so-called singular values, (followed, typically, by
+    zeros), and then :math:`\Sigma^+` is simply the diagonal matrix
+    consisting of the reciprocals of A's singular values
+    (again, followed by zeros). [1]_
+
+    References
+    ----------
+    .. [1] G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando,
+           FL, Academic Press, Inc., 1980, pp. 139-142.
+
+    Examples
+    --------
+    The following example checks that ``a * a+ * a == a`` and
+    ``a+ * a * a+ == a+``:
+
+    >>> rng = np.random.default_rng()
+    >>> a = rng.normal(size=(9, 6))
+    >>> B = np.linalg.pinv(a)
+    >>> np.allclose(a, np.dot(a, np.dot(B, a)))
+    True
+    >>> np.allclose(B, np.dot(B, np.dot(a, B)))
+    True
+
+    Using pinv with a Hermitian matrix:
+
+    >>> a = np.array([[1, 1], [1, 1]])
+    >>> B = np.linalg.pinv(a, hermitian=True)
+    >>> np.allclose(a, np.dot(a, np.dot(B, a)))
+    True
+Response generated in 238.12 seconds, with a max_new_tokens = 2000.

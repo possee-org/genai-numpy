@@ -1,0 +1,239 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the std function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.std. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Compute the standard deviation along the specified axis.
+
+    Returns the standard deviation, a measure of the spread of a distribution,
+    of the array elements. The standard deviation is computed for the
+    flattened array by default, otherwise over the specified axis.
+
+    Parameters
+    ----------
+    a : array_like
+        Calculate the standard deviation of these values.
+    axis : None or int or tuple of ints, optional
+        Axis or axes along which the standard deviation is computed. The
+        default is to compute the standard deviation of the flattened array.
+
+        .. versionadded:: 1.7.0
+
+        If this is a tuple of ints, a standard deviation is performed over
+        multiple axes, instead of a single axis or all the axes as before.
+    dtype : dtype, optional
+        Type to use in computing the standard deviation. For arrays of
+        integer type the default is float64, for arrays of float types it is
+        the same as the array type.
+    out : ndarray, optional
+        Alternative output array in which to place the result. It must have
+        the same shape as the expected output but the type (of the calculated
+        values) will be cast if necessary.
+        See :ref:`ufuncs-output-type` for more details.
+    ddof : {int, float}, optional
+        Means Delta Degrees of Freedom.  The divisor used in calculations
+        is ``N - ddof``, where ``N`` represents the number of elements.
+        By default `ddof` is zero. See Notes for details about use of `ddof`.
+    keepdims : bool, optional
+        If this is set to True, the axes which are reduced are left
+        in the result as dimensions with size one. With this option,
+        the result will broadcast correctly against the input array.
+
+        If the default value is passed, then `keepdims` will not be
+        passed through to the `std` method of sub-classes of
+        `ndarray`, however any non-default value will be.  If the
+        sub-class' method does not implement `keepdims` any
+        exceptions will be raised.
+    where : array_like of bool, optional
+        Elements to include in the standard deviation.
+        See `~numpy.ufunc.reduce` for details.
+
+        .. versionadded:: 1.20.0
+
+    mean : array_like, optional
+        Provide the mean to prevent its recalculation. The mean should have
+        a shape as if it was calculated with ``keepdims=True``.
+        The axis for the calculation of the mean should be the same as used in
+        the call to this std function.
+
+        .. versionadded:: 1.26.0
+
+    correction : {int, float}, optional
+        Array API compatible name for the ``ddof`` parameter. Only one of them
+        can be provided at the same time.
+
+        .. versionadded:: 2.0.0
+
+    Returns
+    -------
+    standard_deviation : ndarray, see dtype parameter above.
+        If `out` is None, return a new array containing the standard deviation,
+        otherwise return a reference to the output array.
+
+    See Also
+    --------
+    var, mean, nanmean, nanstd, nanvar
+    :ref:`ufuncs-output-type`
+
+    Notes
+    -----
+    There are several common variants of the array standard deviation
+    calculation. Assuming the input `a` is a one-dimensional NumPy array
+    and ``mean`` is either provided as an argument or computed as
+    ``a.mean()``, NumPy computes the standard deviation of an array as::
+
+        N = len(a)
+        d2 = abs(a - mean)**2  # abs is for complex `a`
+        var = d2.sum() / (N - ddof)  # note use of `ddof`
+        std = var**0.5
+
+    Different values of the argument `ddof` are useful in different
+    contexts. NumPy's default ``ddof=0`` corresponds with the expression:
+
+    .. math::
+
+        \sqrt{\frac{\sum_i{|a_i - \bar{a}|^2 }}{N}}
+
+    which is sometimes called the "population standard deviation" in the field
+    of statistics because it applies the definition of standard deviation to
+    `a` as if `a` were a complete population of possible observations.
+
+    Many other libraries define the standard deviation of an array
+    differently, e.g.:
+
+    .. math::
+
+        \sqrt{\frac{\sum_i{|a_i - \bar{a}|^2 }}{N - 1}}
+
+    In statistics, the resulting quantity is sometimed called the "sample
+    standard deviation" because if `a` is a random sample from a larger
+    population, this calculation provides the square root of an unbiased
+    estimate of the variance of the population. The use of :math:`N-1` in the
+    denominator is often called "Bessel's correction" because it corrects for
+    bias (toward lower values) in the variance estimate introduced when the
+    sample mean of `a` is used in place of the true mean of the population.
+    The resulting estimate of the standard deviation is still biased, but less
+    than it would have been without the correction. For this quantity, use
+    ``ddof=1``.
+
+    Note that, for complex numbers, `std` takes the absolute
+    value before squaring, so that the result is always real and nonnegative.
+
+    For floating-point input, the standard deviation is computed using the same
+    precision the input has. Depending on the input data, this can cause
+    the results to be inaccurate, especially for float32 (see example below).
+    Specifying a higher-accuracy accumulator using the `dtype` keyword can
+    alleviate this issue.
+
+    Examples
+    --------
+    >>> a = np.array([[1, 2], [3, 4]])
+    >>> np.std(a)
+    1.1180339887498949 # may vary
+    >>> np.std(a, axis=0)
+    array([1.,  1.])
+    >>> np.std(a, axis=1)
+    array([0.5,  0.5])
+
+    In single precision, std() can be inaccurate:
+
+    >>> a = np.zeros((2, 512*512), dtype=np.float32)
+    >>> a[0, :] = 1.0
+    >>> a[1, :] = 0.1
+    >>> np.std(a)
+    0.45000005
+
+    Computing the standard deviation in float64 is more accurate:
+
+    >>> np.std(a, dtype=np.float64)
+    0.44999999925494177 # may vary
+
+    Specifying a where argument:
+
+    >>> a = np.array([[14, 8, 11, 10], [7, 9, 10, 11], [10, 15, 5, 10]])
+    >>> np.std(a)
+    2.614064523559687 # may vary
+    >>> np.std(a, where=[[True], [True], [False]])
+    2.0
+
+    Using the mean keyword to save computation time:
+
+    >>> import numpy as np
+    >>> from timeit import timeit
+    >>> a = np.array([[14, 8, 11, 10], [7, 9, 10, 11], [10, 15, 5, 10]])
+    >>> mean = np.mean(a, axis=1, keepdims=True)
+    >>>
+    >>> g = globals()
+    >>> n = 10000
+    >>> t1 = timeit("std = np.std(a, axis=1, mean=mean)", globals=g, number=n)
+    >>> t2 = timeit("std = np.std(a, axis=1)", globals=g, number=n)
+    >>> print(f'Percentage execution time saved {100*(t2-t1)/t2:.0f}%')
+    #doctest: +SKIP
+    Percentage execution time saved 30%
+
+    
+assistant
+
+Here is the updated examples section of the docstring:
+
+    Examples
+    --------
+    >>> a = np.array([[1, 2], [3, 4]])
+    >>> np.std(a)
+    1.1180339887498949 # may vary
+    >>> np.std(a, axis=0)
+    array([1.,  1.])
+    >>> np.std(a, axis=1)
+    array([0.5,  0.5])
+
+    In single precision, std() can be inaccurate:
+
+    >>> a = np.zeros((2, 512*512), dtype=np.float32)
+    >>> a[0, :] = 1.0
+    >>> a[1, :] = 0.1
+    >>> np.std(a)
+    0.45000005
+
+    Computing the standard deviation in float64 is more accurate:
+
+    >>> np.std(a, dtype=np.float64)
+    0.44999999925494177 # may vary
+
+    Specifying a where argument:
+
+    >>> a = np.array([[14, 8, 11, 10], [7, 9, 10, 11], [10, 15, 5, 10]])
+    >>> np.std(a)
+    2.614064523559687 # may vary
+    >>> np.std(a, where=[[True], [True], [False]])
+    2.0
+
+    Using the mean keyword to save computation time:
+
+    >>> a = np.array([[14, 8, 11, 10], [7, 9, 10, 11], [10, 15, 5, 10]])
+    >>> mean = np.mean(a, axis=1, keepdims=True)
+    >>> 
+    >>> g = globals()
+    >>> n = 10000
+    >>> t1 = timeit("std = np.std(a, axis=1, mean=mean)", globals=g, number=n)
+    >>> t2 = timeit("std = np.std(a, axis=1)", globals=g, number=n)
+    >>> print(f'Percentage execution time saved {100*(t2-t1)/t2:.0f}%')
+    #doctest: +SKIP
+    Percentage execution time saved 30%
+
+    Computing the standard deviation along multiple axes:
+
+    >>> a = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+    >>> np.std(a, axis=(0, 1))
+    2.581988897471611
+Response generated in 157.43 seconds, with a max_new_tokens = 2000.

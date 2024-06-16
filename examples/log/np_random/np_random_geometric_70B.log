@@ -1,0 +1,132 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the geometric function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.geometric. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        geometric(p, size=None)
+
+        Draw samples from the geometric distribution.
+
+        Bernoulli trials are experiments with one of two outcomes:
+        success or failure (an example of such an experiment is flipping
+        a coin).  The geometric distribution models the number of trials
+        that must be run in order to achieve success.  It is therefore
+        supported on the positive integers, ``k = 1, 2, ...``.
+
+        The probability mass function of the geometric distribution is
+
+        .. math:: f(k) = (1 - p)^{k - 1} p
+
+        where `p` is the probability of success of an individual trial.
+
+        .. note::
+            New code should use the `~numpy.random.Generator.geometric`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        p : float or array_like of floats
+            The probability of success of an individual trial.
+        size : int or tuple of ints, optional
+            Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+            ``m * n * k`` samples are drawn.  If size is ``None`` (default),
+            a single value is returned if ``p`` is a scalar.  Otherwise,
+            ``np.array(p).size`` samples are drawn.
+
+        Returns
+        -------
+        out : ndarray or scalar
+            Drawn samples from the parameterized geometric distribution.
+
+        See Also
+        --------
+        random.Generator.geometric: which should be used for new code.
+
+        Examples
+        --------
+        Draw ten thousand values from the geometric distribution,
+        with the probability of an individual success equal to 0.35:
+
+        >>> z = np.random.geometric(p=0.35, size=10000)
+
+        How many trials succeeded after a single run?
+
+        >>> (z == 1).sum() / 10000.
+        0.34889999999999999 #random
+
+        
+assistant
+
+Here is the updated docstring with an additional example:
+
+        geometric(p, size=None)
+
+        Draw samples from the geometric distribution.
+
+        Bernoulli trials are experiments with one of two outcomes:
+        success or failure (an example of such an experiment is flipping
+        a coin).  The geometric distribution models the number of trials
+        that must be run in order to achieve success.  It is therefore
+        supported on the positive integers, ``k = 1, 2, ...``.
+
+        The probability mass function of the geometric distribution is
+
+        .. math:: f(k) = (1 - p)^{k - 1} p
+
+        where `p` is the probability of success of an individual trial.
+
+        .. note::
+            New code should use the `~numpy.random.Generator.geometric`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        p : float or array_like of floats
+            The probability of success of an individual trial.
+        size : int or tuple of ints, optional
+            Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+            ``m * n * k`` samples are drawn.  If size is ``None`` (default),
+            a single value is returned if ``p`` is a scalar.  Otherwise,
+            ``np.array(p).size`` samples are drawn.
+
+        Returns
+        -------
+        out : ndarray or scalar
+            Drawn samples from the parameterized geometric distribution.
+
+        See Also
+        --------
+        random.Generator.geometric: which should be used for new code.
+
+        Examples
+        --------
+        Draw ten thousand values from the geometric distribution,
+        with the probability of an individual success equal to 0.35:
+
+        >>> z = np.random.geometric(p=0.35, size=10000)
+
+        How many trials succeeded after a single run?
+
+        >>> (z == 1).sum() / 10000.
+        0.34889999999999999 #random
+
+        Geometric distribution with varying probabilities:
+
+        >>> probabilities = [0.1, 0.5, 0.9]
+        >>> samples = [np.random.geometric(p, size=1000) for p in probabilities]
+        >>> [s.mean() for s in samples]
+        [10.506, 2.024, 1.116] #random
+Response generated in 127.48 seconds, with a max_new_tokens = 2000.

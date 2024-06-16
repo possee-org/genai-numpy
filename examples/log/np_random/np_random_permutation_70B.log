@@ -1,0 +1,87 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the permutation function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.permutation. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        permutation(x)
+
+        Randomly permute a sequence, or return a permuted range.
+
+        If `x` is a multi-dimensional array, it is only shuffled along its
+        first index.
+
+        .. note::
+            New code should use the
+            `~numpy.random.Generator.permutation`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        x : int or array_like
+            If `x` is an integer, randomly permute ``np.arange(x)``.
+            If `x` is an array, make a copy and shuffle the elements
+            randomly.
+
+        Returns
+        -------
+        out : ndarray
+            Permuted sequence or array range.
+
+        See Also
+        --------
+        random.Generator.permutation: which should be used for new code.
+
+        Examples
+        --------
+        >>> np.random.permutation(10)
+        array([1, 7, 4, 3, 0, 9, 2, 5, 8, 6]) # random
+
+        >>> np.random.permutation([1, 4, 9, 12, 15])
+        array([15,  1,  9,  4, 12]) # random
+
+        >>> arr = np.arange(9).reshape((3, 3))
+        >>> np.random.permutation(arr)
+        array([[6, 7, 8], # random
+               [0, 1, 2],
+               [3, 4, 5]])
+
+        
+assistant
+
+Here is the updated docstring with an additional example:
+
+        Examples
+        --------
+        >>> np.random.permutation(10)
+        array([1, 7, 4, 3, 0, 9, 2, 5, 8, 6]) # random
+
+        >>> np.random.permutation([1, 4, 9, 12, 15])
+        array([15,  1,  9,  4, 12]) # random
+
+        >>> arr = np.arange(9).reshape((3, 3))
+        >>> np.random.permutation(arr)
+        array([[6, 7, 8], # random
+               [0, 1, 2],
+               [3, 4, 5]])
+
+        Permuting a 2D array with multiple rows:
+        
+        >>> arr = np.arange(12).reshape((4, 3))
+        >>> np.random.permutation(arr)
+        array([[ 9, 10, 11], # random
+               [ 0,  1,  2],
+               [ 6,  7,  8],
+               [ 3,  4,  5]])
+Response generated in 62.50 seconds, with a max_new_tokens = 2000.
