@@ -1,0 +1,610 @@
+
+## np.char
+np.char Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+- [ ] Group 4
+- [ ] Group 5
+- [ ] Group 6
+
+| Group 1            | Group 2            | Group 3            | Group 4            | Group 5            |
+| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| add                | equal              | islower            | lstrip             | rsplit             |
+| array              | expandtabs         | isnumeric          | mod                | rstrip             |
+| asarray            | find               | isspace            | multiply           | split              |
+| capitalize         | greater            | istitle            | not_equal          | splitlines         |
+| center             | greater_equal      | isupper            | partition          | startswith         |
+| compare_chararrays | index              | join               | replace            | str_len            |
+| count              | isalnum            | less               | rfind              | strip              |
+| decode             | isalpha            | less_equal         | rindex             | swapcase           |
+| encode             | isdecimal          | ljust              | rjust              | title              |
+| endswith           | isdigit            | lower              | rpartition         | translate          |
+
+| Group 6            |
+| ------------------ |
+| upper              |
+| zfill              |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+|                    |
+
+## np.ctypeslib
+np.ctypeslib Groups:
+- [ ] Group 1
+
+| Group 1        |
+| -------------- |
+| as_array       |
+| as_ctypes      |
+| as_ctypes_type |
+| load_library   |
+| ndpointer      |
+|                |
+|                |
+|                |
+|                |
+|                |
+
+## np.emath
+np.emath Groups:
+- [ ] Group 1
+
+| Group 1 |
+| ------- |
+| arccos  |
+| arcsin  |
+| arctanh |
+| log     |
+| log10   |
+| log2    |
+| logn    |
+| power   |
+| sqrt    |
+|         |
+
+## np.f2py
+np.f2py Groups:
+- [ ] Group 1
+
+| Group 1     |
+| ----------- |
+| get_include |
+| run_main    |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+|             |
+
+## np.fft
+np.fft Groups:
+- [ ] Group 1
+- [ ] Group 2
+
+| Group 1   | Group 2   |
+| --------- | --------- |
+| fft       | ihfft     |
+| fft2      | irfft     |
+| fftfreq   | irfft2    |
+| fftn      | irfftn    |
+| fftshift  | rfft      |
+| hfft      | rfft2     |
+| ifft      | rfftfreq  |
+| ifft2     | rfftn     |
+| ifftn     |           |
+| ifftshift |           |
+
+## np.lib
+np.lib Groups:
+- [ ] Group 1
+
+| Group 1       |
+| ------------- |
+| add_docstring |
+| add_newdoc    |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+
+## np.lib.array.utils
+np.lib.array.utils Groups:
+- [ ] Group 1
+
+| Group 1              |
+| -------------------- |
+| byte_bounds          |
+| normalize_axis_index |
+| normalize_axis_tuple |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+
+## np.lib.introspect
+np.lib.introspect Groups:
+- [ ] Group 1
+
+| Group 1       |
+| ------------- |
+| opt_func_info |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+|               |
+
+## np.lib.scimath
+np.lib.scimath Groups:
+- [ ] Group 1
+
+| Group 1 |
+| ------- |
+| arccos  |
+| arcsin  |
+| arctanh |
+| log     |
+| log10   |
+| log2    |
+| logn    |
+| power   |
+| sqrt    |
+|         |
+
+## np.lib.stride.tricks
+np.lib.stride.tricks Groups:
+- [ ] Group 1
+
+| Group 1             |
+| ------------------- |
+| as_strided          |
+| sliding_window_view |
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
+|                     |
+
+## np.linalg
+np.linalg Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1          | Group 2          | Group 3          |
+| ---------------- | ---------------- | ---------------- |
+| cholesky         | lstsq            | slogdet          |
+| cond             | matmul           | solve            |
+| cross            | matrix_norm      | svd              |
+| det              | matrix_power     | svdvals          |
+| diagonal         | matrix_rank      | tensordot        |
+| eig              | matrix_transpose | tensorinv        |
+| eigh             | multi_dot        | tensorsolve      |
+| eigvals          | norm             | trace            |
+| eigvalsh         | outer            | vecdot           |
+| inv              | pinv             | vector_norm      |
+
+## np.ma
+np.ma Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+- [ ] Group 4
+- [ ] Group 5
+- [ ] Group 6
+- [ ] Group 7
+- [ ] Group 8
+- [ ] Group 9
+- [ ] Group 10
+- [ ] Group 11
+
+| Group 1                  | Group 2                  | Group 3                  | Group 4                  | Group 5                  |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| allclose                 | asanyarray               | compress_rows            | dot                      | getmask                  |
+| allequal                 | asarray                  | compressed               | ediff1d                  | getmaskarray             |
+| alltrue                  | average                  | concatenate              | filled                   | in1d                     |
+| amax                     | choose                   | convolve                 | fix_invalid              | inner                    |
+| amin                     | clump_masked             | correlate                | flatnotmasked_contiguous | innerproduct             |
+| append                   | clump_unmasked           | count_masked             | flatnotmasked_edges      | intersect1d              |
+| apply_along_axis         | common_fill_value        | cov                      | flatten_mask             | isMA                     |
+| apply_over_axes          | compress_cols            | default_fill_value       | flatten_structured_array | isMaskedArray            |
+| argsort                  | compress_nd              | diag                     | fromflex                 | is_mask                  |
+| array                    | compress_rowcols         | diff                     | getdata                  | is_masked                |
+
+| Group 6                  | Group 7                  | Group 8                  | Group 9                  | Group 10                 |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| isarray                  | masked_all               | masked_object            | ndim                     | reshape                  |
+| isin                     | masked_all_like          | masked_outside           | notmasked_contiguous     | resize                   |
+| left_shift               | masked_equal             | masked_values            | notmasked_edges          | right_shift              |
+| make_mask                | masked_greater           | masked_where             | outer                    | round                    |
+| make_mask_descr          | masked_greater_equal     | max                      | outerproduct             | round_                   |
+| make_mask_none           | masked_inside            | maximum_fill_value       | polyfit                  | set_fill_value           |
+| mask_cols                | masked_invalid           | median                   | power                    | setdiff1d                |
+| mask_or                  | masked_less              | min                      | ptp                      | setxor1d                 |
+| mask_rowcols             | masked_less_equal        | minimum_fill_value       | put                      | shape                    |
+| mask_rows                | masked_not_equal         | ndenumerate              | putmask                  | size                     |
+
+| Group 11                 |
+| ------------------------ |
+| sometrue                 |
+| sort                     |
+| take                     |
+| transpose                |
+| union1d                  |
+| unique                   |
+| vander                   |
+| where                    |
+|                          |
+|                          |
+
+## np.polynomial
+np.polynomial Groups:
+- [ ] Group 1
+
+| Group 1                |
+| ---------------------- |
+| set_default_printstyle |
+|                        |
+|                        |
+|                        |
+|                        |
+|                        |
+|                        |
+|                        |
+|                        |
+|                        |
+
+## np.polynomial.chebyshev
+np.polynomial.chebyshev Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1         | Group 2         | Group 3         |
+| --------------- | --------------- | --------------- |
+| cheb2poly       | chebint         | chebtrim        |
+| chebadd         | chebinterpolate | chebval         |
+| chebcompanion   | chebline        | chebval2d       |
+| chebder         | chebmul         | chebval3d       |
+| chebdiv         | chebmulx        | chebvander      |
+| chebfit         | chebpow         | chebvander2d    |
+| chebfromroots   | chebpts1        | chebvander3d    |
+| chebgauss       | chebpts2        | chebweight      |
+| chebgrid2d      | chebroots       | poly2cheb       |
+| chebgrid3d      | chebsub         |                 |
+
+## np.polynomial.hermite
+np.polynomial.hermite Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1       | Group 2       | Group 3       |
+| ------------- | ------------- | ------------- |
+| herm2poly     | hermint       | hermval3d     |
+| hermadd       | hermline      | hermvander    |
+| hermcompanion | hermmul       | hermvander2d  |
+| hermder       | hermmulx      | hermvander3d  |
+| hermdiv       | hermpow       | hermweight    |
+| hermfit       | hermroots     | poly2herm     |
+| hermfromroots | hermsub       |               |
+| hermgauss     | hermtrim      |               |
+| hermgrid2d    | hermval       |               |
+| hermgrid3d    | hermval2d     |               |
+
+## np.polynomial.hermite.e
+np.polynomial.hermite.e Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1        | Group 2        | Group 3        |
+| -------------- | -------------- | -------------- |
+| herme2poly     | hermeint       | hermeval3d     |
+| hermeadd       | hermeline      | hermevander    |
+| hermecompanion | hermemul       | hermevander2d  |
+| hermeder       | hermemulx      | hermevander3d  |
+| hermediv       | hermepow       | hermeweight    |
+| hermefit       | hermeroots     | poly2herme     |
+| hermefromroots | hermesub       |                |
+| hermegauss     | hermetrim      |                |
+| hermegrid2d    | hermeval       |                |
+| hermegrid3d    | hermeval2d     |                |
+
+## np.polynomial.laguerre
+np.polynomial.laguerre Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1      | Group 2      | Group 3      |
+| ------------ | ------------ | ------------ |
+| lag2poly     | lagint       | lagval3d     |
+| lagadd       | lagline      | lagvander    |
+| lagcompanion | lagmul       | lagvander2d  |
+| lagder       | lagmulx      | lagvander3d  |
+| lagdiv       | lagpow       | lagweight    |
+| lagfit       | lagroots     | poly2lag     |
+| lagfromroots | lagsub       |              |
+| laggauss     | lagtrim      |              |
+| laggrid2d    | lagval       |              |
+| laggrid3d    | lagval2d     |              |
+
+## np.polynomial.legendre
+np.polynomial.legendre Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1      | Group 2      | Group 3      |
+| ------------ | ------------ | ------------ |
+| leg2poly     | legint       | legval3d     |
+| legadd       | legline      | legvander    |
+| legcompanion | legmul       | legvander2d  |
+| legder       | legmulx      | legvander3d  |
+| legdiv       | legpow       | legweight    |
+| legfit       | legroots     | poly2leg     |
+| legfromroots | legsub       |              |
+| leggauss     | legtrim      |              |
+| leggrid2d    | legval       |              |
+| leggrid3d    | legval2d     |              |
+
+## np.polynomial.polynomial
+np.polynomial.polynomial Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+
+| Group 1          | Group 2          | Group 3          |
+| ---------------- | ---------------- | ---------------- |
+| polyadd          | polymul          | polyvander       |
+| polycompanion    | polymulx         | polyvander2d     |
+| polyder          | polypow          | polyvander3d     |
+| polydiv          | polyroots        |                  |
+| polyfit          | polysub          |                  |
+| polyfromroots    | polytrim         |                  |
+| polygrid2d       | polyval          |                  |
+| polygrid3d       | polyval2d        |                  |
+| polyint          | polyval3d        |                  |
+| polyline         | polyvalfromroots |                  |
+
+## np.random
+np.random Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+- [ ] Group 4
+- [ ] Group 5
+- [ ] Group 6
+
+| Group 1              | Group 2              | Group 3              | Group 4              | Group 5              |
+| -------------------- | -------------------- | -------------------- | -------------------- | -------------------- |
+| beta                 | geometric            | negative_binomial    | randn                | standard_cauchy      |
+| binomial             | get_state            | noncentral_chisquare | random               | standard_exponential |
+| bytes                | gumbel               | noncentral_f         | random_integers      | standard_gamma       |
+| chisquare            | hypergeometric       | normal               | random_sample        | standard_normal      |
+| choice               | laplace              | pareto               | ranf                 | standard_t           |
+| default_rng          | logistic             | permutation          | rayleigh             | triangular           |
+| dirichlet            | lognormal            | poisson              | sample               | uniform              |
+| exponential          | logseries            | power                | seed                 | vonmises             |
+| f                    | multinomial          | rand                 | set_state            | wald                 |
+| gamma                | multivariate_normal  | randint              | shuffle              | weibull              |
+
+| Group 6              |
+| -------------------- |
+| zipf                 |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+|                      |
+
+## np.rec
+np.rec Groups:
+- [ ] Group 1
+
+| Group 1        |
+| -------------- |
+| array          |
+| find_duplicate |
+| fromarrays     |
+| fromfile       |
+| fromrecords    |
+| fromstring     |
+|                |
+|                |
+|                |
+|                |
+
+## np.strings
+np.strings Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+- [ ] Group 4
+- [ ] Group 5
+
+| Group 1       | Group 2       | Group 3       | Group 4       | Group 5       |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| add           | greater       | istitle       | partition     | swapcase      |
+| capitalize    | greater_equal | isupper       | replace       | title         |
+| center        | index         | less          | rfind         | translate     |
+| count         | isalnum       | less_equal    | rindex        | upper         |
+| decode        | isalpha       | ljust         | rjust         | zfill         |
+| encode        | isdecimal     | lower         | rpartition    |               |
+| endswith      | isdigit       | lstrip        | rstrip        |               |
+| equal         | islower       | mod           | startswith    |               |
+| expandtabs    | isnumeric     | multiply      | str_len       |               |
+| find          | isspace       | not_equal     | strip         |               |
+
+## np
+np Groups:
+- [ ] Group 1
+- [ ] Group 2
+- [ ] Group 3
+- [ ] Group 4
+- [ ] Group 5
+- [ ] Group 6
+- [ ] Group 7
+- [ ] Group 8
+- [ ] Group 9
+- [ ] Group 10
+- [ ] Group 11
+- [ ] Group 12
+- [ ] Group 13
+- [ ] Group 14
+- [ ] Group 15
+- [ ] Group 16
+- [ ] Group 17
+- [ ] Group 18
+- [ ] Group 19
+- [ ] Group 20
+- [ ] Group 21
+- [ ] Group 22
+- [ ] Group 23
+- [ ] Group 24
+- [ ] Group 25
+- [ ] Group 26
+- [ ] Group 27
+- [ ] Group 28
+- [ ] Group 29
+- [ ] Group 30
+- [ ] Group 31
+- [ ] Group 32
+- [ ] Group 33
+- [ ] Group 34
+- [ ] Group 35
+- [ ] Group 36
+- [ ] Group 37
+- [ ] Group 38
+
+| Group 1                 | Group 2                 | Group 3                 | Group 4                 | Group 5                 |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| abs                     | any                     | arctan2                 | array_equiv             | asinh                   |
+| absolute                | append                  | arctanh                 | array_repr              | asmatrix                |
+| acos                    | apply_along_axis        | argmax                  | array_split             | astype                  |
+| acosh                   | apply_over_axes         | argmin                  | array_str               | atan                    |
+| add                     | arange                  | argsort                 | asanyarray              | atan2                   |
+| all                     | arccos                  | argwhere                | asarray                 | atanh                   |
+| allclose                | arccosh                 | around                  | asarray_chkfinite       | atleast_1d              |
+| amax                    | arcsin                  | array                   | ascontiguousarray       | atleast_2d              |
+| amin                    | arcsinh                 | array2string            | asfortranarray          | atleast_3d              |
+| angle                   | arctan                  | array_equal             | asin                    | average                 |
+
+| Group 6                 | Group 7                 | Group 8                 | Group 9                 | Group 10                |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| bartlett                | bitwise_right_shift     | can_cast                | conj                    | count_nonzero           |
+| base_repr               | bitwise_xor             | cbrt                    | conjugate               | cov                     |
+| binary_repr             | blackman                | ceil                    | convolve                | cross                   |
+| bincount                | block                   | choose                  | copy                    | cumprod                 |
+| bitwise_and             | bmat                    | clip                    | copysign                | cumsum                  |
+| bitwise_count           | broadcast_arrays        | column_stack            | copyto                  | datetime_as_string      |
+| bitwise_invert          | broadcast_shapes        | common_type             | corrcoef                | datetime_data           |
+| bitwise_left_shift      | broadcast_to            | compress                | correlate               | deg2rad                 |
+| bitwise_not             | busday_count            | concat                  | cos                     | degrees                 |
+| bitwise_or              | busday_offset           | concatenate             | cosh                    | delete                  |
+
+| Group 11                | Group 12                | Group 13                | Group 14                | Group 15                |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| diag                    | dstack                  | extract                 | floor                   | fromfile                |
+| diag_indices            | ediff1d                 | eye                     | floor_divide            | fromfunction            |
+| diag_indices_from       | einsum                  | fabs                    | fmax                    | fromiter                |
+| diagflat                | einsum_path             | fill_diagonal           | fmin                    | frompyfunc              |
+| diff                    | empty                   | fix                     | fmod                    | fromregex               |
+| digitize                | empty_like              | flatnonzero             | format_float_positional | full                    |
+| divide                  | equal                   | flip                    | format_float_scientific | full_like               |
+| divmod                  | exp                     | fliplr                  | frexp                   | gcd                     |
+| dot                     | exp2                    | flipud                  | from_dlpack             | genfromtxt              |
+| dsplit                  | expm1                   | float_power             | frombuffer              | geomspace               |
+
+| Group 16                | Group 17                | Group 18                | Group 19                | Group 20                |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| get_include             | heaviside               | imag                    | isclose                 | isneginf                |
+| get_printoptions        | histogram               | in1d                    | iscomplex               | isposinf                |
+| getbufsize              | histogram2d             | indices                 | iscomplexobj            | isreal                  |
+| geterr                  | histogram_bin_edges     | info                    | isdtype                 | isrealobj               |
+| geterrcall              | histogramdd             | inner                   | isfinite                | isscalar                |
+| gradient                | hsplit                  | insert                  | isfortran               | issubdtype              |
+| greater                 | hstack                  | interp                  | isin                    | iterable                |
+| greater_equal           | hypot                   | intersect1d             | isinf                   | ix_                     |
+| hamming                 | i0                      | invert                  | isnan                   | kaiser                  |
+| hanning                 | identity                | is_busday               | isnat                   | kron                    |
+
+| Group 21                | Group 22                | Group 23                | Group 24                | Group 25                |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| lcm                     | log10                   | mask_indices            | min_scalar_type         | nancumprod              |
+| ldexp                   | log1p                   | matmul                  | minimum                 | nancumsum               |
+| left_shift              | log2                    | matrix_transpose        | mintypecode             | nanmax                  |
+| less                    | logaddexp               | max                     | mod                     | nanmean                 |
+| less_equal              | logaddexp2              | maximum                 | modf                    | nanmedian               |
+| lexsort                 | logical_and             | may_share_memory        | moveaxis                | nanmin                  |
+| linspace                | logical_not             | mean                    | multiply                | nanpercentile           |
+| load                    | logical_or              | median                  | nan_to_num              | nanprod                 |
+| loadtxt                 | logical_xor             | meshgrid                | nanargmax               | nanquantile             |
+| log                     | logspace                | min                     | nanargmin               | nanstd                  |
+
+| Group 26                | Group 27                | Group 28                | Group 29                | Group 30                |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| nansum                  | outer                   | polydiv                 | prod                    | ravel_multi_index       |
+| nanvar                  | packbits                | polyfit                 | promote_types           | real                    |
+| ndim                    | pad                     | polyint                 | ptp                     | real_if_close           |
+| negative                | percentile              | polymul                 | put                     | reciprocal              |
+| nested_iters            | permute_dims            | polysub                 | put_along_axis          | remainder               |
+| nextafter               | piecewise               | polyval                 | putmask                 | repeat                  |
+| nonzero                 | place                   | positive                | quantile                | require                 |
+| not_equal               | poly                    | pow                     | rad2deg                 | reshape                 |
+| ones                    | polyadd                 | power                   | radians                 | resize                  |
+| ones_like               | polyder                 | printoptions            | ravel                   | result_type             |
+
+| Group 31                | Group 32                | Group 33                | Group 34                | Group 35                |
+| ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
+| right_shift             | savez_compressed        | shares_memory           | sort_complex            | swapaxes                |
+| rint                    | searchsorted            | show_config             | spacing                 | take                    |
+| roll                    | select                  | show_runtime            | split                   | take_along_axis         |
+| rollaxis                | set_printoptions        | sign                    | sqrt                    | tan                     |
+| roots                   | setbufsize              | signbit                 | square                  | tanh                    |
+| rot90                   | setdiff1d               | sin                     | squeeze                 | tensordot               |
+| round                   | seterr                  | sinc                    | stack                   | tile                    |
+| row_stack               | seterrcall              | sinh                    | std                     | trace                   |
+| savetxt                 | setxor1d                | size                    | subtract                | transpose               |
+| savez                   | shape                   | sort                    | sum                     | trapezoid               |
+
+| Group 36                | Group 37                | Group 38                |
+| ----------------------- | ----------------------- | ----------------------- |
+| tri                     | typename                | vander                  |
+| tril                    | union1d                 | var                     |
+| tril_indices            | unique                  | vdot                    |
+| tril_indices_from       | unique_all              | vecdot                  |
+| trim_zeros              | unique_counts           | vsplit                  |
+| triu                    | unique_inverse          | vstack                  |
+| triu_indices            | unique_values           | where                   |
+| triu_indices_from       | unpackbits              | zeros                   |
+| true_divide             | unravel_index           | zeros_like              |
+| trunc                   | unwrap                  |                         |

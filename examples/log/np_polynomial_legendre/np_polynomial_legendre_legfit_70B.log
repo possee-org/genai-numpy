@@ -1,0 +1,180 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the legfit function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.polynomial.legendre.legfit. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Least squares fit of Legendre series to data.
+
+    Return the coefficients of a Legendre series of degree `deg` that is the
+    least squares fit to the data values `y` given at points `x`. If `y` is
+    1-D the returned coefficients will also be 1-D. If `y` is 2-D multiple
+    fits are done, one for each column of `y`, and the resulting
+    coefficients are stored in the corresponding columns of a 2-D return.
+    The fitted polynomial(s) are in the form
+
+    .. math::  p(x) = c_0 + c_1 * L_1(x) + ... + c_n * L_n(x),
+
+    where `n` is `deg`.
+
+    Parameters
+    ----------
+    x : array_like, shape (M,)
+        x-coordinates of the M sample points ``(x[i], y[i])``.
+    y : array_like, shape (M,) or (M, K)
+        y-coordinates of the sample points. Several data sets of sample
+        points sharing the same x-coordinates can be fitted at once by
+        passing in a 2D-array that contains one dataset per column.
+    deg : int or 1-D array_like
+        Degree(s) of the fitting polynomials. If `deg` is a single integer
+        all terms up to and including the `deg`'th term are included in the
+        fit. For NumPy versions >= 1.11.0 a list of integers specifying the
+        degrees of the terms to include may be used instead.
+    rcond : float, optional
+        Relative condition number of the fit. Singular values smaller than
+        this relative to the largest singular value will be ignored. The
+        default value is len(x)*eps, where eps is the relative precision of
+        the float type, about 2e-16 in most cases.
+    full : bool, optional
+        Switch determining nature of return value. When it is False (the
+        default) just the coefficients are returned, when True diagnostic
+        information from the singular value decomposition is also returned.
+    w : array_like, shape (`M`,), optional
+        Weights. If not None, the weight ``w[i]`` applies to the unsquared
+        residual ``y[i] - y_hat[i]`` at ``x[i]``. Ideally the weights are
+        chosen so that the errors of the products ``w[i]*y[i]`` all have the
+        same variance.  When using inverse-variance weighting, use
+        ``w[i] = 1/sigma(y[i])``.  The default value is None.
+
+        .. versionadded:: 1.5.0
+
+    Returns
+    -------
+    coef : ndarray, shape (M,) or (M, K)
+        Legendre coefficients ordered from low to high. If `y` was
+        2-D, the coefficients for the data in column k of `y` are in
+        column `k`. If `deg` is specified as a list, coefficients for
+        terms not included in the fit are set equal to zero in the
+        returned `coef`.
+
+    [residuals, rank, singular_values, rcond] : list
+        These values are only returned if ``full == True``
+
+        - residuals -- sum of squared residuals of the least squares fit
+        - rank -- the numerical rank of the scaled Vandermonde matrix
+        - singular_values -- singular values of the scaled Vandermonde matrix
+        - rcond -- value of `rcond`.
+
+        For more details, see `numpy.linalg.lstsq`.
+
+    Warns
+    -----
+    RankWarning
+        The rank of the coefficient matrix in the least-squares fit is
+        deficient. The warning is only raised if ``full == False``.  The
+        warnings can be turned off by
+
+        >>> import warnings
+        >>> warnings.simplefilter('ignore', np.exceptions.RankWarning)
+
+    See Also
+    --------
+    numpy.polynomial.polynomial.polyfit
+    numpy.polynomial.chebyshev.chebfit
+    numpy.polynomial.laguerre.lagfit
+    numpy.polynomial.hermite.hermfit
+    numpy.polynomial.hermite_e.hermefit
+    legval : Evaluates a Legendre series.
+    legvander : Vandermonde matrix of Legendre series.
+    legweight : Legendre weight function (= 1).
+    numpy.linalg.lstsq : Computes a least-squares fit from the matrix.
+    scipy.interpolate.UnivariateSpline : Computes spline fits.
+
+    Notes
+    -----
+    The solution is the coefficients of the Legendre series `p` that
+    minimizes the sum of the weighted squared errors
+
+    .. math:: E = \sum_j w_j^2 * |y_j - p(x_j)|^2,
+
+    where :math:`w_j` are the weights. This problem is solved by setting up
+    as the (typically) overdetermined matrix equation
+
+    .. math:: V(x) * c = w * y,
+
+    where `V` is the weighted pseudo Vandermonde matrix of `x`, `c` are the
+    coefficients to be solved for, `w` are the weights, and `y` are the
+    observed values.  This equation is then solved using the singular value
+    decomposition of `V`.
+
+    If some of the singular values of `V` are so small that they are
+    neglected, then a `~exceptions.RankWarning` will be issued. This means that
+    the coefficient values may be poorly determined. Using a lower order fit
+    will usually get rid of the warning.  The `rcond` parameter can also be
+    set to a value smaller than its default, but the resulting fit may be
+    spurious and have large contributions from roundoff error.
+
+    Fits using Legendre series are usually better conditioned than fits
+    using power series, but much can depend on the distribution of the
+    sample points and the smoothness of the data. If the quality of the fit
+    is inadequate splines may be a good alternative.
+
+    References
+    ----------
+    .. [1] Wikipedia, "Curve fitting",
+           https://en.wikipedia.org/wiki/Curve_fitting
+
+    Examples
+    --------
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Examples
+    --------
+    Fit a Legendre series to a sampled cosine function:
+
+    >>> x = np.linspace(-1, 1, 100)
+    >>> y = np.cos(np.arccos(x))
+    >>> coef, stats = np.polynomial.legendre.legfit(x, y, 5, full=True)
+    >>> print(np.allclose(y, np.polynomial.legendre.legval(x, coef)))
+
+    Fit a Legendre series to multiple datasets:
+
+    >>> x = np.linspace(-1, 1, 100)
+    >>> y1 = np.cos(np.arccos(x))
+    >>> y2 = np.sin(np.arccos(x))
+    >>> coef = np.polynomial.legendre.legfit(x, np.array([y1, y2]).T, 5)
+    >>> print(coef.shape)
+
+    Fit a Legendre series with specified degrees:
+
+    >>> x = np.linspace(-1, 1, 100)
+    >>> y = np.cos(np.arccos(x))
+    >>> coef = np.polynomial.legendre.legfit(x, y, [0, 2, 4], rcond=1e-10)
+    >>> print(coef.shape)
+
+    Fit a Legendre series with weights:
+
+    >>> x = np.linspace(-1, 1, 100)
+    >>> y = np.cos(np.arccos(x))
+    >>> w = np.ones_like(x)
+    >>> coef = np.polynomial.legendre.legfit(x, y, 5, w=w)
+    >>> print(coef.shape)
+
+I decided to add these examples because they demonstrate different aspects of the `legfit` function, such as fitting a Legendre series to a sampled function, fitting multiple datasets, specifying degrees, and using weights. These examples can help users understand how to use the function in various scenarios.
+
+I stopped adding examples because the existing examples and the new ones I added cover the main use cases of the `legfit` function. The function's parameters and behavior are well-documented, and additional examples would likely be redundant or too specific.
+Response generated in 129.62 seconds, with a max_new_tokens = 2000.

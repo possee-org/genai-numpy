@@ -1,0 +1,127 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the legvander3d function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.polynomial.legendre.legvander3d. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+Pseudo-Vandermonde matrix of given degrees.
+
+    Returns the pseudo-Vandermonde matrix of degrees `deg` and sample
+    points ``(x, y, z)``. If `l`, `m`, `n` are the given degrees in `x`, `y`, `z`,
+    then The pseudo-Vandermonde matrix is defined by
+
+    .. math:: V[..., (m+1)(n+1)i + (n+1)j + k] = L_i(x)*L_j(y)*L_k(z),
+
+    where ``0 <= i <= l``, ``0 <= j <= m``, and ``0 <= j <= n``.  The leading
+    indices of `V` index the points ``(x, y, z)`` and the last index encodes
+    the degrees of the Legendre polynomials.
+
+    If ``V = legvander3d(x, y, z, [xdeg, ydeg, zdeg])``, then the columns
+    of `V` correspond to the elements of a 3-D coefficient array `c` of
+    shape (xdeg + 1, ydeg + 1, zdeg + 1) in the order
+
+    .. math:: c_{000}, c_{001}, c_{002},... , c_{010}, c_{011}, c_{012},...
+
+    and ``np.dot(V, c.flat)`` and ``legval3d(x, y, z, c)`` will be the
+    same up to roundoff. This equivalence is useful both for least squares
+    fitting and for the evaluation of a large number of 3-D Legendre
+    series of the same degrees and sample points.
+
+    Parameters
+    ----------
+    x, y, z : array_like
+        Arrays of point coordinates, all of the same shape. The dtypes will
+        be converted to either float64 or complex128 depending on whether
+        any of the elements are complex. Scalars are converted to 1-D
+        arrays.
+    deg : list of ints
+        List of maximum degrees of the form [x_deg, y_deg, z_deg].
+
+    Returns
+    -------
+    vander3d : ndarray
+        The shape of the returned matrix is ``x.shape + (order,)``, where
+        :math:`order = (deg[0]+1)*(deg[1]+1)*(deg[2]+1)`.  The dtype will
+        be the same as the converted `x`, `y`, and `z`.
+
+    See Also
+    --------
+    legvander, legvander3d, legval2d, legval3d
+
+    Notes
+    -----
+
+    .. versionadded:: 1.7.0
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Parameters
+    ----------
+    x, y, z : array_like
+        Arrays of point coordinates, all of the same shape. The dtypes will
+        be converted to either float64 or complex128 depending on whether
+        any of the elements are complex. Scalars are converted to 1-D
+        arrays.
+    deg : list of ints
+        List of maximum degrees of the form [x_deg, y_deg, z_deg].
+
+    Returns
+    -------
+    vander3d : ndarray
+        The shape of the returned matrix is ``x.shape + (order,)``, where
+        :math:`order = (deg[0]+1)*(deg[1]+1)*(deg[2]+1)`.  The dtype will
+        be the same as the converted `x`, `y`, and `z`.
+
+    Examples
+    --------
+    Evaluating a 3-D Legendre series:
+    >>> x, y, z = np.array([1]), np.array([2]), np.array([3])
+    >>> deg = [2, 1, 1]
+    >>> v = np.polynomial.legendre.legvander3d(x, y, z, deg)
+    >>> c = np.array([[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]])
+    >>> np.dot(v, c.flat)
+
+    Using the result to evaluate a 3-D Legendre series:
+    >>> x, y, z = np.array([1]), np.array([2]), np.array([3])
+    >>> deg = [2, 1, 1]
+    >>> c = np.array([[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]])
+    >>> np.polynomial.legendre.legval3d(x, y, z, c)
+
+    Evaluating a 3-D Legendre series on a 2-D grid:
+    >>> x, y = np.meshgrid(np.linspace(-1, 1, 3), np.linspace(-1, 1, 3))
+    >>> z = np.zeros_like(x)
+    >>> deg = [2, 2, 0]
+    >>> v = np.polynomial.legendre.legvander3d(x.ravel(), y.ravel(), z.ravel(), deg)
+    >>> c = np.array([[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]])
+    >>> np.dot(v, c.flat).reshape(x.shape)
+
+    Evaluating a 3-D Legendre series on a 3-D grid:
+    >>> x, y, z = np.ogrid[-1:1:3j, -1:1:3j, -1:1:3j]
+    >>> deg = [2, 2, 2]
+    >>> v = np.polynomial.legendre.legvander3d(x, y, z, deg)
+    >>> c = np.array([[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]])
+    >>> np.dot(v, c.flat)
+
+    Evaluating a 3-D Legendre series with complex coefficients:
+    >>> x, y, z = np.array([1]), np.array([2]), np.array([3])
+    >>> deg = [2, 1, 1]
+    >>> c = np.array([[[[1 + 2j, 2 + 3j], [3 + 4j, 4 + 5j]], [[5 + 6j, 6 + 7j], [7 + 8j, 8 + 9j]]]])
+    >>> v = np.polynomial.legendre.legvander3d(x, y, z, deg)
+    >>> np.dot(v, c.flat)
+
+I decided to add these examples because they demonstrate different use cases of the `legvander3d` function, such as evaluating a 3-D Legendre series on a 1-D, 2-D, or 3-D grid, and with complex coefficients. These examples help to illustrate the flexibility and applicability of the function.
+
+I stopped adding examples because the existing examples, along with the additional ones I added, provide a comprehensive understanding of how to use the `legvander3d` function in various scenarios.
+Response generated in 243.56 seconds, with a max_new_tokens = 2000.

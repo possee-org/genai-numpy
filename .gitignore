@@ -63,8 +63,9 @@ GTAGS
 
 # Python files #
 ################
-# task lists
-tracking-lists/log
+# These are useful for keeping a list of NumPy callables, in an easy to get place.
+# Don't ignore the tracking-lists/log files.
+# tools/tracking-lists/log
 
 # OS generated files #
 ######################
