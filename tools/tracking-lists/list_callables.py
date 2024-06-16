@@ -128,7 +128,5 @@ def main(search_version=1):
                         log.write(item + '\n')
                 module_log_file.write(module_name + '\n')
 
-
-
 if __name__ == '__main__':
     main(search_version=1)

@@ -1,0 +1,101 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the chebvander2d function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.polynomial.chebyshev.chebvander2d. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+Pseudo-Vandermonde matrix of given degrees.
+
+    Returns the pseudo-Vandermonde matrix of degrees `deg` and sample
+    points ``(x, y)``. The pseudo-Vandermonde matrix is defined by
+
+    .. math:: V[..., (deg[1] + 1)*i + j] = T_i(x) * T_j(y),
+
+    where ``0 <= i <= deg[0]`` and ``0 <= j <= deg[1]``. The leading indices of
+    `V` index the points ``(x, y)`` and the last index encodes the degrees of
+    the Chebyshev polynomials.
+
+    If ``V = chebvander2d(x, y, [xdeg, ydeg])``, then the columns of `V`
+    correspond to the elements of a 2-D coefficient array `c` of shape
+    (xdeg + 1, ydeg + 1) in the order
+
+    .. math:: c_{00}, c_{01}, c_{02} ... , c_{10}, c_{11}, c_{12} ...
+
+    and ``np.dot(V, c.flat)`` and ``chebval2d(x, y, c)`` will be the same
+    up to roundoff. This equivalence is useful both for least squares
+    fitting and for the evaluation of a large number of 2-D Chebyshev
+    series of the same degrees and sample points.
+
+    Parameters
+    ----------
+    x, y : array_like
+        Arrays of point coordinates, all of the same shape. The dtypes
+        will be converted to either float64 or complex128 depending on
+        whether any of the elements are complex. Scalars are converted to
+        1-D arrays.
+    deg : list of ints
+        List of maximum degrees of the form [x_deg, y_deg].
+
+    Returns
+    -------
+    vander2d : ndarray
+        The shape of the returned matrix is ``x.shape + (order,)``, where
+        :math:`order = (deg[0]+1)*(deg[1]+1)`.  The dtype will be the same
+        as the converted `x` and `y`.
+
+    See Also
+    --------
+    chebvander, chebvander3d, chebval2d, chebval3d
+
+    Notes
+    -----
+
+    .. versionadded:: 1.7.0
+
+    
+assistant
+
+Here is the updated docstring with additional examples:
+
+    Examples
+    --------
+    Evaluate a 2-D Chebyshev series at points (x, y):
+    
+    >>> x = np.array([0.5, 1.5, 2.5])
+    >>> y = np.array([0.5, 1.5, 2.5])
+    >>> deg = [2, 2]
+    >>> vander = np.polynomial.chebyshev.chebvander2d(x, y, deg)
+    >>> c = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    >>> np.dot(vander, c.flat)
+
+    Evaluate a 2-D Chebyshev series at points (x, y) with different degrees:
+    
+    >>> x = np.array([0.5, 1.5, 2.5])
+    >>> y = np.array([0.5, 1.5, 2.5])
+    >>> deg = [1, 2]
+    >>> vander = np.polynomial.chebyshev.chebvander2d(x, y, deg)
+    >>> c = np.array([[1, 2], [3, 4], [5, 6]])
+    >>> np.dot(vander, c.flat)
+
+    Evaluate a 2-D Chebyshev series at points (x, y) with complex coefficients:
+    
+    >>> x = np.array([0.5, 1.5, 2.5])
+    >>> y = np.array([0.5, 1.5, 2.5])
+    >>> deg = [2, 2]
+    >>> vander = np.polynomial.chebyshev.chebvander2d(x, y, deg)
+    >>> c = np.array([[1 + 1j, 2 + 2j, 3 + 3j], [4 + 4j, 5 + 5j, 6 + 6j], [7 + 7j, 8 + 8j, 9 + 9j]])
+    >>> np.dot(vander, c.flat)
+
+I decided to add these examples because they demonstrate how to use the `chebvander2d` function to evaluate a 2-D Chebyshev series at points (x, y) with different degrees and coefficients. The first example shows the basic usage of the function, the second example shows how to use the function with different degrees, and the third example shows how to use the function with complex coefficients.
+
+I stopped adding examples because the existing examples and the additional examples I provided cover the main use cases of the `chebvander2d` function. The function is relatively simple, and the examples demonstrate its usage in different scenarios. Adding more examples would not provide significant additional value.
+Response generated in 159.42 seconds, with a max_new_tokens = 2000.

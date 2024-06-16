@@ -1,0 +1,117 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the polyroots function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.polynomial.polynomial.polyroots. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Compute the roots of a polynomial.
+
+    Return the roots (a.k.a. "zeros") of the polynomial
+
+    .. math:: p(x) = \sum_i c[i] * x^i.
+
+    Parameters
+    ----------
+    c : 1-D array_like
+        1-D array of polynomial coefficients.
+
+    Returns
+    -------
+    out : ndarray
+        Array of the roots of the polynomial. If all the roots are real,
+        then `out` is also real, otherwise it is complex.
+
+    See Also
+    --------
+    numpy.polynomial.chebyshev.chebroots
+    numpy.polynomial.legendre.legroots
+    numpy.polynomial.laguerre.lagroots
+    numpy.polynomial.hermite.hermroots
+    numpy.polynomial.hermite_e.hermeroots
+
+    Notes
+    -----
+    The root estimates are obtained as the eigenvalues of the companion
+    matrix, Roots far from the origin of the complex plane may have large
+    errors due to the numerical instability of the power series for such
+    values. Roots with multiplicity greater than 1 will also show larger
+    errors as the value of the series near such points is relatively
+    insensitive to errors in the roots. Isolated roots near the origin can
+    be improved by a few iterations of Newton's method.
+
+    Examples
+    --------
+    >>> import numpy.polynomial.polynomial as poly
+    >>> poly.polyroots(poly.polyfromroots((-1,0,1)))
+    array([-1.,  0.,  1.])
+    >>> poly.polyroots(poly.polyfromroots((-1,0,1))).dtype
+    dtype('float64')
+    >>> j = complex(0,1)
+    >>> poly.polyroots(poly.polyfromroots((-j,0,j)))
+    array([  0.00000000e+00+0.j,   0.00000000e+00+1.j,   2.77555756e-17-1.j])  # may vary
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Compute the roots of a polynomial.
+
+    Return the roots (a.k.a. "zeros") of the polynomial
+
+    .. math:: p(x) = \sum_i c[i] * x^i.
+
+    Parameters
+    ----------
+    c : 1-D array_like
+        1-D array of polynomial coefficients.
+
+    Returns
+    -------
+    out : ndarray
+        Array of the roots of the polynomial. If all the roots are real,
+        then `out` is also real, otherwise it is complex.
+
+    See Also
+    --------
+    numpy.polynomial.chebyshev.chebroots
+    numpy.polynomial.legendre.legroots
+    numpy.polynomial.laguerre.lagroots
+    numpy.polynomial.hermite.hermroots
+    numpy.polynomial.hermite_e.hermeroots
+
+    Notes
+    -----
+    The root estimates are obtained as the eigenvalues of the companion
+    matrix, Roots far from the origin of the complex plane may have large
+    errors due to the numerical instability of the power series for such
+    values. Roots with multiplicity greater than 1 will also show larger
+    errors as the value of the series near such points is relatively
+    insensitive to errors in the roots. Isolated roots near the origin can
+    be improved by a few iterations of Newton's method.
+
+    Examples
+    --------
+    >>> import numpy.polynomial.polynomial as poly
+    >>> poly.polyroots(poly.polyfromroots((-1,0,1)))
+    array([-1.,  0.,  1.])
+    >>> poly.polyroots(poly.polyfromroots((-1,0,1))).dtype
+    dtype('float64')
+    >>> j = complex(0,1)
+    >>> poly.polyroots(poly.polyfromroots((-j,0,j)))
+    array([  0.00000000e+00+0.j,   0.00000000e+00+1.j,   2.77555756e-17-1.j])  # may vary
+    Roots of a polynomial with real coefficients:
+    >>> coeffs = np.array([1, -2, 1])
+    >>> np.polynomial.polynomial.polyroots(coeffs)
+    array([1., 1.])
+Response generated in 123.73 seconds, with a max_new_tokens = 2000.

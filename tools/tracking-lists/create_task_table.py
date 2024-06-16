@@ -61,14 +61,14 @@ def create_task_table(task_list, num_columns, group_name = "Groups Names"):
 
     return f"{group_names_output}\n\n{table}"
 
-# Example usage
-task_list = [
-    "Task 1", "Task 2", "Task 3"
-]
+# # Example usage
+# task_list = [
+#     "Task 1", "Task 2", "Task 3"
+# ]
 
-# num_columns = 3
-# table_markdown = create_task_table(task_list, num_columns)
-# print(table_markdown)
+# # num_columns = 3
+# # table_markdown = create_task_table(task_list, num_columns)
+# # print(table_markdown)
 
 def read_log_file(file_path):
     with open(file_path, 'r') as file:
@@ -108,7 +108,7 @@ def main(table_file = 'full_table.txt'):
             task_list = log_lines
 
             num_columns = 5
-            table_markdown = create_task_table(task_list, num_columns, log_file.stem.replace('_', '.') + "Groups")
+            table_markdown = create_task_table(task_list, num_columns, log_file.stem.replace('_', '.') + " Groups")
             table.write(table_markdown + '\n')
 
     print(f"Task Tables created in {table_file}")
