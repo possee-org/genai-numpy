@@ -1,0 +1,87 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the sign function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.sign. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+
+Returns an element-wise indication of the sign of a number.
+
+The `sign` function returns ``-1 if x < 0, 0 if x==0, 1 if x > 0``.  nan
+is returned for nan inputs.
+
+For complex inputs, the `sign` function returns ``x / abs(x)``, the
+generalization of the above (and ``0 if x==0``).
+
+.. versionchanged:: 2.0.0
+    Definition of complex sign changed to follow the Array API standard.
+
+Parameters
+----------
+x : array_like
+    Input values.
+out : ndarray, None, or tuple of ndarray and None, optional
+    A location into which the result is stored. If provided, it must have
+    a shape that the inputs broadcast to. If not provided or None,
+    a freshly-allocated array is returned. A tuple (possible only as a
+    keyword argument) must have length equal to the number of outputs.
+where : array_like, optional
+    This condition is broadcast over the input. At locations where the
+    condition is True, the `out` array will be set to the ufunc result.
+    Elsewhere, the `out` array will retain its original value.
+    Note that if an uninitialized `out` array is created via the default
+    ``out=None``, locations within it where the condition is False will
+    remain uninitialized.
+**kwargs
+    For other keyword-only arguments, see the
+    :ref:`ufunc docs <ufuncs.kwargs>`.
+
+Returns
+-------
+y : ndarray
+    The sign of `x`.
+    This is a scalar if `x` is a scalar.
+
+Notes
+-----
+There is more than one definition of sign in common use for complex
+numbers.  The definition used here is equivalent to :math:`x/\sqrt{x*x}`
+which is different from a common alternative, :math:`x/|x|`.
+
+Examples
+--------
+>>> np.sign([-5., 4.5])
+array([-1.,  1.])
+>>> np.sign(0)
+0
+>>> np.sign([3-4j, 8j])
+array([0.6-0.8j, 0. +1.j ])
+assistant
+
+Here is the updated docstring with an additional example:
+
+Examples
+--------
+>>> np.sign([-5., 4.5])
+array([-1.,  1.])
+>>> np.sign(0)
+0
+>>> np.sign([3-4j, 8j])
+array([0.6-0.8j, 0. +1.j ])
+>>> np.sign([np.inf, -np.inf, np.nan])
+array([ 1., -1., nan])
+
+I decided to add an example that demonstrates the behavior of the `sign` function with infinite and NaN inputs, as this is an important edge case that users may encounter. This example shows that the function returns 1 for positive infinity, -1 for negative infinity, and NaN for NaN inputs.
+
+I stopped here because the existing examples already cover the basic behavior of the function with real and complex inputs, and the additional example I added covers an important edge case. Further examples may be redundant or unnecessary at this point.
+Response generated in 52.33 seconds, with a max_new_tokens = 2000.

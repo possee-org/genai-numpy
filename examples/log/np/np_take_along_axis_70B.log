@@ -1,0 +1,240 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the take_along_axis function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.take_along_axis. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Take values from the input array by matching 1d index and data slices.
+
+    This iterates over matching 1d slices oriented along the specified axis in
+    the index and data arrays, and uses the former to look up values in the
+    latter. These slices can be different lengths.
+
+    Functions returning an index along an axis, like `argsort` and
+    `argpartition`, produce suitable indices for this function.
+
+    .. versionadded:: 1.15.0
+
+    Parameters
+    ----------
+    arr : ndarray (Ni..., M, Nk...)
+        Source array
+    indices : ndarray (Ni..., J, Nk...)
+        Indices to take along each 1d slice of `arr`. This must match the
+        dimension of arr, but dimensions Ni and Nj only need to broadcast
+        against `arr`.
+    axis : int
+        The axis to take 1d slices along. If axis is None, the input array is
+        treated as if it had first been flattened to 1d, for consistency with
+        `sort` and `argsort`.
+
+    Returns
+    -------
+    out: ndarray (Ni..., J, Nk...)
+        The indexed result.
+
+    Notes
+    -----
+    This is equivalent to (but faster than) the following use of `ndindex` and
+    `s_`, which sets each of ``ii`` and ``kk`` to a tuple of indices::
+
+        Ni, M, Nk = a.shape[:axis], a.shape[axis], a.shape[axis+1:]
+        J = indices.shape[axis]  # Need not equal M
+        out = np.empty(Ni + (J,) + Nk)
+
+        for ii in ndindex(Ni):
+            for kk in ndindex(Nk):
+                a_1d       = a      [ii + s_[:,] + kk]
+                indices_1d = indices[ii + s_[:,] + kk]
+                out_1d     = out    [ii + s_[:,] + kk]
+                for j in range(J):
+                    out_1d[j] = a_1d[indices_1d[j]]
+
+    Equivalently, eliminating the inner loop, the last two lines would be::
+
+                out_1d[:] = a_1d[indices_1d]
+
+    See Also
+    --------
+    take : Take along an axis, using the same indices for every 1d slice
+    put_along_axis :
+        Put values into the destination array by matching 1d index and data slices
+
+    Examples
+    --------
+
+    For this sample array
+
+    >>> a = np.array([[10, 30, 20], [60, 40, 50]])
+
+    We can sort either by using sort directly, or argsort and this function
+
+    >>> np.sort(a, axis=1)
+    array([[10, 20, 30],
+           [40, 50, 60]])
+    >>> ai = np.argsort(a, axis=1)
+    >>> ai
+    array([[0, 2, 1],
+           [1, 2, 0]])
+    >>> np.take_along_axis(a, ai, axis=1)
+    array([[10, 20, 30],
+           [40, 50, 60]])
+
+    The same works for max and min, if you maintain the trivial dimension
+    with ``keepdims``:
+
+    >>> np.max(a, axis=1, keepdims=True)
+    array([[30],
+           [60]])
+    >>> ai = np.argmax(a, axis=1, keepdims=True)
+    >>> ai
+    array([[1],
+           [0]])
+    >>> np.take_along_axis(a, ai, axis=1)
+    array([[30],
+           [60]])
+
+    If we want to get the max and min at the same time, we can stack the
+    indices first
+
+    >>> ai_min = np.argmin(a, axis=1, keepdims=True)
+    >>> ai_max = np.argmax(a, axis=1, keepdims=True)
+    >>> ai = np.concatenate([ai_min, ai_max], axis=1)
+    >>> ai
+    array([[0, 1],
+           [1, 0]])
+    >>> np.take_along_axis(a, ai, axis=1)
+    array([[10, 30],
+           [40, 60]])
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Take values from the input array by matching 1d index and data slices.
+
+    This iterates over matching 1d slices oriented along the specified axis in
+    the index and data arrays, and uses the former to look up values in the
+    latter. These slices can be different lengths.
+
+    Functions returning an index along an axis, like `argsort` and
+    `argpartition`, produce suitable indices for this function.
+
+    .. versionadded:: 1.15.0
+
+    Parameters
+    ----------
+    arr : ndarray (Ni..., M, Nk...)
+        Source array
+    indices : ndarray (Ni..., J, Nk...)
+        Indices to take along each 1d slice of `arr`. This must match the
+        dimension of arr, but dimensions Ni and Nj only need to broadcast
+        against `arr`.
+    axis : int
+        The axis to take 1d slices along. If axis is None, the input array is
+        treated as if it had first been flattened to 1d, for consistency with
+        `sort` and `argsort`.
+
+    Returns
+    -------
+    out: ndarray (Ni..., J, Nk...)
+        The indexed result.
+
+    Notes
+    -----
+    This is equivalent to (but faster than) the following use of `ndindex` and
+    `s_`, which sets each of ``ii`` and ``kk`` to a tuple of indices::
+
+        Ni, M, Nk = a.shape[:axis], a.shape[axis], a.shape[axis+1:]
+        J = indices.shape[axis]  # Need not equal M
+        out = np.empty(Ni + (J,) + Nk)
+
+        for ii in ndindex(Ni):
+            for kk in ndindex(Nk):
+                a_1d       = a      [ii + s_[:,] + kk]
+                indices_1d = indices[ii + s_[:,] + kk]
+                out_1d     = out    [ii + s_[:,] + kk]
+                for j in range(J):
+                    out_1d[j] = a_1d[indices_1d[j]]
+
+    Equivalently, eliminating the inner loop, the last two lines would be::
+
+                out_1d[:] = a_1d[indices_1d]
+
+    See Also
+    --------
+    take : Take along an axis, using the same indices for every 1d slice
+    put_along_axis :
+        Put values into the destination array by matching 1d index and data slices
+
+    Examples
+    --------
+    For this sample array
+
+    >>> a = np.array([[10, 30, 20], [60, 40, 50]])
+
+    We can sort either by using sort directly, or argsort and this function
+
+    >>> np.sort(a, axis=1)
+    array([[10, 20, 30],
+           [40, 50, 60]])
+    >>> ai = np.argsort(a, axis=1)
+    >>> ai
+    array([[0, 2, 1],
+           [1, 2, 0]])
+    >>> np.take_along_axis(a, ai, axis=1)
+    array([[10, 20, 30],
+           [40, 50, 60]])
+
+    The same works for max and min, if you maintain the trivial dimension
+    with ``keepdims``:
+
+    >>> np.max(a, axis=1, keepdims=True)
+    array([[30],
+           [60]])
+    >>> ai = np.argmax(a, axis=1, keepdims=True)
+    >>> ai
+    array([[1],
+           [0]])
+    >>> np.take_along_axis(a, ai, axis=1)
+    array([[30],
+           [60]])
+
+    If we want to get the max and min at the same time, we can stack the
+    indices first
+
+    >>> ai_min = np.argmin(a, axis=1, keepdims=True)
+    >>> ai_max = np.argmax(a, axis=1, keepdims=True)
+    >>> ai = np.concatenate([ai_min, ai_max], axis=1)
+    >>> ai
+    array([[0, 1],
+           [1, 0]])
+    >>> np.take_along_axis(a, ai, axis=1)
+    array([[10, 30],
+           [40, 60]])
+
+    Using take_along_axis with a 3D array:
+
+    >>> a = np.array([[[10, 30, 20], [60, 40, 50]], [[70, 80, 90], [100, 110, 120]]])
+    >>> ai = np.argsort(a, axis=2)
+    >>> ai
+    array([[[0, 2, 1],
+             [1, 2, 0]],
+            [[0, 2, 1],
+             [1, 2, 0]]])
+    >>> np.take_along_axis(a, ai, axis=2)
+    array([[[10, 20, 30],
+             [40, 50, 60]],
+            [[70, 90, 80],
+             [100, 120, 110]]])
+Response generated in 292.92 seconds, with a max_new_tokens = 2000.

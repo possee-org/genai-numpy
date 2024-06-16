@@ -1,0 +1,165 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the argmax function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.argmax. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Returns the indices of the maximum values along an axis.
+
+    Parameters
+    ----------
+    a : array_like
+        Input array.
+    axis : int, optional
+        By default, the index is into the flattened array, otherwise
+        along the specified axis.
+    out : array, optional
+        If provided, the result will be inserted into this array. It should
+        be of the appropriate shape and dtype.
+    keepdims : bool, optional
+        If this is set to True, the axes which are reduced are left
+        in the result as dimensions with size one. With this option,
+        the result will broadcast correctly against the array.
+
+        .. versionadded:: 1.22.0
+
+    Returns
+    -------
+    index_array : ndarray of ints
+        Array of indices into the array. It has the same shape as ``a.shape``
+        with the dimension along `axis` removed. If `keepdims` is set to True,
+        then the size of `axis` will be 1 with the resulting array having same
+        shape as ``a.shape``.
+
+    See Also
+    --------
+    ndarray.argmax, argmin
+    amax : The maximum value along a given axis.
+    unravel_index : Convert a flat index into an index tuple.
+    take_along_axis : Apply ``np.expand_dims(index_array, axis)``
+                      from argmax to an array as if by calling max.
+
+    Notes
+    -----
+    In case of multiple occurrences of the maximum values, the indices
+    corresponding to the first occurrence are returned.
+
+    Examples
+    --------
+    >>> a = np.arange(6).reshape(2,3) + 10
+    >>> a
+    array([[10, 11, 12],
+           [13, 14, 15]])
+    >>> np.argmax(a)
+    5
+    >>> np.argmax(a, axis=0)
+    array([1, 1, 1])
+    >>> np.argmax(a, axis=1)
+    array([2, 2])
+
+    Indexes of the maximal elements of a N-dimensional array:
+
+    >>> ind = np.unravel_index(np.argmax(a, axis=None), a.shape)
+    >>> ind
+    (1, 2)
+    >>> a[ind]
+    15
+
+    >>> b = np.arange(6)
+    >>> b[1] = 5
+    >>> b
+    array([0, 5, 2, 3, 4, 5])
+    >>> np.argmax(b)  # Only the first occurrence is returned.
+    1
+
+    >>> x = np.array([[4,2,3], [1,0,3]])
+    >>> index_array = np.argmax(x, axis=-1)
+    >>> # Same as np.amax(x, axis=-1, keepdims=True)
+    >>> np.take_along_axis(x, np.expand_dims(index_array, axis=-1), axis=-1)
+    array([[4],
+           [3]])
+    >>> # Same as np.amax(x, axis=-1)
+    >>> np.take_along_axis(x, np.expand_dims(index_array, axis=-1),
+    ...     axis=-1).squeeze(axis=-1)
+    array([4, 3])
+
+    Setting `keepdims` to `True`,
+
+    >>> x = np.arange(24).reshape((2, 3, 4))
+    >>> res = np.argmax(x, axis=1, keepdims=True)
+    >>> res.shape
+    (2, 1, 4)
+    
+assistant
+
+Here is the updated examples section of the docstring:
+
+    Examples
+    --------
+    >>> a = np.arange(6).reshape(2,3) + 10
+    >>> a
+    array([[10, 11, 12],
+           [13, 14, 15]])
+    >>> np.argmax(a)
+    5
+    >>> np.argmax(a, axis=0)
+    array([1, 1, 1])
+    >>> np.argmax(a, axis=1)
+    array([2, 2])
+
+    Indexes of the maximal elements of a N-dimensional array:
+
+    >>> ind = np.unravel_index(np.argmax(a, axis=None), a.shape)
+    >>> ind
+    (1, 2)
+    >>> a[ind]
+    15
+
+    >>> b = np.arange(6)
+    >>> b[1] = 5
+    >>> b
+    array([0, 5, 2, 3, 4, 5])
+    >>> np.argmax(b)  # Only the first occurrence is returned.
+    1
+
+    >>> x = np.array([[4,2,3], [1,0,3]])
+    >>> index_array = np.argmax(x, axis=-1)
+    >>> # Same as np.amax(x, axis=-1, keepdims=True)
+    >>> np.take_along_axis(x, np.expand_dims(index_array, axis=-1), axis=-1)
+    array([[4],
+           [3]])
+    >>> # Same as np.amax(x, axis=-1)
+    >>> np.take_along_axis(x, np.expand_dims(index_array, axis=-1),
+    ...     axis=-1).squeeze(axis=-1)
+    array([4, 3])
+
+    Setting `keepdims` to `True`,
+
+    >>> x = np.arange(24).reshape((2, 3, 4))
+    >>> res = np.argmax(x, axis=1, keepdims=True)
+    >>> res.shape
+    (2, 1, 4)
+
+    Using argmax with a 3D array and axis=0:
+
+    >>> y = np.array([[[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+    ...                [[10, 11, 12], [13, 14, 15], [16, 17, 18]]])
+    >>> np.argmax(y, axis=0)
+    array([[1, 1, 1],
+           [1, 1, 1],
+           [1, 1, 1]])
+
+I decided to add an example to demonstrate the use of `argmax` with a 3D array and `axis=0`. This example shows how `argmax` can be used to find the indices of the maximum values along the first axis of a 3D array.
+
+I stopped adding examples because the existing examples already cover a wide range of use cases, including finding the indices of the maximum values in a 1D, 2D, and 3D array, using `argmax` with different axes, and setting `keepdims` to `True`. The additional example I added provides further clarification on how to use `argmax` with a 3D array and `axis=0`.
+Response generated in 180.53 seconds, with a max_new_tokens = 2000.

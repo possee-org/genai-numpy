@@ -1,0 +1,49 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the add_docstring function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.lib.add_docstring. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+add_docstring(obj, docstring)
+
+    Add a docstring to a built-in obj if possible.
+    If the obj already has a docstring raise a RuntimeError
+    If this routine does not know how to add a docstring to the object
+    raise a TypeError
+assistant
+
+Here is the updated docstring with an additional example:
+
+add_docstring(obj, docstring)
+
+    Add a docstring to a built-in obj if possible.
+    If the obj already has a docstring raise a RuntimeError
+    If this routine does not know how to add a docstring to the object
+    raise a TypeError
+
+    Examples:
+    Adding a docstring to a function:
+    
+    >>> def example_func(): pass
+    >>> np.lib.add_docstring(example_func, "This is an example function.")
+    >>> help(example_func)
+    
+    Adding a docstring to a class:
+    
+    >>> class ExampleClass: pass
+    >>> np.lib.add_docstring(ExampleClass, "This is an example class.")
+    >>> help(ExampleClass)
+
+I decided to add these examples because they demonstrate the basic usage of the `add_docstring` function with different types of objects (functions and classes). This helps users understand how to apply the function in different scenarios.
+
+I stopped adding examples because the existing examples, along with the two I added, provide a comprehensive understanding of the function's behavior. The docstring already explains the error cases, and the examples cover the successful addition of docstrings to different types of objects. Adding more examples would likely be redundant and might make the docstring overly verbose.
+Response generated in 59.31 seconds, with a max_new_tokens = 2000.

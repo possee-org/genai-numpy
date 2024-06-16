@@ -1,0 +1,289 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the meshgrid function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.meshgrid. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Return a tuple of coordinate matrices from coordinate vectors.
+
+    Make N-D coordinate arrays for vectorized evaluations of
+    N-D scalar/vector fields over N-D grids, given
+    one-dimensional coordinate arrays x1, x2,..., xn.
+
+    .. versionchanged:: 1.9
+       1-D and 0-D cases are allowed.
+
+    Parameters
+    ----------
+    x1, x2,..., xn : array_like
+        1-D arrays representing the coordinates of a grid.
+    indexing : {'xy', 'ij'}, optional
+        Cartesian ('xy', default) or matrix ('ij') indexing of output.
+        See Notes for more details.
+
+        .. versionadded:: 1.7.0
+    sparse : bool, optional
+        If True the shape of the returned coordinate array for dimension *i*
+        is reduced from ``(N1, ..., Ni, ... Nn)`` to
+        ``(1, ..., 1, Ni, 1, ..., 1)``.  These sparse coordinate grids are
+        intended to be use with :ref:`basics.broadcasting`.  When all
+        coordinates are used in an expression, broadcasting still leads to a
+        fully-dimensonal result array.
+
+        Default is False.
+
+        .. versionadded:: 1.7.0
+    copy : bool, optional
+        If False, a view into the original arrays are returned in order to
+        conserve memory.  Default is True.  Please note that
+        ``sparse=False, copy=False`` will likely return non-contiguous
+        arrays.  Furthermore, more than one element of a broadcast array
+        may refer to a single memory location.  If you need to write to the
+        arrays, make copies first.
+
+        .. versionadded:: 1.7.0
+
+    Returns
+    -------
+    X1, X2,..., XN : tuple of ndarrays
+        For vectors `x1`, `x2`,..., `xn` with lengths ``Ni=len(xi)``,
+        returns ``(N1, N2, N3,..., Nn)`` shaped arrays if indexing='ij'
+        or ``(N2, N1, N3,..., Nn)`` shaped arrays if indexing='xy'
+        with the elements of `xi` repeated to fill the matrix along
+        the first dimension for `x1`, the second for `x2` and so on.
+
+    Notes
+    -----
+    This function supports both indexing conventions through the indexing
+    keyword argument.  Giving the string 'ij' returns a meshgrid with
+    matrix indexing, while 'xy' returns a meshgrid with Cartesian indexing.
+    In the 2-D case with inputs of length M and N, the outputs are of shape
+    (N, M) for 'xy' indexing and (M, N) for 'ij' indexing.  In the 3-D case
+    with inputs of length M, N and P, outputs are of shape (N, M, P) for
+    'xy' indexing and (M, N, P) for 'ij' indexing.  The difference is
+    illustrated by the following code snippet::
+
+        xv, yv = np.meshgrid(x, y, indexing='ij')
+        for i in range(nx):
+            for j in range(ny):
+                # treat xv[i,j], yv[i,j]
+
+        xv, yv = np.meshgrid(x, y, indexing='xy')
+        for i in range(nx):
+            for j in range(ny):
+                # treat xv[j,i], yv[j,i]
+
+    In the 1-D and 0-D case, the indexing and sparse keywords have no effect.
+
+    See Also
+    --------
+    mgrid : Construct a multi-dimensional "meshgrid" using indexing notation.
+    ogrid : Construct an open multi-dimensional "meshgrid" using indexing
+            notation.
+    :ref:`how-to-index`
+
+    Examples
+    --------
+    >>> nx, ny = (3, 2)
+    >>> x = np.linspace(0, 1, nx)
+    >>> y = np.linspace(0, 1, ny)
+    >>> xv, yv = np.meshgrid(x, y)
+    >>> xv
+    array([[0. , 0.5, 1. ],
+           [0. , 0.5, 1. ]])
+    >>> yv
+    array([[0.,  0.,  0.],
+           [1.,  1.,  1.]])
+
+    The result of `meshgrid` is a coordinate grid:
+
+    >>> import matplotlib.pyplot as plt
+    >>> plt.plot(xv, yv, marker='o', color='k', linestyle='none')
+    >>> plt.show()
+
+    You can create sparse output arrays to save memory and computation time.
+
+    >>> xv, yv = np.meshgrid(x, y, sparse=True)
+    >>> xv
+    array([[0. ,  0.5,  1. ]])
+    >>> yv
+    array([[0.],
+           [1.]])
+
+    `meshgrid` is very useful to evaluate functions on a grid. If the
+    function depends on all coordinates, both dense and sparse outputs can be
+    used.
+
+    >>> x = np.linspace(-5, 5, 101)
+    >>> y = np.linspace(-5, 5, 101)
+    >>> # full coordinate arrays
+    >>> xx, yy = np.meshgrid(x, y)
+    >>> zz = np.sqrt(xx**2 + yy**2)
+    >>> xx.shape, yy.shape, zz.shape
+    ((101, 101), (101, 101), (101, 101))
+    >>> # sparse coordinate arrays
+    >>> xs, ys = np.meshgrid(x, y, sparse=True)
+    >>> zs = np.sqrt(xs**2 + ys**2)
+    >>> xs.shape, ys.shape, zs.shape
+    ((1, 101), (101, 1), (101, 101))
+    >>> np.array_equal(zz, zs)
+    True
+
+    >>> h = plt.contourf(x, y, zs)
+    >>> plt.axis('scaled')
+    >>> plt.colorbar()
+    >>> plt.show()
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Return a tuple of coordinate matrices from coordinate vectors.
+
+    Make N-D coordinate arrays for vectorized evaluations of
+    N-D scalar/vector fields over N-D grids, given
+    one-dimensional coordinate arrays x1, x2,..., xn.
+
+    .. versionchanged:: 1.9
+       1-D and 0-D cases are allowed.
+
+    Parameters
+    ----------
+    x1, x2,..., xn : array_like
+        1-D arrays representing the coordinates of a grid.
+    indexing : {'xy', 'ij'}, optional
+        Cartesian ('xy', default) or matrix ('ij') indexing of output.
+        See Notes for more details.
+
+        .. versionadded:: 1.7.0
+    sparse : bool, optional
+        If True the shape of the returned coordinate array for dimension *i*
+        is reduced from ``(N1, ..., Ni, ... Nn)`` to
+        ``(1, ..., 1, Ni, 1, ..., 1)``.  These sparse coordinate grids are
+        intended to be use with :ref:`basics.broadcasting`.  When all
+        coordinates are used in an expression, broadcasting still leads to a
+        fully-dimensonal result array.
+
+        Default is False.
+
+        .. versionadded:: 1.7.0
+    copy : bool, optional
+        If False, a view into the original arrays are returned in order to
+        conserve memory.  Default is True.  Please note that
+        ``sparse=False, copy=False`` will likely return non-contiguous
+        arrays.  Furthermore, more than one element of a broadcast array
+        may refer to a single memory location.  If you need to write to the
+        arrays, make copies first.
+
+        .. versionadded:: 1.7.0
+
+    Returns
+    -------
+    X1, X2,..., XN : tuple of ndarrays
+        For vectors `x1`, `x2`,..., `xn` with lengths ``Ni=len(xi)``,
+        returns ``(N1, N2, N3,..., Nn)`` shaped arrays if indexing='ij'
+        or ``(N2, N1, N3,..., Nn)`` shaped arrays if indexing='xy'
+        with the elements of `xi` repeated to fill the matrix along
+        the first dimension for `x1`, the second for `x2` and so on.
+
+    Notes
+    -----
+    This function supports both indexing conventions through the indexing
+    keyword argument.  Giving the string 'ij' returns a meshgrid with
+    matrix indexing, while 'xy' returns a meshgrid with Cartesian indexing.
+    In the 2-D case with inputs of length M and N, the outputs are of shape
+    (N, M) for 'xy' indexing and (M, N) for 'ij' indexing.  In the 3-D case
+    with inputs of length M, N and P, outputs are of shape (N, M, P) for
+    'xy' indexing and (M, N, P) for 'ij' indexing.  The difference is
+    illustrated by the following code snippet::
+
+        xv, yv = np.meshgrid(x, y, indexing='ij')
+        for i in range(nx):
+            for j in range(ny):
+                # treat xv[i,j], yv[i,j]
+
+        xv, yv = np.meshgrid(x, y, indexing='xy')
+        for i in range(nx):
+            for j in range(ny):
+                # treat xv[j,i], yv[j,i]
+
+    In the 1-D and 0-D case, the indexing and sparse keywords have no effect.
+
+    See Also
+    --------
+    mgrid : Construct a multi-dimensional "meshgrid" using indexing notation.
+    ogrid : Construct an open multi-dimensional "meshgrid" using indexing
+            notation.
+    :ref:`how-to-index`
+
+    Examples
+    --------
+    >>> nx, ny = (3, 2)
+    >>> x = np.linspace(0, 1, nx)
+    >>> y = np.linspace(0, 1, ny)
+    >>> xv, yv = np.meshgrid(x, y)
+    >>> xv
+    array([[0. , 0.5, 1. ],
+           [0. , 0.5, 1. ]])
+    >>> yv
+    array([[0.,  0.,  0.],
+           [1.,  1.,  1.]])
+
+    The result of `meshgrid` is a coordinate grid:
+
+    >>> import matplotlib.pyplot as plt
+    >>> plt.plot(xv, yv, marker='o', color='k', linestyle='none')
+    >>> plt.show()
+
+    You can create sparse output arrays to save memory and computation time.
+
+    >>> xv, yv = np.meshgrid(x, y, sparse=True)
+    >>> xv
+    array([[0. ,  0.5,  1. ]])
+    >>> yv
+    array([[0.],
+           [1.]])
+
+    `meshgrid` is very useful to evaluate functions on a grid. If the
+    function depends on all coordinates, both dense and sparse outputs can be
+    used.
+
+    >>> x = np.linspace(-5, 5, 101)
+    >>> y = np.linspace(-5, 5, 101)
+    >>> # full coordinate arrays
+    >>> xx, yy = np.meshgrid(x, y)
+    >>> zz = np.sqrt(xx**2 + yy**2)
+    >>> xx.shape, yy.shape, zz.shape
+    ((101, 101), (101, 101), (101, 101))
+    >>> # sparse coordinate arrays
+    >>> xs, ys = np.meshgrid(x, y, sparse=True)
+    >>> zs = np.sqrt(xs**2 + ys**2)
+    >>> xs.shape, ys.shape, zs.shape
+    ((1, 101), (101, 1), (101, 101))
+    >>> np.array_equal(zz, zs)
+    True
+
+    >>> h = plt.contour(x, y, zs)
+    >>> plt.axis('scaled')
+    >>> plt.colorbar()
+    >>> plt.show()
+
+    Using meshgrid with 3D coordinates:
+
+    >>> x = np.linspace(-5, 5, 101)
+    >>> y = np.linspace(-5, 5, 101)
+    >>> z = np.linspace(-5, 5, 101)
+    >>> xx, yy, zz = np.meshgrid(x, y, z, indexing='xy')
+    >>> xx.shape, yy.shape, zz.shape
+    ((101, 101, 101), (101, 101, 101), (101, 101, 101))
+Response generated in 394.09 seconds, with a max_new_tokens = 2000.

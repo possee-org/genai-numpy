@@ -1,0 +1,165 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the bitwise_invert function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.bitwise_invert. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+
+Compute bit-wise inversion, or bit-wise NOT, element-wise.
+
+Computes the bit-wise NOT of the underlying binary representation of
+the integers in the input arrays. This ufunc implements the C/Python
+operator ``~``.
+
+For signed integer inputs, the bit-wise NOT of the absolute value is
+returned. In a two's-complement system, this operation effectively flips
+all the bits, resulting in a representation that corresponds to the
+negative of the input plus one. This is the most common method of
+representing signed integers on computers [1]_. A N-bit two's-complement
+system can represent every integer in the range :math:`-2^{N-1}` to
+:math:`+2^{N-1}-1`.
+
+Parameters
+----------
+x : array_like
+    Only integer and boolean types are handled.
+out : ndarray, None, or tuple of ndarray and None, optional
+    A location into which the result is stored. If provided, it must have
+    a shape that the inputs broadcast to. If not provided or None,
+    a freshly-allocated array is returned. A tuple (possible only as a
+    keyword argument) must have length equal to the number of outputs.
+where : array_like, optional
+    This condition is broadcast over the input. At locations where the
+    condition is True, the `out` array will be set to the ufunc result.
+    Elsewhere, the `out` array will retain its original value.
+    Note that if an uninitialized `out` array is created via the default
+    ``out=None``, locations within it where the condition is False will
+    remain uninitialized.
+**kwargs
+    For other keyword-only arguments, see the
+    :ref:`ufunc docs <ufuncs.kwargs>`.
+
+Returns
+-------
+out : ndarray or scalar
+    Result.
+    This is a scalar if `x` is a scalar.
+
+See Also
+--------
+bitwise_and, bitwise_or, bitwise_xor
+logical_not
+binary_repr :
+    Return the binary representation of the input number as a string.
+
+Notes
+-----
+``numpy.bitwise_not`` is an alias for `invert`:
+
+>>> np.bitwise_not is np.invert
+True
+
+References
+----------
+.. [1] Wikipedia, "Two's complement",
+    https://en.wikipedia.org/wiki/Two's_complement
+
+Examples
+--------
+We've seen that 13 is represented by ``00001101``.
+The invert or bit-wise NOT of 13 is then:
+
+>>> x = np.invert(np.array(13, dtype=np.uint8))
+>>> x
+242
+>>> np.binary_repr(x, width=8)
+'11110010'
+
+The result depends on the bit-width:
+
+>>> x = np.invert(np.array(13, dtype=np.uint16))
+>>> x
+65522
+>>> np.binary_repr(x, width=16)
+'1111111111110010'
+
+When using signed integer types, the result is the bit-wise NOT of
+the unsigned type, interpreted as a signed integer:
+
+>>> np.invert(np.array([13], dtype=np.int8))
+array([-14], dtype=int8)
+>>> np.binary_repr(-14, width=8)
+'11110010'
+
+Booleans are accepted as well:
+
+>>> np.invert(np.array([True, False]))
+array([False,  True])
+
+The ``~`` operator can be used as a shorthand for ``np.invert`` on
+ndarrays.
+
+>>> x1 = np.array([True, False])
+>>> ~x1
+array([False,  True])
+assistant
+
+Here is the updated examples section of the docstring:
+
+Examples
+--------
+We've seen that 13 is represented by ``00001101``.
+The invert or bit-wise NOT of 13 is then:
+
+>>> x = np.invert(np.array(13, dtype=np.uint8))
+>>> x
+242
+>>> np.binary_repr(x, width=8)
+'11110010'
+
+The result depends on the bit-width:
+
+>>> x = np.invert(np.array(13, dtype=np.uint16))
+>>> x
+65522
+>>> np.binary_repr(x, width=16)
+'1111111111110010'
+
+When using signed integer types, the result is the bit-wise NOT of
+the unsigned type, interpreted as a signed integer:
+
+>>> np.invert(np.array([13], dtype=np.int8))
+array([-14], dtype=int8)
+>>> np.binary_repr(-14, width=8)
+'11110010'
+
+Booleans are accepted as well:
+
+>>> np.invert(np.array([True, False]))
+array([False,  True])
+
+The ``~`` operator can be used as a shorthand for ``np.invert`` on
+ndarrays.
+
+>>> x1 = np.array([True, False])
+>>> ~x1
+array([False,  True])
+
+Using the out parameter:
+
+>>> x = np.array([True, False])
+>>> y = np.zeros_like(x, dtype=bool)
+>>> np.bitwise_invert(x, out=y)
+>>> y
+array([False,  True])
+Response generated in 84.47 seconds, with a max_new_tokens = 2000.

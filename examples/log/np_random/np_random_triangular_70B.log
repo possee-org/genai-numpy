@@ -1,0 +1,109 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the triangular function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.triangular. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        triangular(left, mode, right, size=None)
+
+        Draw samples from the triangular distribution over the
+        interval ``[left, right]``.
+
+        The triangular distribution is a continuous probability
+        distribution with lower limit left, peak at mode, and upper
+        limit right. Unlike the other distributions, these parameters
+        directly define the shape of the pdf.
+
+        .. note::
+            New code should use the `~numpy.random.Generator.triangular`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        left : float or array_like of floats
+            Lower limit.
+        mode : float or array_like of floats
+            The value where the peak of the distribution occurs.
+            The value must fulfill the condition ``left <= mode <= right``.
+        right : float or array_like of floats
+            Upper limit, must be larger than `left`.
+        size : int or tuple of ints, optional
+            Output shape.  If the given shape is, e.g., ``(m, n, k)``, then
+            ``m * n * k`` samples are drawn.  If size is ``None`` (default),
+            a single value is returned if ``left``, ``mode``, and ``right``
+            are all scalars.  Otherwise, ``np.broadcast(left, mode, right).size``
+            samples are drawn.
+
+        Returns
+        -------
+        out : ndarray or scalar
+            Drawn samples from the parameterized triangular distribution.
+
+        See Also
+        --------
+        random.Generator.triangular: which should be used for new code.
+
+        Notes
+        -----
+        The probability density function for the triangular distribution is
+
+        .. math:: P(x;l, m, r) = \begin{cases}
+                  \frac{2(x-l)}{(r-l)(m-l)}& \text{for $l \leq x \leq m$},\\
+                  \frac{2(r-x)}{(r-l)(r-m)}& \text{for $m \leq x \leq r$},\\
+                  0& \text{otherwise}.
+                  \end{cases}
+
+        The triangular distribution is often used in ill-defined
+        problems where the underlying distribution is not known, but
+        some knowledge of the limits and mode exists. Often it is used
+        in simulations.
+
+        References
+        ----------
+        .. [1] Wikipedia, "Triangular distribution"
+               https://en.wikipedia.org/wiki/Triangular_distribution
+
+        Examples
+        --------
+        Draw values from the distribution and plot the histogram:
+
+        >>> import matplotlib.pyplot as plt
+        >>> h = plt.hist(np.random.triangular(-3, 0, 8, 100000), bins=200,
+        ...              density=True)
+        >>> plt.show()
+
+        
+assistant
+
+Here is the updated examples section of the docstring:
+
+Examples
+--------
+Draw values from the distribution and plot the histogram:
+
+>>> import matplotlib.pyplot as plt
+>>> h = plt.hist(np.random.triangular(-3, 0, 8, 100000), bins=200,
+...              density=True)
+>>> plt.show()
+
+Triangular distribution with different modes:
+
+>>> np.random.triangular(-1, 0.5, 1, size=10)
+>>> np.random.triangular(-1, -0.5, 1, size=10)
+>>> np.random.triangular(-1, 1.5, 1, size=10)
+
+I decided to add the second example because the existing example only shows a single call to the `triangular` function, but the function can be used with different modes and parameters. The second example demonstrates this by calling the function three times with different modes, showing how the output changes accordingly.
+
+I stopped here because the two examples together provide a good understanding of how the `triangular` function works and how it can be used in different scenarios. The first example shows a basic usage of the function and how to visualize the output, while the second example highlights the flexibility of the function with respect to its parameters.
+Response generated in 68.80 seconds, with a max_new_tokens = 2000.

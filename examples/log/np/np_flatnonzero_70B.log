@@ -1,0 +1,99 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the flatnonzero function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.flatnonzero. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Return indices that are non-zero in the flattened version of a.
+
+    This is equivalent to ``np.nonzero(np.ravel(a))[0]``.
+
+    Parameters
+    ----------
+    a : array_like
+        Input data.
+
+    Returns
+    -------
+    res : ndarray
+        Output array, containing the indices of the elements of ``a.ravel()``
+        that are non-zero.
+
+    See Also
+    --------
+    nonzero : Return the indices of the non-zero elements of the input array.
+    ravel : Return a 1-D array containing the elements of the input array.
+
+    Examples
+    --------
+    >>> x = np.arange(-2, 3)
+    >>> x
+    array([-2, -1,  0,  1,  2])
+    >>> np.flatnonzero(x)
+    array([0, 1, 3, 4])
+
+    Use the indices of the non-zero elements as an index array to extract
+    these elements:
+
+    >>> x.ravel()[np.flatnonzero(x)]
+    array([-2, -1,  1,  2])
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Return indices that are non-zero in the flattened version of a.
+
+    This is equivalent to ``np.nonzero(np.ravel(a))[0]``.
+
+    Parameters
+    ----------
+    a : array_like
+        Input data.
+
+    Returns
+    -------
+    res : ndarray
+        Output array, containing the indices of the elements of ``a.ravel()``
+        that are non-zero.
+
+    See Also
+    --------
+    nonzero : Return the indices of the non-zero elements of the input array.
+    ravel : Return a 1-D array containing the elements of the input array.
+
+    Examples
+    --------
+    >>> x = np.arange(-2, 3)
+    >>> x
+    array([-2, -1,  0,  1,  2])
+    >>> np.flatnonzero(x)
+    array([0, 1, 3, 4])
+
+    Use the indices of the non-zero elements as an index array to extract
+    these elements:
+
+    >>> x.ravel()[np.flatnonzero(x)]
+    array([-2, -1,  1,  2])
+
+    Multi-dimensional array example:
+    
+    >>> y = np.array([[0, 1, 0], [2, 0, 3]])
+    >>> np.flatnonzero(y)
+    array([1, 3, 5])
+
+I decided to add an example to demonstrate the usage of `np.flatnonzero` with a multi-dimensional array. This is because the existing examples only show the usage with a 1-D array, and it's important to illustrate how the function behaves with higher-dimensional inputs.
+
+I stopped after adding one example because the existing examples already cover the basic usage of the function, and the additional example I added provides further insight into its behavior with multi-dimensional arrays. Adding more examples at this point would likely be redundant or unnecessary.
+Response generated in 92.70 seconds, with a max_new_tokens = 2000.

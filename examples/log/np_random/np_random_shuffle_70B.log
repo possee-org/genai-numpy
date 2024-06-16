@@ -1,0 +1,86 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the shuffle function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.shuffle. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        shuffle(x)
+
+        Modify a sequence in-place by shuffling its contents.
+
+        This function only shuffles the array along the first axis of a
+        multi-dimensional array. The order of sub-arrays is changed but
+        their contents remains the same.
+
+        .. note::
+            New code should use the `~numpy.random.Generator.shuffle`
+            method of a `~numpy.random.Generator` instance instead;
+            please see the :ref:`random-quick-start`.
+
+        Parameters
+        ----------
+        x : ndarray or MutableSequence
+            The array, list or mutable sequence to be shuffled.
+
+        Returns
+        -------
+        None
+
+        See Also
+        --------
+        random.Generator.shuffle: which should be used for new code.
+
+        Examples
+        --------
+        >>> arr = np.arange(10)
+        >>> np.random.shuffle(arr)
+        >>> arr
+        [1 7 5 2 9 4 3 6 0 8] # random
+
+        Multi-dimensional arrays are only shuffled along the first axis:
+
+        >>> arr = np.arange(9).reshape((3, 3))
+        >>> np.random.shuffle(arr)
+        >>> arr
+        array([[3, 4, 5], # random
+               [6, 7, 8],
+               [0, 1, 2]])
+
+        
+assistant
+
+Here is the updated docstring with an additional example:
+
+        Examples
+        --------
+        >>> arr = np.arange(10)
+        >>> np.random.shuffle(arr)
+        >>> arr
+        [1 7 5 2 9 4 3 6 0 8] # random
+
+        Multi-dimensional arrays are only shuffled along the first axis:
+
+        >>> arr = np.arange(9).reshape((3, 3))
+        >>> np.random.shuffle(arr)
+        >>> arr
+        array([[3, 4, 5], # random
+               [6, 7, 8],
+               [0, 1, 2]])
+
+        Shuffling a list:
+
+        >>> lst = [1, 2, 3, 4, 5]
+        >>> np.random.shuffle(lst)
+        >>> lst
+        [3, 1, 5, 2, 4] # random
+Response generated in 46.41 seconds, with a max_new_tokens = 2000.

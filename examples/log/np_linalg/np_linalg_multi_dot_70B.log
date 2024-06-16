@@ -1,0 +1,191 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the multi_dot function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.linalg.multi_dot. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Compute the dot product of two or more arrays in a single function call,
+    while automatically selecting the fastest evaluation order.
+
+    `multi_dot` chains `numpy.dot` and uses optimal parenthesization
+    of the matrices [1]_ [2]_. Depending on the shapes of the matrices,
+    this can speed up the multiplication a lot.
+
+    If the first argument is 1-D it is treated as a row vector.
+    If the last argument is 1-D it is treated as a column vector.
+    The other arguments must be 2-D.
+
+    Think of `multi_dot` as::
+
+        def multi_dot(arrays): return functools.reduce(np.dot, arrays)
+
+
+    Parameters
+    ----------
+    arrays : sequence of array_like
+        If the first argument is 1-D it is treated as row vector.
+        If the last argument is 1-D it is treated as column vector.
+        The other arguments must be 2-D.
+    out : ndarray, optional
+        Output argument. This must have the exact kind that would be returned
+        if it was not used. In particular, it must have the right type, must be
+        C-contiguous, and its dtype must be the dtype that would be returned
+        for `dot(a, b)`. This is a performance feature. Therefore, if these
+        conditions are not met, an exception is raised, instead of attempting
+        to be flexible.
+
+        .. versionadded:: 1.19.0
+
+    Returns
+    -------
+    output : ndarray
+        Returns the dot product of the supplied arrays.
+
+    See Also
+    --------
+    numpy.dot : dot multiplication with two arguments.
+
+    References
+    ----------
+
+    .. [1] Cormen, "Introduction to Algorithms", Chapter 15.2, p. 370-378
+    .. [2] https://en.wikipedia.org/wiki/Matrix_chain_multiplication
+
+    Examples
+    --------
+    `multi_dot` allows you to write::
+
+    >>> from numpy.linalg import multi_dot
+    >>> # Prepare some data
+    >>> A = np.random.random((10000, 100))
+    >>> B = np.random.random((100, 1000))
+    >>> C = np.random.random((1000, 5))
+    >>> D = np.random.random((5, 333))
+    >>> # the actual dot multiplication
+    >>> _ = multi_dot([A, B, C, D])
+
+    instead of::
+
+    >>> _ = np.dot(np.dot(np.dot(A, B), C), D)
+    >>> # or
+    >>> _ = A.dot(B).dot(C).dot(D)
+
+    Notes
+    -----
+    The cost for a matrix multiplication can be calculated with the
+    following function::
+
+        def cost(A, B):
+            return A.shape[0] * A.shape[1] * B.shape[1]
+
+    Assume we have three matrices
+    :math:`A_{10x100}, B_{100x5}, C_{5x50}`.
+
+    The costs for the two different parenthesizations are as follows::
+
+        cost((AB)C) = 10*100*5 + 10*5*50   = 5000 + 2500   = 7500
+        cost(A(BC)) = 10*100*50 + 100*5*50 = 50000 + 25000 = 75000
+
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Compute the dot product of two or more arrays in a single function call,
+    while automatically selecting the fastest evaluation order.
+
+    `multi_dot` chains `numpy.dot` and uses optimal parenthesization
+    of the matrices [1]_ [2]_. Depending on the shapes of the matrices,
+    this can speed up the multiplication a lot.
+
+    If the first argument is 1-D it is treated as a row vector.
+    If the last argument is 1-D it is treated as a column vector.
+    The other arguments must be 2-D.
+
+    Think of `multi_dot` as::
+
+        def multi_dot(arrays): return functools.reduce(np.dot, arrays)
+
+
+    Parameters
+    ----------
+    arrays : sequence of array_like
+        If the first argument is 1-D it is treated as row vector.
+        If the last argument is 1-D it is treated as a column vector.
+        The other arguments must be 2-D.
+    out : ndarray, optional
+        Output argument. This must have the exact kind that would be returned
+        if it was not used. In particular, it must have the right type, must be
+        C-contiguous, and its dtype must be the dtype that would be returned
+        for `dot(a, b)`. This is a performance feature. Therefore, if these
+        conditions are not met, an exception is raised, instead of attempting
+        to be flexible.
+
+        .. versionadded:: 1.19.0
+
+    Returns
+    -------
+    output : ndarray
+        Returns the dot product of the supplied arrays.
+
+    See Also
+    --------
+    numpy.dot : dot multiplication with two arguments.
+
+    References
+    ----------
+    .. [1] Cormen, "Introduction to Algorithms", Chapter 15.2, p. 370-378
+    .. [2] https://en.wikipedia.org/wiki/Matrix_chain_multiplication
+
+    Examples
+    --------
+    `multi_dot` allows you to write::
+
+    >>> from numpy.linalg import multi_dot
+    >>> # Prepare some data
+    >>> A = np.random.random((10000, 100))
+    >>> B = np.random.random((100, 1000))
+    >>> C = np.random.random((1000, 5))
+    >>> D = np.random.random((5, 333))
+    >>> # the actual dot multiplication
+    >>> _ = multi_dot([A, B, C, D])
+
+    instead of::
+
+    >>> _ = np.dot(np.dot(np.dot(A, B), C), D)
+    >>> # or
+    >>> _ = A.dot(B).dot(C).dot(D)
+
+    Using `multi_dot` with 1-D arrays:
+    
+    >>> a = np.random.random((10,))
+    >>> b = np.random.random((10,))
+    >>> c = np.random.random((10,))
+    >>> result = multi_dot([a[:, None], b[None, :], c[:, None]])
+
+    Notes
+    -----
+    The cost for a matrix multiplication can be calculated with the
+    following function::
+
+        def cost(A, B):
+            return A.shape[0] * A.shape[1] * B.shape[1]
+
+    Assume we have three matrices
+    :math:`A_{10x100}, B_{100x5}, C_{5x50}`.
+
+    The costs for the two different parenthesizations are as follows::
+
+        cost((AB)C) = 10*100*5 + 10*5*50   = 5000 + 2500   = 7500
+        cost(A(BC)) = 10*100*50 + 100*5*50 = 50000 + 25000 = 75000
+Response generated in 203.44 seconds, with a max_new_tokens = 2000.

@@ -1,0 +1,205 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the eig function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.linalg.eig. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Compute the eigenvalues and right eigenvectors of a square array.
+
+    Parameters
+    ----------
+    a : (..., M, M) array
+        Matrices for which the eigenvalues and right eigenvectors will
+        be computed
+
+    Returns
+    -------
+    A namedtuple with the following attributes:
+
+    eigenvalues : (..., M) array
+        The eigenvalues, each repeated according to its multiplicity.
+        The eigenvalues are not necessarily ordered. The resulting
+        array will be of complex type, unless the imaginary part is
+        zero in which case it will be cast to a real type. When `a`
+        is real the resulting eigenvalues will be real (0 imaginary
+        part) or occur in conjugate pairs
+
+    eigenvectors : (..., M, M) array
+        The normalized (unit "length") eigenvectors, such that the
+        column ``eigenvectors[:,i]`` is the eigenvector corresponding to the
+        eigenvalue ``eigenvalues[i]``.
+
+    Raises
+    ------
+    LinAlgError
+        If the eigenvalue computation does not converge.
+
+    See Also
+    --------
+    eigvals : eigenvalues of a non-symmetric array.
+    eigh : eigenvalues and eigenvectors of a real symmetric or complex
+           Hermitian (conjugate symmetric) array.
+    eigvalsh : eigenvalues of a real symmetric or complex Hermitian
+               (conjugate symmetric) array.
+    scipy.linalg.eig : Similar function in SciPy that also solves the
+                       generalized eigenvalue problem.
+    scipy.linalg.schur : Best choice for unitary and other non-Hermitian
+                         normal matrices.
+
+    Notes
+    -----
+
+    .. versionadded:: 1.8.0
+
+    Broadcasting rules apply, see the `numpy.linalg` documentation for
+    details.
+
+    This is implemented using the ``_geev`` LAPACK routines which compute
+    the eigenvalues and eigenvectors of general square arrays.
+
+    The number `w` is an eigenvalue of `a` if there exists a vector `v` such
+    that ``a @ v = w * v``. Thus, the arrays `a`, `eigenvalues`, and
+    `eigenvectors` satisfy the equations ``a @ eigenvectors[:,i] =
+    eigenvalues[i] * eigenvectors[:,i]`` for :math:`i \in \{0,...,M-1\}`.
+
+    The array `eigenvectors` may not be of maximum rank, that is, some of the
+    columns may be linearly dependent, although round-off error may obscure
+    that fact. If the eigenvalues are all different, then theoretically the
+    eigenvectors are linearly independent and `a` can be diagonalized by a
+    similarity transformation using `eigenvectors`, i.e, ``inv(eigenvectors) @
+    a @ eigenvectors`` is diagonal.
+
+    For non-Hermitian normal matrices the SciPy function `scipy.linalg.schur`
+    is preferred because the matrix `eigenvectors` is guaranteed to be
+    unitary, which is not the case when using `eig`. The Schur factorization
+    produces an upper triangular matrix rather than a diagonal matrix, but for
+    normal matrices only the diagonal of the upper triangular matrix is
+    needed, the rest is roundoff error.
+
+    Finally, it is emphasized that `eigenvectors` consists of the *right* (as
+    in right-hand side) eigenvectors of `a`. A vector `y` satisfying ``y.T @ a
+    = z * y.T`` for some number `z` is called a *left* eigenvector of `a`,
+    and, in general, the left and right eigenvectors of a matrix are not
+    necessarily the (perhaps conjugate) transposes of each other.
+
+    References
+    ----------
+    G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando, FL,
+    Academic Press, Inc., 1980, Various pp.
+
+    Examples
+    --------
+    >>> from numpy import linalg as LA
+
+    (Almost) trivial example with real eigenvalues and eigenvectors.
+
+    >>> eigenvalues, eigenvectors = LA.eig(np.diag((1, 2, 3)))
+    >>> eigenvalues
+    array([1., 2., 3.])
+    >>> eigenvectors
+    array([[1., 0., 0.],
+           [0., 1., 0.],
+           [0., 0., 1.]])
+
+    Real matrix possessing complex eigenvalues and eigenvectors;
+    note that the eigenvalues are complex conjugates of each other.
+
+    >>> eigenvalues, eigenvectors = LA.eig(np.array([[1, -1], [1, 1]]))
+    >>> eigenvalues
+    array([1.+1.j, 1.-1.j])
+    >>> eigenvectors
+    array([[0.70710678+0.j        , 0.70710678-0.j        ],
+           [0.        -0.70710678j, 0.        +0.70710678j]])
+
+    Complex-valued matrix with real eigenvalues (but complex-valued
+    eigenvectors); note that ``a.conj().T == a``, i.e., `a` is Hermitian.
+
+    >>> a = np.array([[1, 1j], [-1j, 1]])
+    >>> eigenvalues, eigenvectors = LA.eig(a)
+    >>> eigenvalues
+    array([2.+0.j, 0.+0.j])
+    >>> eigenvectors
+    array([[ 0.        +0.70710678j,  0.70710678+0.j        ], # may vary
+           [ 0.70710678+0.j        , -0.        +0.70710678j]])
+
+    Be careful about round-off error!
+
+    >>> a = np.array([[1 + 1e-9, 0], [0, 1 - 1e-9]])
+    >>> # Theor. eigenvalues are 1 +/- 1e-9
+    >>> eigenvalues, eigenvectors = LA.eig(a)
+    >>> eigenvalues
+    array([1., 1.])
+    >>> eigenvectors
+    array([[1., 0.],
+           [0., 1.]])
+
+    
+assistant
+
+Here is the updated examples section of the docstring:
+
+    Examples
+    --------
+    >>> from numpy import linalg as LA
+
+    (Almost) trivial example with real eigenvalues and eigenvectors.
+
+    >>> eigenvalues, eigenvectors = LA.eig(np.diag((1, 2, 3)))
+    >>> eigenvalues
+    array([1., 2., 3.])
+    >>> eigenvectors
+    array([[1., 0., 0.],
+           [0., 1., 0.],
+           [0., 0., 1.]])
+
+    Real matrix possessing complex eigenvalues and eigenvectors;
+    note that the eigenvalues are complex conjugates of each other.
+
+    >>> eigenvalues, eigenvectors = LA.eig(np.array([[1, -1], [1, 1]]))
+    >>> eigenvalues
+    array([1.+1.j, 1.-1.j])
+    >>> eigenvectors
+    array([[0.70710678+0.j        , 0.70710678-0.j        ],
+           [0.        -0.70710678j, 0.        +0.70710678j]])
+
+    Complex-valued matrix with real eigenvalues (but complex-valued
+    eigenvectors); note that ``a.conj().T == a``, i.e., `a` is Hermitian.
+
+    >>> a = np.array([[1, 1j], [-1j, 1]])
+    >>> eigenvalues, eigenvectors = LA.eig(a)
+    >>> eigenvalues
+    array([2.+0.j, 0.+0.j])
+    >>> eigenvectors
+    array([[ 0.        +0.70710678j,  0.70710678+0.j        ], # may vary
+           [ 0.70710678+0.j        , -0.        +0.70710678j]])
+
+    Be careful about round-off error!
+
+    >>> a = np.array([[1 + 1e-9, 0], [0, 1 - 1e-9]])
+    >>> # Theor. eigenvalues are 1 +/- 1e-9
+    >>> eigenvalues, eigenvectors = LA.eig(a)
+    >>> eigenvalues
+    array([1., 1.])
+    >>> eigenvectors
+    array([[1., 0.],
+           [0., 1.]])
+
+    Matrix with repeated eigenvalues.
+
+    >>> eigenvalues, eigenvectors = np.linalg.eig(np.array([[2, 1], [1, 1]]))
+    >>> eigenvalues
+    array([2., 1.])
+    >>> eigenvectors
+    array([[0.70710678, 0.70710678],
+           [0.70710678, -0.70710678]])
+Response generated in 170.82 seconds, with a max_new_tokens = 2000.

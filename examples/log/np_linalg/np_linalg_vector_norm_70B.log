@@ -1,0 +1,105 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the vector_norm function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.linalg.vector_norm. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Computes the vector norm of a vector (or batch of vectors) ``x``.
+
+    This function is Array API compatible.
+
+    Parameters
+    ----------
+    x : array_like
+        Input array.
+    axis : {None, int, 2-tuple of ints}, optional
+        If an integer, ``axis`` specifies the axis (dimension) along which
+        to compute vector norms. If an n-tuple, ``axis`` specifies the axes
+        (dimensions) along which to compute batched vector norms. If ``None``,
+        the vector norm must be computed over all array values (i.e.,
+        equivalent to computing the vector norm of a flattened array).
+        Default: ``None``.
+    keepdims : bool, optional
+        If this is set to True, the axes which are normed over are left in
+        the result as dimensions with size one. Default: False.
+    ord : {1, -1, 2, -2, inf, -inf, 'fro', 'nuc'}, optional
+        The order of the norm. For details see the table under ``Notes``
+        in `numpy.linalg.norm`.
+
+    See Also
+    --------
+    numpy.linalg.norm : Generic norm function
+
+    
+assistant
+
+Here is the updated docstring with additional examples:
+
+    Computes the vector norm of a vector (or batch of vectors) ``x``.
+
+    This function is Array API compatible.
+
+    Parameters
+    ----------
+    x : array_like
+        Input array.
+    axis : {None, int, 2-tuple of ints}, optional
+        If an integer, ``axis`` specifies the axis (dimension) along which
+        to compute vector norms. If an n-tuple, ``axis`` specifies the axes
+        (dimensions) along which to compute batched vector norms. If ``None``,
+        the vector norm must be computed over all array values (i.e.,
+        equivalent to computing the vector norm of a flattened array).
+        Default: ``None``.
+    keepdims : bool, optional
+        If this is set to True, the axes which are normed over are left in
+        the result as dimensions with size one. Default: False.
+    ord : {1, -1, 2, -2, inf, -inf, 'fro', 'nuc'}, optional
+        The order of the norm. For details see the table under ``Notes``
+        in `numpy.linalg.norm`.
+
+    See Also
+    --------
+    numpy.linalg.norm : Generic norm function
+
+    Examples
+    --------
+    Compute the Euclidean norm of a 1-D array:
+    >>> x = np.array([1, 2, 3])
+    >>> np.linalg.vector_norm(x)
+    3.7416573867739413
+
+    Compute the Euclidean norm of a 2-D array along axis 0:
+    >>> x = np.array([[1, 2], [3, 4]])
+    >>> np.linalg.vector_norm(x, axis=0)
+    array([3.60555128, 4.47213595])
+
+    Compute the Euclidean norm of a 2-D array along axis 1:
+    >>> x = np.array([[1, 2], [3, 4]])
+    >>> np.linalg.vector_norm(x, axis=1)
+    array([2.23606798, 5.        ])
+
+    Compute the Frobenius norm of a 2-D array:
+    >>> x = np.array([[1, 2], [3, 4]])
+    >>> np.linalg.vector_norm(x, ord='fro')
+    5.477225575051661
+
+    Compute the vector norm of a batch of vectors:
+    >>> x = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+    >>> np.linalg.vector_norm(x, axis=(1, 2))
+    array([5.47722557, 11.18033989])
+
+    Compute the vector norm of a batch of vectors with keepdims=True:
+    >>> x = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+    >>> np.linalg.vector_norm(x, axis=(1, 2), keepdims=True)
+    array([[[5.47722557]], [[11.18033989]]])
+Response generated in 156.71 seconds, with a max_new_tokens = 2000.

@@ -1,0 +1,85 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the set_state function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.random.set_state. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+        set_state(state)
+
+        Set the internal state of the generator from a tuple.
+
+        For use if one has reason to manually (re-)set the internal state of
+        the bit generator used by the RandomState instance. By default,
+        RandomState uses the "Mersenne Twister"[1]_ pseudo-random number
+        generating algorithm.
+
+        Parameters
+        ----------
+        state : {tuple(str, ndarray of 624 uints, int, int, float), dict}
+            The `state` tuple has the following items:
+
+            1. the string 'MT19937', specifying the Mersenne Twister algorithm.
+            2. a 1-D array of 624 unsigned integers ``keys``.
+            3. an integer ``pos``.
+            4. an integer ``has_gauss``.
+            5. a float ``cached_gaussian``.
+
+            If state is a dictionary, it is directly set using the BitGenerators
+            `state` property.
+
+        Returns
+        -------
+        out : None
+            Returns 'None' on success.
+
+        See Also
+        --------
+        get_state
+
+        Notes
+        -----
+        `set_state` and `get_state` are not needed to work with any of the
+        random distributions in NumPy. If the internal state is manually altered,
+        the user should know exactly what he/she is doing.
+
+        For backwards compatibility, the form (str, array of 624 uints, int) is
+        also accepted although it is missing some information about the cached
+        Gaussian value: ``state = ('MT19937', keys, pos)``.
+
+        References
+        ----------
+        .. [1] M. Matsumoto and T. Nishimura, "Mersenne Twister: A
+           623-dimensionally equidistributed uniform pseudorandom number
+           generator," *ACM Trans. on Modeling and Computer Simulation*,
+           Vol. 8, No. 1, pp. 3-30, Jan. 1998.
+
+        
+assistant
+
+Here is the updated docstring with an additional example:
+
+        set_state(state)
+
+        ...
+
+        Examples
+        --------
+        >>> np.random.set_state(np.random.get_state())
+        >>> state = np.random.get_state()
+        >>> np.random.set_state(state)
+
+        Setting the state with a dictionary:
+        
+        >>> state_dict = {'bit_generator': 'MT19937', 'state': {'key': 123, 'pos': 456}}
+        >>> np.random.set_state(state_dict)
+Response generated in 28.00 seconds, with a max_new_tokens = 2000.

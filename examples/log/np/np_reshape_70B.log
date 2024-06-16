@@ -1,0 +1,206 @@
+system
+
+You are a helpful assistant working to improve the NumPy documentation. Use numpydoc style guidelines.
+user
+
+I will provide you with the docstring for the reshape function. Examine the examples and decide if adding an example would be useful. If the current examples are sufficient, then state so. Otherwise create one example to add to the bottom of the docstring. Add the example to the bottom of the docstring. Call the function using np.reshape. Do not include an import statement for numpy, as `import numpy as np` has already been called.
+
+For each example you create, include a header. The header should be written as regular text on a single line without any newline characters and end with a colon. Do not include "Example #:" in the header. The example code should start with the >>> prompt. Include a blank line between the header and the example code. 
+
+Continue the process until you decide no more examples are needed or you have created 15 examples. 
+
+When you are finished, return the entire examples section of the docstring as a string. Do not provide any commentary before the returned string. 
+
+After you have returned the string, explain why you decided to add each example and then explain why you stopped.
+
+
+    Gives a new shape to an array without changing its data.
+
+    Parameters
+    ----------
+    a : array_like
+        Array to be reshaped.
+    shape : int or tuple of ints
+        The new shape should be compatible with the original shape. If
+        an integer, then the result will be a 1-D array of that length.
+        One shape dimension can be -1. In this case, the value is
+        inferred from the length of the array and remaining dimensions.
+    newshape : int or tuple of ints
+        .. deprecated:: 2.1
+            Replaced by ``shape`` argument. Retained for backward
+            compatibility.
+    order : {'C', 'F', 'A'}, optional
+        Read the elements of ``a`` using this index order, and place the
+        elements into the reshaped array using this index order. 'C'
+        means to read / write the elements using C-like index order,
+        with the last axis index changing fastest, back to the first
+        axis index changing slowest. 'F' means to read / write the
+        elements using Fortran-like index order, with the first index
+        changing fastest, and the last index changing slowest. Note that
+        the 'C' and 'F' options take no account of the memory layout of
+        the underlying array, and only refer to the order of indexing.
+        'A' means to read / write the elements in Fortran-like index
+        order if ``a`` is Fortran *contiguous* in memory, C-like order
+        otherwise.
+    copy : bool, optional
+        If ``True``, then the array data is copied. If ``None``, a copy will
+        only be made if it's required by ``order``. For ``False`` it raises
+        a ``ValueError`` if a copy cannot be avoided. Default: ``None``.
+
+    Returns
+    -------
+    reshaped_array : ndarray
+        This will be a new view object if possible; otherwise, it will
+        be a copy.  Note there is no guarantee of the *memory layout* (C- or
+        Fortran- contiguous) of the returned array.
+
+    See Also
+    --------
+    ndarray.reshape : Equivalent method.
+
+    Notes
+    -----
+    It is not always possible to change the shape of an array without copying
+    the data.
+
+    The ``order`` keyword gives the index ordering both for *fetching*
+    the values from ``a``, and then *placing* the values into the output
+    array. For example, let's say you have an array:
+
+    >>> a = np.arange(6).reshape((3, 2))
+    >>> a
+    array([[0, 1],
+           [2, 3],
+           [4, 5]])
+
+    You can think of reshaping as first raveling the array (using the given
+    index order), then inserting the elements from the raveled array into the
+    new array using the same kind of index ordering as was used for the
+    raveling.
+
+    >>> np.reshape(a, (2, 3)) # C-like index ordering
+    array([[0, 1, 2],
+           [3, 4, 5]])
+    >>> np.reshape(np.ravel(a), (2, 3)) # equivalent to C ravel then C reshape
+    array([[0, 1, 2],
+           [3, 4, 5]])
+    >>> np.reshape(a, (2, 3), order='F') # Fortran-like index ordering
+    array([[0, 4, 3],
+           [2, 1, 5]])
+    >>> np.reshape(np.ravel(a, order='F'), (2, 3), order='F')
+    array([[0, 4, 3],
+           [2, 1, 5]])
+
+    Examples
+    --------
+    >>> a = np.array([[1,2,3], [4,5,6]])
+    >>> np.reshape(a, 6)
+    array([1, 2, 3, 4, 5, 6])
+    >>> np.reshape(a, 6, order='F')
+    array([1, 4, 2, 5, 3, 6])
+
+    >>> np.reshape(a, (3,-1))       # the unspecified value is inferred to be 2
+    array([[1, 2],
+           [3, 4],
+           [5, 6]])
+    
+assistant
+
+Here is the updated docstring with an additional example:
+
+    Gives a new shape to an array without changing its data.
+
+    Parameters
+    ----------
+    a : array_like
+        Array to be reshaped.
+    shape : int or tuple of ints
+        The new shape should be compatible with the original shape. If
+        an integer, then the result will be a 1-D array of that length.
+        One shape dimension can be -1. In this case, the value is
+        inferred from the length of the array and remaining dimensions.
+    newshape : int or tuple of ints
+        .. deprecated:: 2.1
+            Replaced by ``shape`` argument. Retained for backward
+            compatibility.
+    order : {'C', 'F', 'A'}, optional
+        Read the elements of ``a`` using this index order, and place the
+        elements into the reshaped array using this index order. 'C'
+        means to read / write the elements using C-like index order,
+        with the last axis index changing fastest, back to the first
+        axis index changing slowest. 'F' means to read / write the
+        elements using Fortran-like index order, with the first index
+        changing fastest, and the last index changing slowest. Note that
+        the 'C' and 'F' options take no account of the memory layout of
+        the underlying array, and only refer to the order of indexing.
+        'A' means to read / write the elements in Fortran-like index
+        order if ``a`` is Fortran *contiguous* in memory, C-like order
+        otherwise.
+    copy : bool, optional
+        If ``True``, then the array data is copied. If ``None``, a copy will
+        only be made if it's required by ``order``. For ``False`` it raises
+        a ``ValueError`` if a copy cannot be avoided. Default: ``None``.
+
+    Returns
+    -------
+    reshaped_array : ndarray
+        This will be a new view object if possible; otherwise, it will
+        be a copy.  Note there is no guarantee of the *memory layout* (C- or
+        Fortran- contiguous) of the returned array.
+
+    See Also
+    --------
+    ndarray.reshape : Equivalent method.
+
+    Notes
+    -----
+    It is not always possible to change the shape of an array without copying
+    the data.
+
+    The ``order`` keyword gives the index ordering both for *fetching*
+    the values from ``a``, and then *placing* the values into the output
+    array. For example, let's say you have an array:
+
+    >>> a = np.arange(6).reshape((3, 2))
+    >>> a
+    array([[0, 1],
+           [2, 3],
+           [4, 5]])
+
+    You can think of reshaping as first raveling the array (using the given
+    index order), then inserting the elements from the raveled array into the
+    new array using the same kind of index ordering as was used for the
+    raveling.
+
+    >>> np.reshape(a, (2, 3)) # C-like index ordering
+    array([[0, 1, 2],
+           [3, 4, 5]])
+    >>> np.reshape(np.ravel(a), (2, 3)) # equivalent to C ravel then C reshape
+    array([[0, 1, 2],
+           [3, 4, 5]])
+    >>> np.reshape(a, (2, 3), order='F') # Fortran-like index ordering
+    array([[0, 4, 3],
+           [2, 1, 5]])
+    >>> np.reshape(np.ravel(a, order='F'), (2, 3), order='F')
+    array([[0, 4, 3],
+           [2, 1, 5]])
+
+    Examples
+    --------
+    >>> a = np.array([[1,2,3], [4,5,6]])
+    >>> np.reshape(a, 6)
+    array([1, 2, 3, 4, 5, 6])
+    >>> np.reshape(a, 6, order='F')
+    array([1, 4, 2, 5, 3, 6])
+
+    >>> np.reshape(a, (3,-1))       # the unspecified value is inferred to be 2
+    array([[1, 2],
+           [3, 4],
+           [5, 6]])
+
+    Reshaping a 1-D array:
+    >>> b = np.array([1, 2, 3, 4, 5, 6])
+    >>> np.reshape(b, (2, 3))
+    array([[1, 2, 3],
+           [4, 5, 6]])
+Response generated in 274.21 seconds, with a max_new_tokens = 2000.
