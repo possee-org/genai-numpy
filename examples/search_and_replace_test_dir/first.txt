@@ -1,0 +1,57 @@
+#1aldfjalkfj
+#2aldfjalkfj
+#3aldfjalkfj
+#4aldfjalkfj
+
+def Iwant()
+    """
+    This is the docstring
+    and I want to see what happens.
+    When someone decides to add text
+    to the bottom
+
+    here is  a new line
+
+    Examples
+    --------
+
+    first examples
+
+    >>> code
+    garbage
+
+    second example
+    >>> more code
+
+    BOOM!!!! This got added. I added it to the end so you can
+    see it added multiple times.
+
+    BOOM!!!! This got added. I added it to the end so you can
+    see it added multiple times.
+
+    BOOM!!!! This got added. I added it to the end so you can
+    see it added multiple times.
+
+    BOOM!!!! This got added.
+
+    BOOM!!!! This got added.
+
+    BOOM!!!! This got added.
+
+    BOOM!!!! This got added.
+
+    BOOM!!!! This got added.
+
+    This is the appended text.
+    This is the appended text.
+    This is the appended text.
+    This is the appended text.
+    This is the appended text.
+    References
+    ----------
+    Here is the section.
+"""
+    now teh function
+
+def another()
+    garbage
