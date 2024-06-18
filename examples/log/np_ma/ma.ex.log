@@ -199,17 +199,15 @@ Here is the updated docstring with an additional example:
       fill_value=999999)
     Dot product with an output array:
     
-    >>> a = np.ma.array([[1, 2, 3], [4, 5, 6]], mask=[[1, 0, 0], [0, 0, 0]])
-    >>> b = np.ma.array([[1, 2], [3, 4], [5, 6]], mask=[[1, 0], [0, 0], [0, 0]])
-    >>> out = np.ma.masked_all((2, 2), dtype=float)
-    >>> np.ma.dot(a, b, out=out)
-    >>> out
+    >>> a = np.ma.array([[1, 2], [3, 4]], mask=[[1, 0], [0, 0]])
+    >>> b = np.ma.array([[5, 6], [7, 8]], mask=[[0, 1], [0, 0]])
+    >>> np.ma.dot(a, b)
     masked_array(
-      data=[[21.0, 26.0],
-            [45.0, 64.0]],
-      mask=[[False, False],
-            [False, False]],
-      fill_value=999999)
+        data=[[14, 16],
+              [43, 32]],
+        mask=[[False, False],
+              [False, False]],
+        fill_value=999999)
 
 I decided to add an example to demonstrate the use of the `out` parameter, which allows the user to specify an output array. This can be useful for performance reasons, as it avoids the need to create a new array.
 
