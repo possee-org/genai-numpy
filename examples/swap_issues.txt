@@ -42,7 +42,7 @@ np_ma_array_70B: has extra white space after examples, so lost a line of white s
 np_polynomial_polynomial_polyvander3d_70B: Blank line captured. Not sure what's up.
 np_random_multivariate_normal_70B: Lots really long comments in examples.  I'm going to have to just add white space to make the commparision (Llama 3 wrong)
 np_random_noncentral_chisquare_70B: values2[0] -> values[0]2  (Llama 3 wrong)
-np_rec_fromrecords_70B: rec.fromrecords -> rec.from (Llama 3 is wrong)
+np_rec_fromrecords_70B: rec.fromrecords -> rec.from (Llama 3 wrong)
 np_strings_title_70B: 'b ca1' -> '1b ca' (Llama 3 wrong)
 np_sum_70B: Didn't add white space from original. (Llama 3 wrong)
 
