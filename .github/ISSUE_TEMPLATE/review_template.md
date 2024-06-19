@@ -18,7 +18,7 @@ assignees: 'bmwoodruff'
 Leave this section in place and check off each item to confirm you have ran the tests. -->
 
 ```
-spin build && python -m pip install . && spin docs && python tools/refguide_check.py --doctests
+spin build && python -m pip install . && spin docs && python tools/refguide_check.py --doctests && spin lint
 ```
 - [ ] All tests have passed
 - [ ] A visual inspection of the generated docs is correct
