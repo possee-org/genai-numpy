@@ -1,829 +1,831 @@
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues29', 'out_len34', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_absolute_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues29', 'out_len34', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_abs_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues7', 'out_len12', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_acosh_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues15', 'out_len20', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_acos_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues20', 'out_len28', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_add_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues13', 'out_len19', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_allclose_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues22', 'out_len26', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_all_70B.log
-0: ['swap_count1', 'diff0', 'expect34', 'Falses34', 'Trues2', 'out_len36', 'prom_len2', 'Trues==prom_len True']: .\log\np\np_amax_70B.log
-0: ['swap_count1', 'diff0', 'expect25', 'Falses25', 'Trues2', 'out_len27', 'prom_len2', 'Trues==prom_len True']: .\log\np\np_amin_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues9', 'out_len13', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_angle_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues37', 'out_len41', 'prom_len37', 'Trues==prom_len True']: .\log\np\np_any_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues29', 'out_len41', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_append_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues35', 'out_len43', 'prom_len35', 'Trues==prom_len True']: .\log\np\np_apply_along_axis_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues26', 'out_len33', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_apply_over_axes_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_arange_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues7', 'out_len12', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_arccosh_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues15', 'out_len22', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_arccos_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues5', 'out_len15', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_arcsinh_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues9', 'out_len13', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_arcsin_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues18', 'out_len23', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_arctan2_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_arctanh_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues18', 'out_len28', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_arctan_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues46', 'out_len55', 'prom_len46', 'Trues==prom_len True']: .\log\np\np_argmax_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues46', 'out_len52', 'prom_len46', 'Trues==prom_len True']: .\log\np\np_argmin_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues52', 'out_len58', 'prom_len52', 'Trues==prom_len True']: .\log\np\np_argsort_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues12', 'out_len21', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_argwhere_70B.log
-0: ['swap_count1', 'diff0', 'expect27', 'Falses27', 'Trues2', 'out_len29', 'prom_len2', 'Trues==prom_len True']: .\log\np\np_around_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues15', 'out_len20', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_array2string_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues42', 'out_len48', 'prom_len42', 'Trues==prom_len True']: .\log\np\np_array_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues26', 'out_len31', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_array_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_array_equiv_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_array_repr_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues10', 'out_len18', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_array_split_70B.log
-0: ['swap_count1', 'diff0', 'expect15', 'Falses15', 'Trues5', 'out_len20', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_array_str_70B.log
-0: ['swap_count1', 'diff0', 'expect26', 'Falses26', 'Trues14', 'out_len40', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_asanyarray_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues32', 'out_len43', 'prom_len32', 'Trues==prom_len True']: .\log\np\np_asarray_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues19', 'out_len25', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_asarray_chkfinite_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues31', 'out_len38', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_ascontiguousarray_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues31', 'out_len38', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_asfortranarray_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_asinh_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_asin_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_asmatrix_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues14', 'out_len20', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_astype_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues18', 'out_len27', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_atan2_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_atanh_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues18', 'out_len28', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_atan_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues16', 'out_len20', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_atleast_1d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues14', 'out_len20', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_atleast_2d_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues24', 'out_len31', 'prom_len24', 'Trues==prom_len True']: .\log\np\np_atleast_3d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues43', 'out_len51', 'prom_len43', 'Trues==prom_len True']: .\log\np\np_average_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues35', 'out_len40', 'prom_len35', 'Trues==prom_len True']: .\log\np\np_bartlett_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_base_repr_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_binary_repr_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues28', 'out_len33', 'prom_len28', 'Trues==prom_len True']: .\log\np\np_bincount_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues31', 'out_len35', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_bitwise_and_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues9', 'out_len22', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_bitwise_count_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues39', 'out_len47', 'prom_len39', 'Trues==prom_len True']: .\log\np\np_bitwise_invert_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues31', 'out_len35', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_bitwise_left_shift_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues39', 'out_len46', 'prom_len39', 'Trues==prom_len True']: .\log\np\np_bitwise_not_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues36', 'out_len40', 'prom_len36', 'Trues==prom_len True']: .\log\np\np_bitwise_or_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues20', 'out_len27', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_bitwise_right_shift_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues29', 'out_len36', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_bitwise_xor_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues37', 'out_len48', 'prom_len37', 'Trues==prom_len True']: .\log\np\np_blackman_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues62', 'out_len74', 'prom_len62', 'Trues==prom_len True']: .\log\np\np_block_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues25', 'out_len38', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_bmat_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues19', 'out_len29', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_broadcast_arrays_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_broadcast_shapes_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues8', 'out_len19', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_broadcast_to_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_busday_count_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues26', 'out_len31', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_busday_offset_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues18', 'out_len29', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_can_cast_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_cbrt_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues6', 'out_len10', 'prom_len6', 'Trues==prom_len True']: .\log\np\np_ceil_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues40', 'out_len46', 'prom_len40', 'Trues==prom_len True']: .\log\np\np_choose_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues19', 'out_len23', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_clip_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues9', 'out_len19', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_column_stack_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_common_type_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues23', 'out_len29', 'prom_len23', 'Trues==prom_len True']: .\log\np\np_compress_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues34', 'out_len40', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_concatenate_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues34', 'out_len40', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_concat_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_conjugate_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues10', 'out_len14', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_conj_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues21', 'out_len26', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_convolve_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues14', 'out_len18', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_copysign_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues15', 'out_len24', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_copyto_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues27', 'out_len39', 'prom_len27', 'Trues==prom_len True']: .\log\np\np_copy_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues63', 'out_len69', 'prom_len63', 'Trues==prom_len True']: .\log\np\np_corrcoef_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues21', 'out_len26', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_correlate_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues12', 'out_len17', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_cosh_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues17', 'out_len23', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_cos_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues16', 'out_len28', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_count_nonzero_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues34', 'out_len41', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_cov_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues59', 'out_len67', 'prom_len59', 'Trues==prom_len True']: .\log\np\np_cross_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues22', 'out_len31', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_cumprod_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues26', 'out_len30', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_cumsum_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues38', 'out_len44', 'prom_len38', 'Trues==prom_len True']: .\log\np\np_datetime_as_string_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues14', 'out_len20', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_datetime_data_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues5', 'out_len11', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_deg2rad_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_degrees_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_delete_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues13', 'out_len19', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_diagflat_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues20', 'out_len27', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_diag_70B.log
-0: ['swap_count1', 'diff0', 'expect18', 'Falses18', 'Trues36', 'out_len54', 'prom_len36', 'Trues==prom_len True']: .\log\np\np_diag_indices_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues26', 'out_len33', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_diag_indices_from_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues19', 'out_len26', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_diff_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues22', 'out_len29', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_digitize_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues21', 'out_len27', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_divide_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues12', 'out_len17', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_divmod_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues25', 'out_len32', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_dot_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues27', 'out_len35', 'prom_len27', 'Trues==prom_len True']: .\log\np\np_dsplit_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues16', 'out_len26', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_dstack_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues15', 'out_len20', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_ediff1d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues184', 'out_len190', 'prom_len184', 'Trues==prom_len True']: .\log\np\np_einsum_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues26', 'out_len26', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_einsum_path_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_empty_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues11', 'out_len17', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_empty_like_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues19', 'out_len24', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_exp2_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues11', 'out_len18', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_expm1_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues21', 'out_len28', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_exp_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues21', 'out_len28', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_extract_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues10', 'out_len18', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_eye_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_fabs_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues77', 'out_len84', 'prom_len77', 'Trues==prom_len True']: .\log\np\np_fill_diagonal_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_fix_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues14', 'out_len20', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_flatnonzero_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues17', 'out_len23', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_fliplr_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues20', 'out_len24', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_flipud_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues33', 'out_len39', 'prom_len33', 'Trues==prom_len True']: .\log\np\np_flip_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues41', 'out_len49', 'prom_len41', 'Trues==prom_len True']: .\log\np\np_float_power_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np\np_floor_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues14', 'out_len20', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_floor_divide_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues12', 'out_len16', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_fmax_70B.log
-0: ['swap_count1', 'diff0', 'expect3', 'Falses3', 'Trues12', 'out_len15', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_fmin_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues19', 'out_len23', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_fmod_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_format_float_positional_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues10', 'out_len18', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_format_float_scientific_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues12', 'out_len23', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_frexp_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues11', 'out_len18', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_frombuffer_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues31', 'out_len38', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_fromfile_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues20', 'out_len28', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_fromfunction_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues17', 'out_len24', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_fromiter_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues10', 'out_len18', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_frompyfunc_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues14', 'out_len25', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_fromregex_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_from_dlpack_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_full_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues23', 'out_len28', 'prom_len23', 'Trues==prom_len True']: .\log\np\np_full_like_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_gcd_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues51', 'out_len63', 'prom_len51', 'Trues==prom_len True']: .\log\np\np_genfromtxt_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues45', 'out_len58', 'prom_len45', 'Trues==prom_len True']: .\log\np\np_geomspace_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues5', 'out_len11', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_getbufsize_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_geterrcall_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_geterr_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_get_include_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_get_printoptions_70B.log
-0: ['swap_count1', 'diff0', 'expect24', 'Falses24', 'Trues105', 'out_len129', 'prom_len105', 'Trues==prom_len True']: .\log\np\np_gradient_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues13', 'out_len17', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_greater_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues13', 'out_len17', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_greater_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues34', 'out_len40', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_hamming_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues35', 'out_len43', 'prom_len35', 'Trues==prom_len True']: .\log\np\np_hanning_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_heaviside_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues83', 'out_len93', 'prom_len83', 'Trues==prom_len True']: .\log\np\np_histogram2d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues8', 'out_len16', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_histogramdd_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues36', 'out_len46', 'prom_len36', 'Trues==prom_len True']: .\log\np\np_histogram_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues41', 'out_len46', 'prom_len41', 'Trues==prom_len True']: .\log\np\np_histogram_bin_edges_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues48', 'out_len56', 'prom_len48', 'Trues==prom_len True']: .\log\np\np_hsplit_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues13', 'out_len21', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_hstack_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_hypot_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues7', 'out_len12', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_i0_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_identity_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_imag_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues15', 'out_len22', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_in1d_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues37', 'out_len47', 'prom_len37', 'Trues==prom_len True']: .\log\np\np_indices_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues35', 'out_len41', 'prom_len35', 'Trues==prom_len True']: .\log\np\np_info_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues34', 'out_len41', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_inner_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues47', 'out_len51', 'prom_len47', 'Trues==prom_len True']: .\log\np\np_insert_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues41', 'out_len50', 'prom_len41', 'Trues==prom_len True']: .\log\np\np_interp_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues22', 'out_len27', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_intersect1d_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues39', 'out_len48', 'prom_len39', 'Trues==prom_len True']: .\log\np\np_invert_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues21', 'out_len29', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_isclose_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_iscomplexobj_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_iscomplex_70B.log
-0: ['swap_count1', 'diff0', 'expect16', 'Falses16', 'Trues10', 'out_len26', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_isdtype_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues22', 'out_len28', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_isfinite_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues43', 'out_len48', 'prom_len43', 'Trues==prom_len True']: .\log\np\np_isfortran_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues18', 'out_len22', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_isinf_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues42', 'out_len50', 'prom_len42', 'Trues==prom_len True']: .\log\np\np_isin_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_isnan_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues9', 'out_len16', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_isnat_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues16', 'out_len23', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_isneginf_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues16', 'out_len23', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_isposinf_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_isrealobj_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues25', 'out_len30', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_isreal_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues22', 'out_len34', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_isscalar_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues37', 'out_len44', 'prom_len37', 'Trues==prom_len True']: .\log\np\np_issubdtype_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues7', 'out_len16', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_is_busday_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues7', 'out_len12', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_iterable_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues25', 'out_len34', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_ix__70B.log
-0: ['swap_count1', 'diff0', 'expect14', 'Falses14', 'Trues37', 'out_len51', 'prom_len37', 'Trues==prom_len True']: .\log\np\np_kaiser_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues26', 'out_len35', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_kron_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues11', 'out_len19', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_lcm_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_ldexp_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues31', 'out_len35', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_left_shift_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues12', 'out_len17', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_less_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues13', 'out_len17', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_less_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect19', 'Falses19', 'Trues78', 'out_len97', 'prom_len78', 'Trues==prom_len True']: .\log\np\np_lexsort_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues24', 'out_len29', 'prom_len24', 'Trues==prom_len True']: .\log\np\np_linspace_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues118', 'out_len126', 'prom_len118', 'Trues==prom_len True']: .\log\np\np_loadtxt_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues29', 'out_len38', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_load_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_log10_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues7', 'out_len11', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_log1p_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues10', 'out_len14', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_log2_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_logaddexp2_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_logaddexp_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues20', 'out_len25', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_logical_and_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues11', 'out_len17', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_logical_not_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues19', 'out_len23', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_logical_or_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues17', 'out_len26', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_logical_xor_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues27', 'out_len32', 'prom_len27', 'Trues==prom_len True']: .\log\np\np_logspace_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_log_70B.log
-0: ['swap_count1', 'diff0', 'expect16', 'Falses16', 'Trues27', 'out_len43', 'prom_len27', 'Trues==prom_len True']: .\log\np\np_mask_indices_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues57', 'out_len70', 'prom_len57', 'Trues==prom_len True']: .\log\np\np_matmul_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues12', 'out_len23', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_matrix_transpose_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_maximum_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues38', 'out_len44', 'prom_len38', 'Trues==prom_len True']: .\log\np\np_max_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_may_share_memory_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues31', 'out_len39', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_mean_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues29', 'out_len34', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_median_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues52', 'out_len61', 'prom_len52', 'Trues==prom_len True']: .\log\np\np_meshgrid_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_minimum_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_mintypecode_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues38', 'out_len44', 'prom_len38', 'Trues==prom_len True']: .\log\np\np_min_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_min_scalar_type_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_modf_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues14', 'out_len18', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_mod_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues19', 'out_len25', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_moveaxis_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues22', 'out_len33', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_multiply_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues12', 'out_len21', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_nanargmax_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues12', 'out_len21', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_nanargmin_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues18', 'out_len27', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_nancumprod_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_nancumsum_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_nanmax_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues10', 'out_len14', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_nanmean_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues24', 'out_len32', 'prom_len24', 'Trues==prom_len True']: .\log\np\np_nanmedian_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_nanmin_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues28', 'out_len35', 'prom_len28', 'Trues==prom_len True']: .\log\np\np_nanpercentile_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues14', 'out_len20', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_nanprod_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues27', 'out_len31', 'prom_len27', 'Trues==prom_len True']: .\log\np\np_nanquantile_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_nanstd_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues22', 'out_len28', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_nansum_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_nanvar_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues25', 'out_len30', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_nan_to_num_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_ndim_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues12', 'out_len16', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_negative_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues29', 'out_len41', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_nested_iters_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_nextafter_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues43', 'out_len49', 'prom_len43', 'Trues==prom_len True']: .\log\np\np_nonzero_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues16', 'out_len20', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_not_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues17', 'out_len26', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_ones_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_ones_like_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues34', 'out_len51', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_outer_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues16', 'out_len29', 'prom_len16', 'Trues==prom_len True']: .\log\np\np_packbits_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues68', 'out_len72', 'prom_len68', 'Trues==prom_len True']: .\log\np\np_pad_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues62', 'out_len68', 'prom_len62', 'Trues==prom_len True']: .\log\np\np_percentile_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues24', 'out_len29', 'prom_len24', 'Trues==prom_len True']: .\log\np\np_permute_dims_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues20', 'out_len26', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_piecewise_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_place_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues18', 'out_len23', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_polyadd_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues29', 'out_len36', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_polyder_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues9', 'out_len16', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_polydiv_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues41', 'out_len50', 'prom_len41', 'Trues==prom_len True']: .\log\np\np_polyfit_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues34', 'out_len43', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_polyint_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues19', 'out_len26', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_polymul_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_polysub_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues11', 'out_len18', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_polyval_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues25', 'out_len30', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_poly_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_positive_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues49', 'out_len54', 'prom_len49', 'Trues==prom_len True']: .\log\np\np_power_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues49', 'out_len56', 'prom_len49', 'Trues==prom_len True']: .\log\np\np_pow_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues13', 'out_len19', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_printoptions_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues44', 'out_len52', 'prom_len44', 'Trues==prom_len True']: .\log\np\np_prod_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues22', 'out_len29', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_promote_types_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues30', 'out_len35', 'prom_len30', 'Trues==prom_len True']: .\log\np\np_ptp_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues15', 'out_len24', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_putmask_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_put_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues18', 'out_len30', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_put_along_axis_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues28', 'out_len45', 'prom_len28', 'Trues==prom_len True']: .\log\np\np_quantile_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues5', 'out_len11', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_rad2deg_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues15', 'out_len20', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_radians_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues41', 'out_len49', 'prom_len41', 'Trues==prom_len True']: .\log\np\np_ravel_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues15', 'out_len19', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_ravel_multi_index_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_real_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_real_if_close_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues7', 'out_len12', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_reciprocal_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues14', 'out_len18', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_remainder_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues15', 'out_len24', 'prom_len15', 'Trues==prom_len True']: .\log\np\np_repeat_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues20', 'out_len32', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_require_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues13', 'out_len19', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_reshape_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_resize_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_result_type_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues20', 'out_len27', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_right_shift_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np\np_rint_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues10', 'out_len14', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_rollaxis_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues37', 'out_len48', 'prom_len37', 'Trues==prom_len True']: .\log\np\np_roll_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np\np_roots_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues19', 'out_len28', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_rot90_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues13', 'out_len17', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_round_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues18', 'out_len27', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_row_stack_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_savetxt_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues28', 'out_len41', 'prom_len28', 'Trues==prom_len True']: .\log\np\np_savez_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_savez_compressed_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues9', 'out_len13', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_searchsorted_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues21', 'out_len29', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_select_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues13', 'out_len21', 'prom_len13', 'Trues==prom_len True']: .\log\np\np_setbufsize_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_setdiff1d_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues40', 'out_len50', 'prom_len40', 'Trues==prom_len True']: .\log\np\np_seterrcall_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues21', 'out_len29', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_seterr_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_setxor1d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues47', 'out_len53', 'prom_len47', 'Trues==prom_len True']: .\log\np\np_set_printoptions_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_shape_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues31', 'out_len37', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_shares_memory_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues2', 'out_len13', 'prom_len2', 'Trues==prom_len True']: .\log\np\np_show_config_70B.log
-0: ['swap_count1', 'diff0', 'expect16', 'Falses16', 'Trues2', 'out_len18', 'prom_len2', 'Trues==prom_len True']: .\log\np\np_show_runtime_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues7', 'out_len11', 'prom_len7', 'Trues==prom_len True']: .\log\np\np_signbit_70B.log
-0: ['swap_count1', 'diff0', 'expect3', 'Falses3', 'Trues9', 'out_len12', 'prom_len9', 'Trues==prom_len True']: .\log\np\np_sign_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues30', 'out_len36', 'prom_len30', 'Trues==prom_len True']: .\log\np\np_sinc_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues22', 'out_len27', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_sinh_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues22', 'out_len29', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_sin_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_size_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues31', 'out_len37', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_sort_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_sort_complex_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_spacing_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues14', 'out_len22', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_split_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_sqrt_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_square_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues26', 'out_len34', 'prom_len26', 'Trues==prom_len True']: .\log\np\np_squeeze_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues24', 'out_len32', 'prom_len24', 'Trues==prom_len True']: .\log\np\np_stack_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues46', 'out_len52', 'prom_len46', 'Trues==prom_len True']: .\log\np\np_std_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues22', 'out_len27', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_subtract_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues25', 'out_len30', 'prom_len25', 'Trues==prom_len True']: .\log\np\np_sum_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues21', 'out_len27', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_swapaxes_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues19', 'out_len26', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_take_70B.log
-0: ['swap_count1', 'diff0', 'expect15', 'Falses15', 'Trues47', 'out_len62', 'prom_len47', 'Trues==prom_len True']: .\log\np\np_take_along_axis_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues18', 'out_len23', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_tanh_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues19', 'out_len24', 'prom_len19', 'Trues==prom_len True']: .\log\np\np_tan_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues75', 'out_len84', 'prom_len75', 'Trues==prom_len True']: .\log\np\np_tensordot_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues29', 'out_len37', 'prom_len29', 'Trues==prom_len True']: .\log\np\np_tile_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_trace_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues24', 'out_len33', 'prom_len24', 'Trues==prom_len True']: .\log\np\np_transpose_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues47', 'out_len55', 'prom_len47', 'Trues==prom_len True']: .\log\np\np_trapezoid_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues22', 'out_len29', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_tril_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues41', 'out_len51', 'prom_len41', 'Trues==prom_len True']: .\log\np\np_tril_indices_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues33', 'out_len45', 'prom_len33', 'Trues==prom_len True']: .\log\np\np_tril_indices_from_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np\np_trim_zeros_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues22', 'out_len29', 'prom_len22', 'Trues==prom_len True']: .\log\np\np_triu_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues42', 'out_len49', 'prom_len42', 'Trues==prom_len True']: .\log\np\np_triu_indices_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues33', 'out_len40', 'prom_len33', 'Trues==prom_len True']: .\log\np\np_triu_indices_from_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues12', 'out_len19', 'prom_len12', 'Trues==prom_len True']: .\log\np\np_tri_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues21', 'out_len27', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_true_divide_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues6', 'out_len10', 'prom_len6', 'Trues==prom_len True']: .\log\np\np_trunc_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues30', 'out_len37', 'prom_len30', 'Trues==prom_len True']: .\log\np\np_typename_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_union1d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues47', 'out_len53', 'prom_len47', 'Trues==prom_len True']: .\log\np\np_unique_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues8', 'out_len16', 'prom_len8', 'Trues==prom_len True']: .\log\np\np_unique_all_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_unique_counts_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues5', 'out_len11', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_unique_inverse_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np\np_unique_values_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues31', 'out_len36', 'prom_len31', 'Trues==prom_len True']: .\log\np\np_unpackbits_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues10', 'out_len14', 'prom_len10', 'Trues==prom_len True']: .\log\np\np_unravel_index_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues20', 'out_len24', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_unwrap_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues36', 'out_len44', 'prom_len36', 'Trues==prom_len True']: .\log\np\np_vander_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues49', 'out_len55', 'prom_len49', 'Trues==prom_len True']: .\log\np\np_var_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues20', 'out_len27', 'prom_len20', 'Trues==prom_len True']: .\log\np\np_vdot_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues11', 'out_len20', 'prom_len11', 'Trues==prom_len True']: .\log\np\np_vecdot_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues34', 'out_len42', 'prom_len34', 'Trues==prom_len True']: .\log\np\np_vsplit_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues18', 'out_len27', 'prom_len18', 'Trues==prom_len True']: .\log\np\np_vstack_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues32', 'out_len38', 'prom_len32', 'Trues==prom_len True']: .\log\np\np_where_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues21', 'out_len30', 'prom_len21', 'Trues==prom_len True']: .\log\np\np_zeros_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues17', 'out_len27', 'prom_len17', 'Trues==prom_len True']: .\log\np\np_zeros_like_70B.log
-0: ['swap_count1', 'diff0', 'expect15', 'Falses15', 'Trues20', 'out_len35', 'prom_len20', 'Trues==prom_len True']: .\log\np_char\np_char_add_8B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_char\np_char_array_8B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_ctypeslib\np_ctypeslib_as_array_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues2', 'out_len32', 'prom_len2', 'Trues==prom_len True']: .\log\np_ctypeslib\np_ctypeslib_as_ctypes_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_ctypeslib\np_ctypeslib_as_ctypes_type_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_ctypeslib\np_ctypeslib_load_library_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_ctypeslib\np_ctypeslib_ndpointer_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_emath\np_emath_arccos_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_emath\np_emath_arcsin_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues16', 'out_len20', 'prom_len16', 'Trues==prom_len True']: .\log\np_emath\np_emath_arctanh_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_emath\np_emath_log10_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np_emath\np_emath_log2_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np_emath\np_emath_logn_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues11', 'out_len19', 'prom_len11', 'Trues==prom_len True']: .\log\np_emath\np_emath_log_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues19', 'out_len24', 'prom_len19', 'Trues==prom_len True']: .\log\np_emath\np_emath_power_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues26', 'out_len33', 'prom_len26', 'Trues==prom_len True']: .\log\np_emath\np_emath_sqrt_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_f2py\np_f2py_get_include_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np_f2py\np_f2py_run_main_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues15', 'out_len23', 'prom_len15', 'Trues==prom_len True']: .\log\np_fft\np_fft_fft2_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np_fft\np_fft_fftfreq_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues28', 'out_len41', 'prom_len28', 'Trues==prom_len True']: .\log\np_fft\np_fft_fftn_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues20', 'out_len37', 'prom_len20', 'Trues==prom_len True']: .\log\np_fft\np_fft_fftshift_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues20', 'out_len25', 'prom_len20', 'Trues==prom_len True']: .\log\np_fft\np_fft_fft_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues20', 'out_len25', 'prom_len20', 'Trues==prom_len True']: .\log\np_fft\np_fft_hfft_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues9', 'out_len26', 'prom_len9', 'Trues==prom_len True']: .\log\np_fft\np_fft_ifft2_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues20', 'out_len28', 'prom_len20', 'Trues==prom_len True']: .\log\np_fft\np_fft_ifftn_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np_fft\np_fft_ifftshift_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues20', 'out_len26', 'prom_len20', 'Trues==prom_len True']: .\log\np_fft\np_fft_ifft_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np_fft\np_fft_ihfft_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np_fft\np_fft_irfft2_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues12', 'out_len20', 'prom_len12', 'Trues==prom_len True']: .\log\np_fft\np_fft_irfftn_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues12', 'out_len16', 'prom_len12', 'Trues==prom_len True']: .\log\np_fft\np_fft_irfft_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np_fft\np_fft_rfft2_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues13', 'out_len21', 'prom_len13', 'Trues==prom_len True']: .\log\np_fft\np_fft_rfftfreq_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues15', 'out_len28', 'prom_len15', 'Trues==prom_len True']: .\log\np_fft\np_fft_rfftn_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_fft\np_fft_rfft_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_lib\np_lib_add_docstring_70B.log
-0: ['swap_count1', 'diff0', 'expect20', 'Falses20', 'Trues2', 'out_len22', 'prom_len2', 'Trues==prom_len True']: .\log\np_lib\np_lib_add_newdoc_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues13', 'out_len20', 'prom_len13', 'Trues==prom_len True']: .\log\np_lib_array_utils\np_lib_array_utils_byte_bounds_70B.log
-0: ['swap_count1', 'diff0', 'expect24', 'Falses24', 'Trues19', 'out_len43', 'prom_len19', 'Trues==prom_len True']: .\log\np_lib_array_utils\np_lib_array_utils_normalize_axis_index_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_lib_array_utils\np_lib_array_utils_normalize_axis_tuple_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues37', 'out_len43', 'prom_len37', 'Trues==prom_len True']: .\log\np_lib_introspect\np_lib_introspect_opt_func_info_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_arccos_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_arcsin_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues16', 'out_len21', 'prom_len16', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_arctanh_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_log10_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues11', 'out_len18', 'prom_len11', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_log2_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_logn_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues11', 'out_len19', 'prom_len11', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_log_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues19', 'out_len24', 'prom_len19', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_power_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues26', 'out_len31', 'prom_len26', 'Trues==prom_len True']: .\log\np_lib_scimath\np_lib_scimath_sqrt_70B.log
-0: ['swap_count1', 'diff0', 'expect46', 'Falses46', 'Trues2', 'out_len48', 'prom_len2', 'Trues==prom_len True']: .\log\np_lib_stride_tricks\np_lib_stride_tricks_as_strided_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues106', 'out_len117', 'prom_len106', 'Trues==prom_len True']: .\log\np_lib_stride_tricks\np_lib_stride_tricks_sliding_window_view_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues26', 'out_len36', 'prom_len26', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_cholesky_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues28', 'out_len33', 'prom_len28', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_cond_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_cross_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues16', 'out_len22', 'prom_len16', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_det_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_diagonal_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues53', 'out_len62', 'prom_len53', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_eigh_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues24', 'out_len29', 'prom_len24', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_eigvalsh_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues26', 'out_len32', 'prom_len26', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_eigvals_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues46', 'out_len55', 'prom_len46', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_eig_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues60', 'out_len69', 'prom_len60', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_inv_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues32', 'out_len41', 'prom_len32', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_lstsq_70B.log
-0: ['swap_count1', 'diff0', 'expect27', 'Falses27', 'Trues2', 'out_len29', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_matmul_70B.log
-0: ['swap_count1', 'diff0', 'expect26', 'Falses26', 'Trues2', 'out_len28', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_matrix_norm_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues30', 'out_len37', 'prom_len30', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_matrix_power_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_matrix_rank_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues12', 'out_len18', 'prom_len12', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_matrix_transpose_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues19', 'out_len26', 'prom_len19', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_multi_dot_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues68', 'out_len76', 'prom_len68', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_norm_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_outer_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues13', 'out_len20', 'prom_len13', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_pinv_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues29', 'out_len38', 'prom_len29', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_slogdet_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues17', 'out_len25', 'prom_len17', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_solve_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues2', 'out_len19', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_svdvals_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues50', 'out_len60', 'prom_len50', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_svd_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues75', 'out_len82', 'prom_len75', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_tensordot_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues22', 'out_len33', 'prom_len22', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_tensorinv_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues12', 'out_len21', 'prom_len12', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_tensorsolve_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_trace_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_vecdot_70B.log
-0: ['swap_count1', 'diff0', 'expect32', 'Falses32', 'Trues2', 'out_len34', 'prom_len2', 'Trues==prom_len True']: .\log\np_linalg\np_linalg_vector_norm_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues27', 'out_len34', 'prom_len27', 'Trues==prom_len True']: .\log\np_ma\np_ma_allclose_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues16', 'out_len23', 'prom_len16', 'Trues==prom_len True']: .\log\np_ma\np_ma_allequal_70B.log
-0: ['swap_count1', 'diff0', 'expect34', 'Falses34', 'Trues2', 'out_len36', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_alltrue_70B.log
-0: ['swap_count1', 'diff0', 'expect29', 'Falses29', 'Trues2', 'out_len31', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_amax_70B.log
-0: ['swap_count1', 'diff0', 'expect21', 'Falses21', 'Trues2', 'out_len23', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_amin_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues11', 'out_len24', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_append_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues35', 'out_len43', 'prom_len35', 'Trues==prom_len True']: .\log\np_ma\np_ma_apply_along_axis_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues42', 'out_len54', 'prom_len42', 'Trues==prom_len True']: .\log\np_ma\np_ma_apply_over_axes_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues10', 'out_len23', 'prom_len10', 'Trues==prom_len True']: .\log\np_ma\np_ma_argsort_70B.log
-0: ['swap_count1', 'diff0', 'expect20', 'Falses20', 'Trues46', 'out_len66', 'prom_len46', 'Trues==prom_len True']: .\log\np_ma\np_ma_array_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues15', 'out_len25', 'prom_len15', 'Trues==prom_len True']: .\log\np_ma\np_ma_asanyarray_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues15', 'out_len25', 'prom_len15', 'Trues==prom_len True']: .\log\np_ma\np_ma_asarray_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues47', 'out_len53', 'prom_len47', 'Trues==prom_len True']: .\log\np_ma\np_ma_average_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues9', 'out_len18', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_choose_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np_ma\np_ma_clump_masked_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np_ma\np_ma_clump_unmasked_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np_ma\np_ma_common_fill_value_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues23', 'out_len29', 'prom_len23', 'Trues==prom_len True']: .\log\np_ma\np_ma_compressed_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues10', 'out_len19', 'prom_len10', 'Trues==prom_len True']: .\log\np_ma\np_ma_compress_cols_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues13', 'out_len21', 'prom_len13', 'Trues==prom_len True']: .\log\np_ma\np_ma_compress_nd_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues24', 'out_len34', 'prom_len24', 'Trues==prom_len True']: .\log\np_ma\np_ma_compress_rowcols_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_ma\np_ma_compress_rows_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues19', 'out_len36', 'prom_len19', 'Trues==prom_len True']: .\log\np_ma\np_ma_concatenate_70B.log
-0: ['swap_count1', 'diff0', 'expect34', 'Falses34', 'Trues2', 'out_len36', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_convolve_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_correlate_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues26', 'out_len32', 'prom_len26', 'Trues==prom_len True']: .\log\np_ma\np_ma_count_masked_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np_ma\np_ma_cov_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues9', 'out_len13', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_default_fill_value_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues32', 'out_len43', 'prom_len32', 'Trues==prom_len True']: .\log\np_ma\np_ma_diag_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues29', 'out_len36', 'prom_len29', 'Trues==prom_len True']: .\log\np_ma\np_ma_diff_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues19', 'out_len25', 'prom_len19', 'Trues==prom_len True']: .\log\np_ma\np_ma_dot_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues8', 'out_len16', 'prom_len8', 'Trues==prom_len True']: .\log\np_ma\np_ma_ediff1d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues19', 'out_len27', 'prom_len19', 'Trues==prom_len True']: .\log\np_ma\np_ma_filled_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues18', 'out_len26', 'prom_len18', 'Trues==prom_len True']: .\log\np_ma\np_ma_fix_invalid_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues17', 'out_len29', 'prom_len17', 'Trues==prom_len True']: .\log\np_ma\np_ma_flatnotmasked_contiguous_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np_ma\np_ma_flatnotmasked_edges_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues15', 'out_len22', 'prom_len15', 'Trues==prom_len True']: .\log\np_ma\np_ma_flatten_mask_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues8', 'out_len16', 'prom_len8', 'Trues==prom_len True']: .\log\np_ma\np_ma_flatten_structured_array_70B.log
-0: ['swap_count1', 'diff0', 'expect18', 'Falses18', 'Trues38', 'out_len56', 'prom_len38', 'Trues==prom_len True']: .\log\np_ma\np_ma_fromflex_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues21', 'out_len28', 'prom_len21', 'Trues==prom_len True']: .\log\np_ma\np_ma_getdata_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues28', 'out_len39', 'prom_len28', 'Trues==prom_len True']: .\log\np_ma\np_ma_getmaskarray_70B.log
-0: ['swap_count1', 'diff0', 'expect14', 'Falses14', 'Trues37', 'out_len51', 'prom_len37', 'Trues==prom_len True']: .\log\np_ma\np_ma_getmask_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues9', 'out_len18', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_in1d_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues34', 'out_len41', 'prom_len34', 'Trues==prom_len True']: .\log\np_ma\np_ma_innerproduct_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues34', 'out_len41', 'prom_len34', 'Trues==prom_len True']: .\log\np_ma\np_ma_inner_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues9', 'out_len18', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_intersect1d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues25', 'out_len31', 'prom_len25', 'Trues==prom_len True']: .\log\np_ma\np_ma_isarray_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues9', 'out_len18', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_isin_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues25', 'out_len30', 'prom_len25', 'Trues==prom_len True']: .\log\np_ma\np_ma_isMaskedArray_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues25', 'out_len31', 'prom_len25', 'Trues==prom_len True']: .\log\np_ma\np_ma_isMA_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues27', 'out_len39', 'prom_len27', 'Trues==prom_len True']: .\log\np_ma\np_ma_is_masked_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues39', 'out_len44', 'prom_len39', 'Trues==prom_len True']: .\log\np_ma\np_ma_is_mask_70B.log
-0: ['swap_count1', 'diff0', 'expect26', 'Falses26', 'Trues2', 'out_len28', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_left_shift_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues42', 'out_len47', 'prom_len42', 'Trues==prom_len True']: .\log\np_ma\np_ma_make_mask_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues12', 'out_len19', 'prom_len12', 'Trues==prom_len True']: .\log\np_ma\np_ma_make_mask_descr_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues16', 'out_len22', 'prom_len16', 'Trues==prom_len True']: .\log\np_ma\np_ma_make_mask_none_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues22', 'out_len30', 'prom_len22', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_all_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues22', 'out_len34', 'prom_len22', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_all_like_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues11', 'out_len19', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_greater_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_greater_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues16', 'out_len23', 'prom_len16', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_inside_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues13', 'out_len23', 'prom_len13', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_invalid_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_less_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_less_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues11', 'out_len21', 'prom_len11', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_not_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues28', 'out_len38', 'prom_len28', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_object_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues16', 'out_len28', 'prom_len16', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_outside_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues23', 'out_len29', 'prom_len23', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_values_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues62', 'out_len72', 'prom_len62', 'Trues==prom_len True']: .\log\np_ma\np_ma_masked_where_70B.log
-0: ['swap_count1', 'diff0', 'expect16', 'Falses16', 'Trues28', 'out_len44', 'prom_len28', 'Trues==prom_len True']: .\log\np_ma\np_ma_mask_cols_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np_ma\np_ma_mask_or_70B.log
-0: ['swap_count1', 'diff0', 'expect27', 'Falses27', 'Trues28', 'out_len55', 'prom_len28', 'Trues==prom_len True']: .\log\np_ma\np_ma_mask_rowcols_70B.log
-0: ['swap_count1', 'diff0', 'expect16', 'Falses16', 'Trues29', 'out_len45', 'prom_len29', 'Trues==prom_len True']: .\log\np_ma\np_ma_mask_rows_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues19', 'out_len25', 'prom_len19', 'Trues==prom_len True']: .\log\np_ma\np_ma_maximum_fill_value_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues38', 'out_len42', 'prom_len38', 'Trues==prom_len True']: .\log\np_ma\np_ma_max_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues14', 'out_len22', 'prom_len14', 'Trues==prom_len True']: .\log\np_ma\np_ma_median_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues19', 'out_len25', 'prom_len19', 'Trues==prom_len True']: .\log\np_ma\np_ma_minimum_fill_value_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues31', 'out_len35', 'prom_len31', 'Trues==prom_len True']: .\log\np_ma\np_ma_min_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues36', 'out_len47', 'prom_len36', 'Trues==prom_len True']: .\log\np_ma\np_ma_ndenumerate_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_ndim_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues27', 'out_len34', 'prom_len27', 'Trues==prom_len True']: .\log\np_ma\np_ma_notmasked_contiguous_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues13', 'out_len22', 'prom_len13', 'Trues==prom_len True']: .\log\np_ma\np_ma_notmasked_edges_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues34', 'out_len46', 'prom_len34', 'Trues==prom_len True']: .\log\np_ma\np_ma_outerproduct_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues34', 'out_len43', 'prom_len34', 'Trues==prom_len True']: .\log\np_ma\np_ma_outer_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues41', 'out_len50', 'prom_len41', 'Trues==prom_len True']: .\log\np_ma\np_ma_polyfit_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues26', 'out_len37', 'prom_len26', 'Trues==prom_len True']: .\log\np_ma\np_ma_power_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues40', 'out_len50', 'prom_len40', 'Trues==prom_len True']: .\log\np_ma\np_ma_ptp_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues17', 'out_len34', 'prom_len17', 'Trues==prom_len True']: .\log\np_ma\np_ma_putmask_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_put_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues2', 'out_len32', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_reshape_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues40', 'out_len50', 'prom_len40', 'Trues==prom_len True']: .\log\np_ma\np_ma_resize_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues15', 'out_len25', 'prom_len15', 'Trues==prom_len True']: .\log\np_ma\np_ma_right_shift_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues23', 'out_len33', 'prom_len23', 'Trues==prom_len True']: .\log\np_ma\np_ma_round_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues23', 'out_len33', 'prom_len23', 'Trues==prom_len True']: .\log\np_ma\np_ma_round__70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_ma\np_ma_setdiff1d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_setxor1d_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues32', 'out_len45', 'prom_len32', 'Trues==prom_len True']: .\log\np_ma\np_ma_set_fill_value_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np_ma\np_ma_shape_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_ma\np_ma_size_70B.log
-0: ['swap_count1', 'diff0', 'expect18', 'Falses18', 'Trues2', 'out_len20', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_sometrue_70B.log
-0: ['swap_count1', 'diff0', 'expect18', 'Falses18', 'Trues15', 'out_len33', 'prom_len15', 'Trues==prom_len True']: .\log\np_ma\np_ma_sort_70B.log
-0: ['swap_count1', 'diff0', 'expect130', 'Falses130', 'Trues2', 'out_len132', 'prom_len2', 'Trues==prom_len True']: .\log\np_ma\np_ma_take_70B.log
-0: ['swap_count1', 'diff0', 'expect28', 'Falses28', 'Trues21', 'out_len49', 'prom_len21', 'Trues==prom_len True']: .\log\np_ma\np_ma_transpose_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_ma\np_ma_union1d_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues26', 'out_len36', 'prom_len26', 'Trues==prom_len True']: .\log\np_ma\np_ma_unique_70B.log
-0: ['swap_count1', 'diff0', 'expect14', 'Falses14', 'Trues36', 'out_len50', 'prom_len36', 'Trues==prom_len True']: .\log\np_ma\np_ma_vander_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues24', 'out_len29', 'prom_len24', 'Trues==prom_len True']: .\log\np_ma\np_ma_where_70B.log
-0: ['swap_count1', 'diff0', 'expect13', 'Falses13', 'Trues18', 'out_len31', 'prom_len18', 'Trues==prom_len True']: .\log\np_polynomial\np_polynomial_set_default_printstyle_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues12', 'out_len17', 'prom_len12', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_cheb2poly_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebadd_70B.log
-0: ['swap_count1', 'diff0', 'expect31', 'Falses31', 'Trues2', 'out_len33', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebcompanion_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebder_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues11', 'out_len17', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebdiv_70B.log
-0: ['swap_count1', 'diff0', 'expect122', 'Falses122', 'Trues3', 'out_len125', 'prom_len3', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebfit_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues9', 'out_len14', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebfromroots_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebgauss_70B.log
-0: ['swap_count1', 'diff0', 'expect20', 'Falses20', 'Trues2', 'out_len22', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebgrid2d_70B.log
-0: ['swap_count1', 'diff0', 'expect34', 'Falses34', 'Trues2', 'out_len36', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebgrid3d_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebinterpolate_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues16', 'out_len21', 'prom_len16', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebint_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebline_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues6', 'out_len12', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebmulx_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebmul_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebpow_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebpts1_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebpts2_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebroots_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebsub_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebtrim_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues2', 'out_len19', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebval2d_70B.log
-0: ['swap_count1', 'diff0', 'expect21', 'Falses21', 'Trues2', 'out_len23', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebval3d_70B.log
-0: ['swap_count1', 'diff0', 'expect28', 'Falses28', 'Trues2', 'out_len30', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebval_70B.log
-0: ['swap_count1', 'diff0', 'expect29', 'Falses29', 'Trues2', 'out_len31', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebvander2d_70B.log
-0: ['swap_count1', 'diff0', 'expect25', 'Falses25', 'Trues2', 'out_len27', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebvander3d_70B.log
-0: ['swap_count1', 'diff0', 'expect37', 'Falses37', 'Trues2', 'out_len39', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebvander_70B.log
-0: ['swap_count1', 'diff0', 'expect18', 'Falses18', 'Trues2', 'out_len20', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebweight_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues12', 'out_len16', 'prom_len12', 'Trues==prom_len True']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_poly2cheb_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_herm2poly_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermadd_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermcompanion_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermder_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues10', 'out_len14', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermdiv_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues10', 'out_len22', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermfit_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermfromroots_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues6', 'out_len14', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermgauss_70B.log
-0: ['swap_count1', 'diff0', 'expect14', 'Falses14', 'Trues11', 'out_len25', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermgrid2d_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues13', 'out_len25', 'prom_len13', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermgrid3d_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermint_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermline_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermmulx_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermmul_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermpow_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues9', 'out_len15', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermroots_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermsub_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermtrim_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermval2d_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues10', 'out_len19', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermval3d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermval_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues10', 'out_len19', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermvander2d_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues11', 'out_len20', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermvander3d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermvander_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermweight_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite\np_polynomial_hermite_poly2herm_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_herme2poly_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeadd_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermecompanion_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeder_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermediv_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues10', 'out_len21', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermefit_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermefromroots_70B.log
-0: ['swap_count1', 'diff0', 'expect31', 'Falses31', 'Trues2', 'out_len33', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermegauss_70B.log
-0: ['swap_count1', 'diff0', 'expect39', 'Falses39', 'Trues2', 'out_len41', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermegrid2d_70B.log
-0: ['swap_count1', 'diff0', 'expect43', 'Falses43', 'Trues2', 'out_len45', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermegrid3d_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues14', 'out_len18', 'prom_len14', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeint_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues9', 'out_len15', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeline_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermemulx_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues6', 'out_len10', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermemul_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermepow_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues9', 'out_len15', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeroots_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermesub_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermetrim_70B.log
-0: ['swap_count1', 'diff0', 'expect23', 'Falses23', 'Trues2', 'out_len25', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeval2d_70B.log
-0: ['swap_count1', 'diff0', 'expect35', 'Falses35', 'Trues2', 'out_len37', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeval3d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeval_70B.log
-0: ['swap_count1', 'diff0', 'expect14', 'Falses14', 'Trues2', 'out_len16', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermevander2d_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues2', 'out_len32', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermevander3d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermevander_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeweight_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_poly2herme_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lag2poly_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagadd_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues7', 'out_len15', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagcompanion_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagder_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagdiv_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues10', 'out_len21', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagfit_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagfromroots_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues6', 'out_len14', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_laggauss_70B.log
-0: ['swap_count1', 'diff0', 'expect12', 'Falses12', 'Trues8', 'out_len20', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_laggrid2d_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_laggrid3d_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues14', 'out_len21', 'prom_len14', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagint_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagline_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagmulx_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagmul_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagpow_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues9', 'out_len15', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagroots_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagsub_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagtrim_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues7', 'out_len17', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagval2d_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues7', 'out_len16', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagval3d_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagval_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues8', 'out_len17', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagvander2d_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues10', 'out_len20', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagvander3d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagvander_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagweight_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_poly2lag_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues12', 'out_len16', 'prom_len12', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_leg2poly_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legadd_70B.log
-0: ['swap_count1', 'diff0', 'expect25', 'Falses25', 'Trues2', 'out_len27', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legcompanion_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legder_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues11', 'out_len17', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legdiv_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues3', 'out_len33', 'prom_len3', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legfit_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues9', 'out_len13', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legfromroots_70B.log
-0: ['swap_count1', 'diff0', 'expect29', 'Falses29', 'Trues2', 'out_len31', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_leggauss_70B.log
-0: ['swap_count1', 'diff0', 'expect40', 'Falses40', 'Trues2', 'out_len42', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_leggrid2d_70B.log
-0: ['swap_count1', 'diff0', 'expect20', 'Falses20', 'Trues2', 'out_len22', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_leggrid3d_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues16', 'out_len21', 'prom_len16', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legint_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legline_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legmulx_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legmul_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legpow_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues6', 'out_len10', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legroots_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legsub_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legtrim_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues2', 'out_len32', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legval2d_70B.log
-0: ['swap_count1', 'diff0', 'expect26', 'Falses26', 'Trues2', 'out_len28', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legval3d_70B.log
-0: ['swap_count1', 'diff0', 'expect27', 'Falses27', 'Trues2', 'out_len29', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legval_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues2', 'out_len32', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legvander2d_70B.log
-0: ['swap_count1', 'diff0', 'expect37', 'Falses37', 'Trues2', 'out_len39', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legvander3d_70B.log
-0: ['swap_count1', 'diff0', 'expect27', 'Falses27', 'Trues2', 'out_len29', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legvander_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_legweight_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_legendre\np_polynomial_legendre_poly2leg_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyadd_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polycompanion_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues13', 'out_len20', 'prom_len13', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyder_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polydiv_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues28', 'out_len38', 'prom_len28', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyfit_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues9', 'out_len13', 'prom_len9', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyfromroots_70B.log
-0: ['swap_count1', 'diff0', 'expect15', 'Falses15', 'Trues8', 'out_len23', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polygrid2d_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues8', 'out_len17', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polygrid3d_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues16', 'out_len21', 'prom_len16', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyint_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyline_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polymulx_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polymul_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polypow_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyroots_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polysub_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues11', 'out_len15', 'prom_len11', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polytrim_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues7', 'out_len15', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyval2d_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues7', 'out_len15', 'prom_len7', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyval3d_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues23', 'out_len29', 'prom_len23', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvalfromroots_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues22', 'out_len29', 'prom_len22', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyval_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues29', 'out_len39', 'prom_len29', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvander2d_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues24', 'out_len35', 'prom_len24', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvander3d_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues13', 'out_len20', 'prom_len13', 'Trues==prom_len True']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvander_70B.log
-0: ['swap_count1', 'diff0', 'expect20', 'Falses20', 'Trues2', 'out_len22', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_beta_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues18', 'out_len26', 'prom_len18', 'Trues==prom_len True']: .\log\np_random\np_random_binomial_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues5', 'out_len14', 'prom_len5', 'Trues==prom_len True']: .\log\np_random\np_random_bytes_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np_random\np_random_chisquare_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues34', 'out_len40', 'prom_len34', 'Trues==prom_len True']: .\log\np_random\np_random_choice_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues52', 'out_len62', 'prom_len52', 'Trues==prom_len True']: .\log\np_random\np_random_default_rng_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues16', 'out_len21', 'prom_len16', 'Trues==prom_len True']: .\log\np_random\np_random_dirichlet_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues16', 'out_len23', 'prom_len16', 'Trues==prom_len True']: .\log\np_random\np_random_exponential_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues27', 'out_len33', 'prom_len27', 'Trues==prom_len True']: .\log\np_random\np_random_f_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues18', 'out_len23', 'prom_len18', 'Trues==prom_len True']: .\log\np_random\np_random_gamma_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues12', 'out_len19', 'prom_len12', 'Trues==prom_len True']: .\log\np_random\np_random_geometric_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_get_state_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues37', 'out_len46', 'prom_len37', 'Trues==prom_len True']: .\log\np_random\np_random_gumbel_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues19', 'out_len26', 'prom_len19', 'Trues==prom_len True']: .\log\np_random\np_random_hypergeometric_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues22', 'out_len28', 'prom_len22', 'Trues==prom_len True']: .\log\np_random\np_random_laplace_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues17', 'out_len22', 'prom_len17', 'Trues==prom_len True']: .\log\np_random\np_random_logistic_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues44', 'out_len50', 'prom_len44', 'Trues==prom_len True']: .\log\np_random\np_random_lognormal_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues17', 'out_len23', 'prom_len17', 'Trues==prom_len True']: .\log\np_random\np_random_logseries_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues38', 'out_len45', 'prom_len38', 'Trues==prom_len True']: .\log\np_random\np_random_multinomial_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues38', 'out_len45', 'prom_len38', 'Trues==prom_len True']: .\log\np_random\np_random_multivariate_normal_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues15', 'out_len22', 'prom_len15', 'Trues==prom_len True']: .\log\np_random\np_random_negative_binomial_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues28', 'out_len34', 'prom_len28', 'Trues==prom_len True']: .\log\np_random\np_random_noncentral_chisquare_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues20', 'out_len28', 'prom_len20', 'Trues==prom_len True']: .\log\np_random\np_random_noncentral_f_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues32', 'out_len38', 'prom_len32', 'Trues==prom_len True']: .\log\np_random\np_random_normal_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues16', 'out_len22', 'prom_len16', 'Trues==prom_len True']: .\log\np_random\np_random_pareto_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues14', 'out_len23', 'prom_len14', 'Trues==prom_len True']: .\log\np_random\np_random_permutation_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues17', 'out_len21', 'prom_len17', 'Trues==prom_len True']: .\log\np_random\np_random_poisson_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues42', 'out_len48', 'prom_len42', 'Trues==prom_len True']: .\log\np_random\np_random_power_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues29', 'out_len36', 'prom_len29', 'Trues==prom_len True']: .\log\np_random\np_random_randint_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues12', 'out_len19', 'prom_len12', 'Trues==prom_len True']: .\log\np_random\np_random_randn_70B.log
-0: ['swap_count1', 'diff0', 'expect23', 'Falses23', 'Trues2', 'out_len25', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_random_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues30', 'out_len36', 'prom_len30', 'Trues==prom_len True']: .\log\np_random\np_random_random_integers_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues16', 'out_len22', 'prom_len16', 'Trues==prom_len True']: .\log\np_random\np_random_random_sample_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues7', 'out_len12', 'prom_len7', 'Trues==prom_len True']: .\log\np_random\np_random_rand_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_ranf_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues20', 'out_len26', 'prom_len20', 'Trues==prom_len True']: .\log\np_random\np_random_rayleigh_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_sample_70B.log
-0: ['swap_count1', 'diff0', 'expect28', 'Falses28', 'Trues2', 'out_len30', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_seed_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues2', 'out_len13', 'prom_len2', 'Trues==prom_len True']: .\log\np_random\np_random_set_state_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues16', 'out_len23', 'prom_len16', 'Trues==prom_len True']: .\log\np_random\np_random_shuffle_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_random\np_random_standard_cauchy_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_random\np_random_standard_exponential_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues18', 'out_len24', 'prom_len18', 'Trues==prom_len True']: .\log\np_random\np_random_standard_gamma_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues22', 'out_len28', 'prom_len22', 'Trues==prom_len True']: .\log\np_random\np_random_standard_normal_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues49', 'out_len58', 'prom_len49', 'Trues==prom_len True']: .\log\np_random\np_random_standard_t_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues9', 'out_len15', 'prom_len9', 'Trues==prom_len True']: .\log\np_random\np_random_triangular_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues21', 'out_len27', 'prom_len21', 'Trues==prom_len True']: .\log\np_random\np_random_uniform_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues18', 'out_len25', 'prom_len18', 'Trues==prom_len True']: .\log\np_random\np_random_vonmises_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues8', 'out_len14', 'prom_len8', 'Trues==prom_len True']: .\log\np_random\np_random_wald_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues21', 'out_len26', 'prom_len21', 'Trues==prom_len True']: .\log\np_random\np_random_weibull_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues29', 'out_len37', 'prom_len29', 'Trues==prom_len True']: .\log\np_random\np_random_zipf_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues36', 'out_len42', 'prom_len36', 'Trues==prom_len True']: .\log\np_rec\np_rec_array_70B.log
-0: ['swap_count1', 'diff0', 'expect14', 'Falses14', 'Trues2', 'out_len16', 'prom_len2', 'Trues==prom_len True']: .\log\np_rec\np_rec_find_duplicate_70B.log
-0: ['swap_count1', 'diff0', 'expect10', 'Falses10', 'Trues23', 'out_len33', 'prom_len23', 'Trues==prom_len True']: .\log\np_rec\np_rec_fromarrays_70B.log
-0: ['swap_count1', 'diff0', 'expect16', 'Falses16', 'Trues18', 'out_len34', 'prom_len18', 'Trues==prom_len True']: .\log\np_rec\np_rec_fromfile_70B.log
-0: ['swap_count1', 'diff0', 'expect11', 'Falses11', 'Trues15', 'out_len26', 'prom_len15', 'Trues==prom_len True']: .\log\np_rec\np_rec_fromrecords_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues21', 'out_len29', 'prom_len21', 'Trues==prom_len True']: .\log\np_rec\np_rec_fromstring_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues20', 'out_len26', 'prom_len20', 'Trues==prom_len True']: .\log\np_strings\np_strings_add_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues9', 'out_len18', 'prom_len9', 'Trues==prom_len True']: .\log\np_strings\np_strings_capitalize_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues11', 'out_len16', 'prom_len11', 'Trues==prom_len True']: .\log\np_strings\np_strings_center_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues14', 'out_len19', 'prom_len14', 'Trues==prom_len True']: .\log\np_strings\np_strings_count_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues10', 'out_len17', 'prom_len10', 'Trues==prom_len True']: .\log\np_strings\np_strings_decode_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues7', 'out_len13', 'prom_len7', 'Trues==prom_len True']: .\log\np_strings\np_strings_encode_70B.log
-0: ['swap_count1', 'diff0', 'expect9', 'Falses9', 'Trues10', 'out_len19', 'prom_len10', 'Trues==prom_len True']: .\log\np_strings\np_strings_endswith_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues19', 'out_len24', 'prom_len19', 'Trues==prom_len True']: .\log\np_strings\np_strings_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues6', 'out_len12', 'prom_len6', 'Trues==prom_len True']: .\log\np_strings\np_strings_expandtabs_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues6', 'out_len12', 'prom_len6', 'Trues==prom_len True']: .\log\np_strings\np_strings_find_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_strings\np_strings_greater_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues13', 'out_len18', 'prom_len13', 'Trues==prom_len True']: .\log\np_strings\np_strings_greater_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues6', 'out_len12', 'prom_len6', 'Trues==prom_len True']: .\log\np_strings\np_strings_index_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues6', 'out_len11', 'prom_len6', 'Trues==prom_len True']: .\log\np_strings\np_strings_isalnum_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_strings\np_strings_isalpha_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np_strings\np_strings_isdecimal_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues9', 'out_len15', 'prom_len9', 'Trues==prom_len True']: .\log\np_strings\np_strings_isdigit_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues7', 'out_len11', 'prom_len7', 'Trues==prom_len True']: .\log\np_strings\np_strings_islower_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues5', 'out_len9', 'prom_len5', 'Trues==prom_len True']: .\log\np_strings\np_strings_isnumeric_70B.log
-0: ['swap_count0', 'diff0', 'expect0', 'Falses0', 'Trues2', 'out_len2', 'prom_len2', 'Trues==prom_len True']: .\log\np_strings\np_strings_isspace_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_istitle_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues8', 'out_len13', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_isupper_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues12', 'out_len17', 'prom_len12', 'Trues==prom_len True']: .\log\np_strings\np_strings_less_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues13', 'out_len17', 'prom_len13', 'Trues==prom_len True']: .\log\np_strings\np_strings_less_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_ljust_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np_strings\np_strings_lower_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues15', 'out_len19', 'prom_len15', 'Trues==prom_len True']: .\log\np_strings\np_strings_lstrip_70B.log
-0: ['swap_count1', 'diff0', 'expect30', 'Falses30', 'Trues2', 'out_len32', 'prom_len2', 'Trues==prom_len True']: .\log\np_strings\np_strings_mod_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues18', 'out_len23', 'prom_len18', 'Trues==prom_len True']: .\log\np_strings\np_strings_multiply_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues16', 'out_len20', 'prom_len16', 'Trues==prom_len True']: .\log\np_strings\np_strings_not_equal_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues8', 'out_len16', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_partition_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues10', 'out_len16', 'prom_len10', 'Trues==prom_len True']: .\log\np_strings\np_strings_replace_70B.log
-0: ['swap_count1', 'diff0', 'expect17', 'Falses17', 'Trues2', 'out_len19', 'prom_len2', 'Trues==prom_len True']: .\log\np_strings\np_strings_rfind_70B.log
-0: ['swap_count1', 'diff0', 'expect6', 'Falses6', 'Trues6', 'out_len12', 'prom_len6', 'Trues==prom_len True']: .\log\np_strings\np_strings_rindex_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues8', 'out_len12', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_rjust_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues8', 'out_len15', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_rpartition_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues10', 'out_len15', 'prom_len10', 'Trues==prom_len True']: .\log\np_strings\np_strings_rstrip_70B.log
-0: ['swap_count1', 'diff0', 'expect33', 'Falses33', 'Trues2', 'out_len35', 'prom_len2', 'Trues==prom_len True']: .\log\np_strings\np_strings_startswith_70B.log
-0: ['swap_count1', 'diff0', 'expect4', 'Falses4', 'Trues14', 'out_len18', 'prom_len14', 'Trues==prom_len True']: .\log\np_strings\np_strings_strip_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues12', 'out_len17', 'prom_len12', 'Trues==prom_len True']: .\log\np_strings\np_strings_str_len_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues9', 'out_len16', 'prom_len9', 'Trues==prom_len True']: .\log\np_strings\np_strings_swapcase_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues9', 'out_len17', 'prom_len9', 'Trues==prom_len True']: .\log\np_strings\np_strings_title_70B.log
-0: ['swap_count1', 'diff0', 'expect8', 'Falses8', 'Trues8', 'out_len16', 'prom_len8', 'Trues==prom_len True']: .\log\np_strings\np_strings_translate_70B.log
-0: ['swap_count1', 'diff0', 'expect7', 'Falses7', 'Trues7', 'out_len14', 'prom_len7', 'Trues==prom_len True']: .\log\np_strings\np_strings_upper_70B.log
-0: ['swap_count1', 'diff0', 'expect5', 'Falses5', 'Trues5', 'out_len10', 'prom_len5', 'Trues==prom_len True']: .\log\np_strings\np_strings_zfill_70B.log
+-2: ['out_len53', 'clean_len53']: .\log\np\np_outer_70B.log
+-2: ['out_len45', 'clean_len45']: .\log\np_ma\np_ma_outer_70B.log
+-1: ['out_len20', 'clean_len20']: .\log\np\np_maximum_70B.log
+-1: ['out_len20', 'clean_len20']: .\log\np\np_minimum_70B.log
+-1: ['out_len19', 'clean_len19']: .\log\np_fft\np_fft_ifftshift_70B.log
+-1: ['out_len51', 'clean_len51']: .\log\np_ma\np_ma_vander_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np\np_absolute_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np\np_abs_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_acos_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_add_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_all_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np\np_any_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np\np_append_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np\np_apply_along_axis_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np\np_apply_over_axes_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_arccos_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_arcsinh_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np\np_arcsin_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_arctan2_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_arctan_70B.log
+0: ['out_len55', 'clean_len55']: .\log\np\np_argmax_70B.log
+0: ['out_len52', 'clean_len52']: .\log\np\np_argmin_70B.log
+0: ['out_len58', 'clean_len58']: .\log\np\np_argsort_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np\np_argwhere_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_array2string_70B.log
+0: ['out_len48', 'clean_len48']: .\log\np\np_array_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np\np_array_equal_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_array_equiv_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_array_repr_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_array_split_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_array_str_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_asanyarray_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np\np_asarray_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np\np_asarray_chkfinite_70B.log
+0: ['out_len9', 'clean_len9']: .\log\np\np_asinh_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_asmatrix_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_astype_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_atan2_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_atan_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_atleast_1d_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_atleast_2d_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np\np_atleast_3d_70B.log
+0: ['out_len51', 'clean_len51']: .\log\np\np_average_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_bartlett_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_base_repr_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_binary_repr_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np\np_bincount_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np\np_bitwise_and_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_bitwise_count_70B.log
+0: ['out_len47', 'clean_len47']: .\log\np\np_bitwise_invert_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np\np_bitwise_left_shift_70B.log
+0: ['out_len46', 'clean_len46']: .\log\np\np_bitwise_not_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_bitwise_or_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_bitwise_right_shift_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np\np_bitwise_xor_70B.log
+0: ['out_len48', 'clean_len48']: .\log\np\np_blackman_70B.log
+0: ['out_len74', 'clean_len74']: .\log\np\np_block_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np\np_bmat_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_broadcast_arrays_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np\np_broadcast_shapes_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_broadcast_to_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np\np_busday_offset_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_can_cast_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np\np_cbrt_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np\np_ceil_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_column_stack_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_compress_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_concatenate_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_concat_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_conjugate_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_conj_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_convolve_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_copysign_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_copyto_70B.log
+0: ['out_len39', 'clean_len39']: .\log\np\np_copy_70B.log
+0: ['out_len69', 'clean_len69']: .\log\np\np_corrcoef_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_correlate_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_cosh_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np\np_cov_70B.log
+0: ['out_len67', 'clean_len67']: .\log\np\np_cross_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np\np_cumprod_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np\np_cumsum_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np\np_datetime_as_string_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_datetime_data_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_deg2rad_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_degrees_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_delete_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_diagflat_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_diag_70B.log
+0: ['out_len54', 'clean_len54']: .\log\np\np_diag_indices_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np\np_diag_indices_from_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_diff_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_digitize_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_divide_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_divmod_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np\np_dot_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_dstack_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_ediff1d_70B.log
+0: ['out_len190', 'clean_len190']: .\log\np\np_einsum_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_empty_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_empty_like_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_equal_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_expm1_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_exp_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_extract_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_flatnonzero_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_fliplr_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_flipud_70B.log
+0: ['out_len49', 'clean_len49']: .\log\np\np_float_power_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_floor_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_floor_divide_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_fmax_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_fmin_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_fmod_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_frexp_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_frombuffer_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np\np_fromfile_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_fromfunction_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_fromiter_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_frompyfunc_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np\np_fromregex_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np\np_from_dlpack_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_full_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_full_like_70B.log
+0: ['out_len63', 'clean_len63']: .\log\np\np_genfromtxt_70B.log
+0: ['out_len58', 'clean_len58']: .\log\np\np_geomspace_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_getbufsize_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_geterrcall_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_geterr_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np\np_get_include_70B.log
+0: ['out_len129', 'clean_len129']: .\log\np\np_gradient_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_greater_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_greater_equal_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_hamming_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np\np_hanning_70B.log
+0: ['out_len93', 'clean_len93']: .\log\np\np_histogram2d_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_histogramdd_70B.log
+0: ['out_len46', 'clean_len46']: .\log\np\np_histogram_70B.log
+0: ['out_len46', 'clean_len46']: .\log\np\np_histogram_bin_edges_70B.log
+0: ['out_len56', 'clean_len56']: .\log\np\np_hsplit_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_hypot_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np\np_i0_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_identity_70B.log
+0: ['out_len47', 'clean_len47']: .\log\np\np_indices_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np\np_info_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np\np_inner_70B.log
+0: ['out_len51', 'clean_len51']: .\log\np\np_insert_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np\np_interp_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_intersect1d_70B.log
+0: ['out_len48', 'clean_len48']: .\log\np\np_invert_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np\np_isfinite_70B.log
+0: ['out_len48', 'clean_len48']: .\log\np\np_isfortran_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_isinf_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np\np_isin_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_isnan_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_isneginf_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_isposinf_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np\np_isreal_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np\np_isscalar_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np\np_issubdtype_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_is_busday_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np\np_iterable_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np\np_ix__70B.log
+0: ['out_len51', 'clean_len51']: .\log\np\np_kaiser_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np\np_kron_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_ldexp_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np\np_left_shift_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_less_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_less_equal_70B.log
+0: ['out_len97', 'clean_len97']: .\log\np\np_lexsort_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_linspace_70B.log
+0: ['out_len126', 'clean_len126']: .\log\np\np_loadtxt_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np\np_load_70B.log
+0: ['out_len9', 'clean_len9']: .\log\np\np_log10_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_log2_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_logaddexp2_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_logaddexp_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np\np_logical_not_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_logical_or_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_logical_xor_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np\np_logspace_70B.log
+0: ['out_len9', 'clean_len9']: .\log\np\np_log_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np\np_mask_indices_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_matrix_transpose_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np\np_max_70B.log
+0: ['out_len39', 'clean_len39']: .\log\np\np_mean_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np\np_median_70B.log
+0: ['out_len61', 'clean_len61']: .\log\np\np_meshgrid_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np\np_min_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_min_scalar_type_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_mod_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np\np_moveaxis_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np\np_multiply_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np\np_nanargmax_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_nancumprod_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_nancumsum_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_nanmax_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np\np_nanmedian_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_nanmin_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np\np_nanpercentile_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np\np_nanquantile_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np\np_nan_to_num_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_negative_70B.log
+0: ['out_len49', 'clean_len49']: .\log\np\np_nonzero_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_not_equal_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_ones_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_ones_like_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_packbits_70B.log
+0: ['out_len72', 'clean_len72']: .\log\np\np_pad_70B.log
+0: ['out_len68', 'clean_len68']: .\log\np\np_percentile_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_permute_dims_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_piecewise_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_place_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_polyadd_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np\np_polyder_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_polydiv_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np\np_polyfit_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np\np_polyint_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_polymul_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np\np_polysub_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np\np_poly_70B.log
+0: ['out_len54', 'clean_len54']: .\log\np\np_power_70B.log
+0: ['out_len56', 'clean_len56']: .\log\np\np_pow_70B.log
+0: ['out_len52', 'clean_len52']: .\log\np\np_prod_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_promote_types_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np\np_ptp_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_putmask_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_put_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_rad2deg_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np\np_radians_70B.log
+0: ['out_len49', 'clean_len49']: .\log\np\np_ravel_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_ravel_multi_index_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_real_if_close_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_remainder_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np\np_repeat_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np\np_require_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_reshape_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_result_type_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_right_shift_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_rint_70B.log
+0: ['out_len48', 'clean_len48']: .\log\np\np_roll_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_roots_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_row_stack_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np\np_savez_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np\np_savez_compressed_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_select_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np\np_setbufsize_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_setdiff1d_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np\np_seterrcall_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_seterr_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np\np_setxor1d_70B.log
+0: ['out_len53', 'clean_len53']: .\log\np\np_set_printoptions_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np\np_shares_memory_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np\np_sinc_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_sinh_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_sin_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np\np_sort_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np\np_sort_complex_70B.log
+0: ['out_len9', 'clean_len9']: .\log\np\np_spacing_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np\np_split_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np\np_sqrt_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np\np_stack_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_subtract_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_swapaxes_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np\np_take_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np\np_tanh_70B.log
+0: ['out_len84', 'clean_len84']: .\log\np\np_tensordot_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np\np_tile_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np\np_trace_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np\np_transpose_70B.log
+0: ['out_len55', 'clean_len55']: .\log\np\np_trapezoid_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_tril_70B.log
+0: ['out_len51', 'clean_len51']: .\log\np\np_tril_indices_70B.log
+0: ['out_len45', 'clean_len45']: .\log\np\np_tril_indices_from_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_trim_zeros_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np\np_triu_70B.log
+0: ['out_len49', 'clean_len49']: .\log\np\np_triu_indices_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np\np_triu_indices_from_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np\np_tri_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_true_divide_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np\np_trunc_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np\np_typename_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_union1d_70B.log
+0: ['out_len53', 'clean_len53']: .\log\np\np_unique_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np\np_unique_all_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np\np_unique_counts_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np\np_unique_inverse_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np\np_unique_values_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np\np_unpackbits_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np\np_unravel_index_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np\np_vander_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_vdot_70B.log
+0: ['out_len42', 'clean_len42']: .\log\np\np_vsplit_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_vstack_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np\np_where_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np\np_zeros_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np\np_zeros_like_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_char\np_char_array_8B.log
+0: ['out_len2', 'clean_len2']: .\log\np_ctypeslib\np_ctypeslib_as_array_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_ctypeslib\np_ctypeslib_as_ctypes_type_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_ctypeslib\np_ctypeslib_load_library_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_ctypeslib\np_ctypeslib_ndpointer_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_emath\np_emath_arccos_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_emath\np_emath_arcsin_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_emath\np_emath_arctanh_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_emath\np_emath_log2_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_emath\np_emath_logn_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_emath\np_emath_log_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np_emath\np_emath_power_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_emath\np_emath_sqrt_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_f2py\np_f2py_get_include_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_f2py\np_f2py_run_main_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_fft\np_fft_fft2_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_fft\np_fft_fftfreq_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np_fft\np_fft_fftn_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np_fft\np_fft_fftshift_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_fft\np_fft_fft_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_fft\np_fft_ifft2_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_fft\np_fft_ifft_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_fft\np_fft_ihfft_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_fft\np_fft_irfft2_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_fft\np_fft_irfftn_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_fft\np_fft_irfft_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_fft\np_fft_rfft2_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_fft\np_fft_rfftfreq_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np_fft\np_fft_rfftn_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_fft\np_fft_rfft_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_lib\np_lib_add_docstring_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_lib_array_utils\np_lib_array_utils_normalize_axis_index_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_lib_array_utils\np_lib_array_utils_normalize_axis_tuple_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np_lib_introspect\np_lib_introspect_opt_func_info_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_lib_scimath\np_lib_scimath_arccos_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_lib_scimath\np_lib_scimath_arcsin_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_lib_scimath\np_lib_scimath_arctanh_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_lib_scimath\np_lib_scimath_log2_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_lib_scimath\np_lib_scimath_log_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np_lib_scimath\np_lib_scimath_power_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np_lib_scimath\np_lib_scimath_sqrt_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np_linalg\np_linalg_cholesky_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_linalg\np_linalg_cond_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_linalg\np_linalg_cross_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_linalg\np_linalg_det_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_linalg\np_linalg_diagonal_70B.log
+0: ['out_len62', 'clean_len62']: .\log\np_linalg\np_linalg_eigh_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np_linalg\np_linalg_eigvalsh_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np_linalg\np_linalg_eigvals_70B.log
+0: ['out_len55', 'clean_len55']: .\log\np_linalg\np_linalg_eig_70B.log
+0: ['out_len69', 'clean_len69']: .\log\np_linalg\np_linalg_inv_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np_linalg\np_linalg_lstsq_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np_linalg\np_linalg_matrix_power_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_linalg\np_linalg_matrix_transpose_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_linalg\np_linalg_multi_dot_70B.log
+0: ['out_len76', 'clean_len76']: .\log\np_linalg\np_linalg_norm_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_linalg\np_linalg_outer_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_linalg\np_linalg_pinv_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np_linalg\np_linalg_slogdet_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_linalg\np_linalg_solve_70B.log
+0: ['out_len60', 'clean_len60']: .\log\np_linalg\np_linalg_svd_70B.log
+0: ['out_len82', 'clean_len82']: .\log\np_linalg\np_linalg_tensordot_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_linalg\np_linalg_tensorinv_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_linalg\np_linalg_tensorsolve_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_linalg\np_linalg_trace_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_linalg\np_linalg_vecdot_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_allclose_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_ma\np_ma_allequal_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np_ma\np_ma_append_70B.log
+0: ['out_len43', 'clean_len43']: .\log\np_ma\np_ma_apply_along_axis_70B.log
+0: ['out_len54', 'clean_len54']: .\log\np_ma\np_ma_apply_over_axes_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_ma\np_ma_argsort_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_ma\np_ma_asanyarray_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_ma\np_ma_asarray_70B.log
+0: ['out_len53', 'clean_len53']: .\log\np_ma\np_ma_average_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_ma\np_ma_choose_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_ma\np_ma_clump_masked_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_ma\np_ma_clump_unmasked_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_ma\np_ma_common_fill_value_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_ma\np_ma_compress_cols_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_compress_rowcols_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_ma\np_ma_compress_rows_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np_ma\np_ma_concatenate_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_ma\np_ma_correlate_70B.log
+0: ['out_len32', 'clean_len32']: .\log\np_ma\np_ma_count_masked_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_ma\np_ma_cov_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np_ma\np_ma_diff_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_ma\np_ma_ediff1d_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_ma\np_ma_fix_invalid_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np_ma\np_ma_flatnotmasked_contiguous_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np_ma\np_ma_flatnotmasked_edges_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_ma\np_ma_flatten_mask_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_ma\np_ma_flatten_structured_array_70B.log
+0: ['out_len56', 'clean_len56']: .\log\np_ma\np_ma_fromflex_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np_ma\np_ma_getdata_70B.log
+0: ['out_len39', 'clean_len39']: .\log\np_ma\np_ma_getmaskarray_70B.log
+0: ['out_len51', 'clean_len51']: .\log\np_ma\np_ma_getmask_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_ma\np_ma_in1d_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np_ma\np_ma_innerproduct_70B.log
+0: ['out_len41', 'clean_len41']: .\log\np_ma\np_ma_inner_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_ma\np_ma_intersect1d_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np_ma\np_ma_isarray_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_ma\np_ma_isin_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np_ma\np_ma_isMaskedArray_70B.log
+0: ['out_len31', 'clean_len31']: .\log\np_ma\np_ma_isMA_70B.log
+0: ['out_len39', 'clean_len39']: .\log\np_ma\np_ma_is_masked_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np_ma\np_ma_is_mask_70B.log
+0: ['out_len47', 'clean_len47']: .\log\np_ma\np_ma_make_mask_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_ma\np_ma_make_mask_none_70B.log
+0: ['out_len30', 'clean_len30']: .\log\np_ma\np_ma_masked_all_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_masked_all_like_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_ma\np_ma_masked_equal_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_ma\np_ma_masked_greater_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_ma\np_ma_masked_greater_equal_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_ma\np_ma_masked_inside_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_ma\np_ma_masked_invalid_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_ma\np_ma_masked_less_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_ma\np_ma_masked_less_equal_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_ma\np_ma_masked_not_equal_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np_ma\np_ma_masked_object_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np_ma\np_ma_masked_outside_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np_ma\np_ma_masked_values_70B.log
+0: ['out_len72', 'clean_len72']: .\log\np_ma\np_ma_masked_where_70B.log
+0: ['out_len44', 'clean_len44']: .\log\np_ma\np_ma_mask_cols_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_ma\np_ma_mask_or_70B.log
+0: ['out_len55', 'clean_len55']: .\log\np_ma\np_ma_mask_rowcols_70B.log
+0: ['out_len45', 'clean_len45']: .\log\np_ma\np_ma_mask_rows_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_ma\np_ma_maximum_fill_value_70B.log
+0: ['out_len42', 'clean_len42']: .\log\np_ma\np_ma_max_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_ma\np_ma_median_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_ma\np_ma_minimum_fill_value_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np_ma\np_ma_min_70B.log
+0: ['out_len47', 'clean_len47']: .\log\np_ma\np_ma_ndenumerate_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_notmasked_contiguous_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_ma\np_ma_notmasked_edges_70B.log
+0: ['out_len46', 'clean_len46']: .\log\np_ma\np_ma_outerproduct_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np_ma\np_ma_polyfit_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np_ma\np_ma_power_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np_ma\np_ma_ptp_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_putmask_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_ma\np_ma_put_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np_ma\np_ma_resize_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_ma\np_ma_right_shift_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_ma\np_ma_round_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_ma\np_ma_round__70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_ma\np_ma_setdiff1d_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_ma\np_ma_setxor1d_70B.log
+0: ['out_len45', 'clean_len45']: .\log\np_ma\np_ma_set_fill_value_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_ma\np_ma_sort_70B.log
+0: ['out_len49', 'clean_len49']: .\log\np_ma\np_ma_transpose_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_ma\np_ma_union1d_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np_ma\np_ma_unique_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np_ma\np_ma_where_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_cheb2poly_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebadd_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebgauss_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebinterpolate_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebmulx_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebpow_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebpts1_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebpts2_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebroots_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_herm2poly_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermadd_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermcompanion_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermfit_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermfromroots_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermgauss_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermgrid2d_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermgrid3d_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermline_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermmulx_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermmul_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermpow_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermroots_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermsub_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermval2d_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermval3d_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermval_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermvander2d_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermvander3d_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermvander_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermweight_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_poly2herm_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_herme2poly_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeadd_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermecompanion_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermefit_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermefromroots_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeline_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermemulx_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermemul_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermepow_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeroots_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermesub_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeval_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermevander_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeweight_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_poly2herme_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lag2poly_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagadd_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagcompanion_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagfit_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagfromroots_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_laggrid2d_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_laggrid3d_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagmulx_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagmul_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagpow_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagroots_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagsub_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagval3d_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagval_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagvander2d_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagvander3d_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagvander_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagweight_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_poly2lag_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_polynomial_legendre\np_polynomial_legendre_leg2poly_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_legendre\np_polynomial_legendre_legadd_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_polynomial_legendre\np_polynomial_legendre_legmulx_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_polynomial_legendre\np_polynomial_legendre_legmul_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_legendre\np_polynomial_legendre_legpow_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np_polynomial_legendre\np_polynomial_legendre_legroots_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_polynomial_legendre\np_polynomial_legendre_legsub_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_polynomial_legendre\np_polynomial_legendre_legweight_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_polynomial_legendre\np_polynomial_legendre_poly2leg_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polycompanion_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyfit_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polygrid2d_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polygrid3d_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polymulx_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polymul_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyval2d_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyval3d_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvalfromroots_70B.log
+0: ['out_len39', 'clean_len39']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvander2d_70B.log
+0: ['out_len35', 'clean_len35']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvander3d_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyvander_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_random\np_random_binomial_70B.log
+0: ['out_len40', 'clean_len40']: .\log\np_random\np_random_choice_70B.log
+0: ['out_len21', 'clean_len21']: .\log\np_random\np_random_dirichlet_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_random\np_random_exponential_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_random\np_random_f_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_random\np_random_gamma_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_random\np_random_geometric_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_random\np_random_get_state_70B.log
+0: ['out_len46', 'clean_len46']: .\log\np_random\np_random_gumbel_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_random\np_random_hypergeometric_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np_random\np_random_laplace_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_random\np_random_logistic_70B.log
+0: ['out_len50', 'clean_len50']: .\log\np_random\np_random_lognormal_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_random\np_random_logseries_70B.log
+0: ['out_len45', 'clean_len45']: .\log\np_random\np_random_multinomial_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_random\np_random_negative_binomial_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_random\np_random_noncentral_chisquare_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np_random\np_random_noncentral_f_70B.log
+0: ['out_len38', 'clean_len38']: .\log\np_random\np_random_normal_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_random\np_random_pareto_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_random\np_random_permutation_70B.log
+0: ['out_len48', 'clean_len48']: .\log\np_random\np_random_power_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np_random\np_random_randint_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_random\np_random_randn_70B.log
+0: ['out_len36', 'clean_len36']: .\log\np_random\np_random_random_integers_70B.log
+0: ['out_len22', 'clean_len22']: .\log\np_random\np_random_random_sample_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_random\np_random_rand_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_random\np_random_ranf_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_random\np_random_rayleigh_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_random\np_random_sample_70B.log
+0: ['out_len23', 'clean_len23']: .\log\np_random\np_random_shuffle_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_random\np_random_standard_cauchy_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_random\np_random_standard_exponential_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np_random\np_random_standard_gamma_70B.log
+0: ['out_len28', 'clean_len28']: .\log\np_random\np_random_standard_normal_70B.log
+0: ['out_len58', 'clean_len58']: .\log\np_random\np_random_standard_t_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_random\np_random_triangular_70B.log
+0: ['out_len27', 'clean_len27']: .\log\np_random\np_random_uniform_70B.log
+0: ['out_len25', 'clean_len25']: .\log\np_random\np_random_vonmises_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_random\np_random_wald_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_random\np_random_weibull_70B.log
+0: ['out_len37', 'clean_len37']: .\log\np_random\np_random_zipf_70B.log
+0: ['out_len42', 'clean_len42']: .\log\np_rec\np_rec_array_70B.log
+0: ['out_len33', 'clean_len33']: .\log\np_rec\np_rec_fromarrays_70B.log
+0: ['out_len34', 'clean_len34']: .\log\np_rec\np_rec_fromfile_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_rec\np_rec_fromrecords_70B.log
+0: ['out_len29', 'clean_len29']: .\log\np_rec\np_rec_fromstring_70B.log
+0: ['out_len26', 'clean_len26']: .\log\np_strings\np_strings_add_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_strings\np_strings_capitalize_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_strings\np_strings_center_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_strings\np_strings_count_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_strings\np_strings_decode_70B.log
+0: ['out_len13', 'clean_len13']: .\log\np_strings\np_strings_encode_70B.log
+0: ['out_len24', 'clean_len24']: .\log\np_strings\np_strings_equal_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_strings\np_strings_expandtabs_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_strings\np_strings_find_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_strings\np_strings_greater_70B.log
+0: ['out_len18', 'clean_len18']: .\log\np_strings\np_strings_greater_equal_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_strings\np_strings_index_70B.log
+0: ['out_len11', 'clean_len11']: .\log\np_strings\np_strings_isalnum_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_strings\np_strings_isalpha_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np_strings\np_strings_isdecimal_70B.log
+0: ['out_len9', 'clean_len9']: .\log\np_strings\np_strings_isnumeric_70B.log
+0: ['out_len2', 'clean_len2']: .\log\np_strings\np_strings_isspace_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_strings\np_strings_istitle_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_strings\np_strings_less_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_strings\np_strings_less_equal_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_strings\np_strings_lower_70B.log
+0: ['out_len19', 'clean_len19']: .\log\np_strings\np_strings_lstrip_70B.log
+0: ['out_len20', 'clean_len20']: .\log\np_strings\np_strings_not_equal_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_strings\np_strings_partition_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_strings\np_strings_replace_70B.log
+0: ['out_len12', 'clean_len12']: .\log\np_strings\np_strings_rindex_70B.log
+0: ['out_len15', 'clean_len15']: .\log\np_strings\np_strings_rpartition_70B.log
+0: ['out_len17', 'clean_len17']: .\log\np_strings\np_strings_title_70B.log
+0: ['out_len16', 'clean_len16']: .\log\np_strings\np_strings_translate_70B.log
+0: ['out_len14', 'clean_len14']: .\log\np_strings\np_strings_upper_70B.log
+0: ['out_len10', 'clean_len10']: .\log\np_strings\np_strings_zfill_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np\np_acosh_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np\np_allclose_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np\np_angle_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np\np_arange_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np\np_arccosh_70B.log
+1: ['out_len8', 'clean_len8']: .\log\np\np_arctanh_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_asin_70B.log
+1: ['out_len9', 'clean_len9']: .\log\np\np_atanh_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np\np_busday_count_70B.log
+1: ['out_len45', 'clean_len45']: .\log\np\np_choose_70B.log
+1: ['out_len22', 'clean_len22']: .\log\np\np_clip_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_common_type_70B.log
+1: ['out_len22', 'clean_len22']: .\log\np\np_cos_70B.log
+1: ['out_len27', 'clean_len27']: .\log\np\np_count_nonzero_70B.log
+1: ['out_len34', 'clean_len34']: .\log\np\np_dsplit_70B.log
+1: ['out_len25', 'clean_len25']: .\log\np\np_einsum_path_70B.log
+1: ['out_len8', 'clean_len8']: .\log\np\np_exp2_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np\np_eye_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np\np_fabs_70B.log
+1: ['out_len83', 'clean_len83']: .\log\np\np_fill_diagonal_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_fix_70B.log
+1: ['out_len38', 'clean_len38']: .\log\np\np_flip_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np\np_format_float_positional_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np\np_format_float_scientific_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np\np_gcd_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np\np_get_printoptions_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_heaviside_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np\np_hstack_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np\np_imag_70B.log
+1: ['out_len21', 'clean_len21']: .\log\np\np_in1d_70B.log
+1: ['out_len28', 'clean_len28']: .\log\np\np_isclose_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_iscomplexobj_70B.log
+1: ['out_len8', 'clean_len8']: .\log\np\np_iscomplex_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np\np_isnat_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_isrealobj_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np\np_lcm_70B.log
+1: ['out_len10', 'clean_len10']: .\log\np\np_log1p_70B.log
+1: ['out_len24', 'clean_len24']: .\log\np\np_logical_and_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_may_share_memory_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np\np_modf_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np\np_nanargmin_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_nanmean_70B.log
+1: ['out_len19', 'clean_len19']: .\log\np\np_nanprod_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np\np_nanstd_70B.log
+1: ['out_len27', 'clean_len27']: .\log\np\np_nansum_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np\np_nanvar_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_ndim_70B.log
+1: ['out_len40', 'clean_len40']: .\log\np\np_nested_iters_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np\np_nextafter_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np\np_polyval_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np\np_positive_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np\np_printoptions_70B.log
+1: ['out_len29', 'clean_len29']: .\log\np\np_put_along_axis_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np\np_real_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np\np_reciprocal_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np\np_resize_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np\np_rollaxis_70B.log
+1: ['out_len27', 'clean_len27']: .\log\np\np_rot90_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np\np_round_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np\np_savetxt_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np\np_searchsorted_70B.log
+1: ['out_len23', 'clean_len23']: .\log\np\np_shape_70B.log
+1: ['out_len10', 'clean_len10']: .\log\np\np_signbit_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np\np_sign_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np\np_size_70B.log
+1: ['out_len8', 'clean_len8']: .\log\np\np_square_70B.log
+1: ['out_len33', 'clean_len33']: .\log\np\np_squeeze_70B.log
+1: ['out_len61', 'clean_len61']: .\log\np\np_take_along_axis_70B.log
+1: ['out_len23', 'clean_len23']: .\log\np\np_tan_70B.log
+1: ['out_len23', 'clean_len23']: .\log\np\np_unwrap_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_emath\np_emath_log10_70B.log
+1: ['out_len24', 'clean_len24']: .\log\np_fft\np_fft_hfft_70B.log
+1: ['out_len27', 'clean_len27']: .\log\np_fft\np_fft_ifftn_70B.log
+1: ['out_len19', 'clean_len19']: .\log\np_lib_array_utils\np_lib_array_utils_byte_bounds_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_lib_scimath\np_lib_scimath_log10_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_lib_scimath\np_lib_scimath_logn_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_linalg\np_linalg_matrix_rank_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np_ma\np_ma_compress_nd_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_ma\np_ma_default_fill_value_70B.log
+1: ['out_len24', 'clean_len24']: .\log\np_ma\np_ma_dot_70B.log
+1: ['out_len26', 'clean_len26']: .\log\np_ma\np_ma_filled_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np_ma\np_ma_make_mask_descr_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_ma\np_ma_ndim_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_ma\np_ma_size_70B.log
+1: ['out_len30', 'clean_len30']: .\log\np_polynomial\np_polynomial_set_default_printstyle_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebder_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebdiv_70B.log
+1: ['out_len124', 'clean_len124']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebfit_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebfromroots_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebint_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebline_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebmul_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebsub_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebtrim_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_poly2cheb_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermder_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermdiv_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermint_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_hermite\np_polynomial_hermite_hermtrim_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeder_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermediv_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeint_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermetrim_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagder_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagdiv_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_laggauss_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagint_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagline_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagtrim_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np_polynomial_laguerre\np_polynomial_laguerre_lagval2d_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_polynomial_legendre\np_polynomial_legendre_legder_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np_polynomial_legendre\np_polynomial_legendre_legdiv_70B.log
+1: ['out_len32', 'clean_len32']: .\log\np_polynomial_legendre\np_polynomial_legendre_legfit_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_polynomial_legendre\np_polynomial_legendre_legfromroots_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np_polynomial_legendre\np_polynomial_legendre_legint_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np_polynomial_legendre\np_polynomial_legendre_legline_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_legendre\np_polynomial_legendre_legtrim_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyadd_70B.log
+1: ['out_len19', 'clean_len19']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyder_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polydiv_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyfromroots_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyint_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyline_70B.log
+1: ['out_len10', 'clean_len10']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polypow_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyroots_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polysub_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polytrim_70B.log
+1: ['out_len28', 'clean_len28']: .\log\np_polynomial_polynomial\np_polynomial_polynomial_polyval_70B.log
+1: ['out_len13', 'clean_len13']: .\log\np_random\np_random_bytes_70B.log
+1: ['out_len8', 'clean_len8']: .\log\np_random\np_random_chisquare_70B.log
+1: ['out_len20', 'clean_len20']: .\log\np_random\np_random_poisson_70B.log
+1: ['out_len18', 'clean_len18']: .\log\np_strings\np_strings_endswith_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_strings\np_strings_isdigit_70B.log
+1: ['out_len10', 'clean_len10']: .\log\np_strings\np_strings_islower_70B.log
+1: ['out_len12', 'clean_len12']: .\log\np_strings\np_strings_isupper_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np_strings\np_strings_ljust_70B.log
+1: ['out_len22', 'clean_len22']: .\log\np_strings\np_strings_multiply_70B.log
+1: ['out_len11', 'clean_len11']: .\log\np_strings\np_strings_rjust_70B.log
+1: ['out_len14', 'clean_len14']: .\log\np_strings\np_strings_rstrip_70B.log
+1: ['out_len17', 'clean_len17']: .\log\np_strings\np_strings_strip_70B.log
+1: ['out_len16', 'clean_len16']: .\log\np_strings\np_strings_str_len_70B.log
+1: ['out_len15', 'clean_len15']: .\log\np_strings\np_strings_swapcase_70B.log
+2: ['out_len34', 'clean_len34']: .\log\np\np_amax_70B.log
+2: ['out_len25', 'clean_len25']: .\log\np\np_amin_70B.log
+2: ['out_len27', 'clean_len27']: .\log\np\np_around_70B.log
+2: ['out_len24', 'clean_len24']: .\log\np\np_isdtype_70B.log
+2: ['out_len68', 'clean_len68']: .\log\np\np_matmul_70B.log
+2: ['out_len14', 'clean_len14']: .\log\np\np_mintypecode_70B.log
+2: ['out_len43', 'clean_len43']: .\log\np\np_quantile_70B.log
+2: ['out_len11', 'clean_len11']: .\log\np\np_show_config_70B.log
+2: ['out_len16', 'clean_len16']: .\log\np\np_show_runtime_70B.log
+2: ['out_len50', 'clean_len50']: .\log\np\np_std_70B.log
+2: ['out_len18', 'clean_len18']: .\log\np\np_vecdot_70B.log
+2: ['out_len30', 'clean_len30']: .\log\np_ctypeslib\np_ctypeslib_as_ctypes_70B.log
+2: ['out_len20', 'clean_len20']: .\log\np_lib\np_lib_add_newdoc_70B.log
+2: ['out_len46', 'clean_len46']: .\log\np_lib_stride_tricks\np_lib_stride_tricks_as_strided_70B.log
+2: ['out_len115', 'clean_len115']: .\log\np_lib_stride_tricks\np_lib_stride_tricks_sliding_window_view_70B.log
+2: ['out_len27', 'clean_len27']: .\log\np_linalg\np_linalg_matmul_70B.log
+2: ['out_len26', 'clean_len26']: .\log\np_linalg\np_linalg_matrix_norm_70B.log
+2: ['out_len17', 'clean_len17']: .\log\np_linalg\np_linalg_svdvals_70B.log
+2: ['out_len32', 'clean_len32']: .\log\np_linalg\np_linalg_vector_norm_70B.log
+2: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_alltrue_70B.log
+2: ['out_len29', 'clean_len29']: .\log\np_ma\np_ma_amax_70B.log
+2: ['out_len21', 'clean_len21']: .\log\np_ma\np_ma_amin_70B.log
+2: ['out_len27', 'clean_len27']: .\log\np_ma\np_ma_compressed_70B.log
+2: ['out_len34', 'clean_len34']: .\log\np_ma\np_ma_convolve_70B.log
+2: ['out_len41', 'clean_len41']: .\log\np_ma\np_ma_diag_70B.log
+2: ['out_len26', 'clean_len26']: .\log\np_ma\np_ma_left_shift_70B.log
+2: ['out_len30', 'clean_len30']: .\log\np_ma\np_ma_reshape_70B.log
+2: ['out_len22', 'clean_len22']: .\log\np_ma\np_ma_shape_70B.log
+2: ['out_len18', 'clean_len18']: .\log\np_ma\np_ma_sometrue_70B.log
+2: ['out_len130', 'clean_len130']: .\log\np_ma\np_ma_take_70B.log
+2: ['out_len31', 'clean_len31']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebcompanion_70B.log
+2: ['out_len20', 'clean_len20']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebgrid2d_70B.log
+2: ['out_len34', 'clean_len34']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebgrid3d_70B.log
+2: ['out_len17', 'clean_len17']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebval2d_70B.log
+2: ['out_len21', 'clean_len21']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebval3d_70B.log
+2: ['out_len28', 'clean_len28']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebval_70B.log
+2: ['out_len29', 'clean_len29']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebvander2d_70B.log
+2: ['out_len25', 'clean_len25']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebvander3d_70B.log
+2: ['out_len37', 'clean_len37']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebvander_70B.log
+2: ['out_len18', 'clean_len18']: .\log\np_polynomial_chebyshev\np_polynomial_chebyshev_chebweight_70B.log
+2: ['out_len31', 'clean_len31']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermegauss_70B.log
+2: ['out_len39', 'clean_len39']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermegrid2d_70B.log
+2: ['out_len43', 'clean_len43']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermegrid3d_70B.log
+2: ['out_len23', 'clean_len23']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeval2d_70B.log
+2: ['out_len35', 'clean_len35']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermeval3d_70B.log
+2: ['out_len14', 'clean_len14']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermevander2d_70B.log
+2: ['out_len30', 'clean_len30']: .\log\np_polynomial_hermite_e\np_polynomial_hermite_e_hermevander3d_70B.log
+2: ['out_len25', 'clean_len25']: .\log\np_polynomial_legendre\np_polynomial_legendre_legcompanion_70B.log
+2: ['out_len29', 'clean_len29']: .\log\np_polynomial_legendre\np_polynomial_legendre_leggauss_70B.log
+2: ['out_len40', 'clean_len40']: .\log\np_polynomial_legendre\np_polynomial_legendre_leggrid2d_70B.log
+2: ['out_len20', 'clean_len20']: .\log\np_polynomial_legendre\np_polynomial_legendre_leggrid3d_70B.log
+2: ['out_len30', 'clean_len30']: .\log\np_polynomial_legendre\np_polynomial_legendre_legval2d_70B.log
+2: ['out_len26', 'clean_len26']: .\log\np_polynomial_legendre\np_polynomial_legendre_legval3d_70B.log
+2: ['out_len27', 'clean_len27']: .\log\np_polynomial_legendre\np_polynomial_legendre_legval_70B.log
+2: ['out_len30', 'clean_len30']: .\log\np_polynomial_legendre\np_polynomial_legendre_legvander2d_70B.log
+2: ['out_len37', 'clean_len37']: .\log\np_polynomial_legendre\np_polynomial_legendre_legvander3d_70B.log
+2: ['out_len27', 'clean_len27']: .\log\np_polynomial_legendre\np_polynomial_legendre_legvander_70B.log
+2: ['out_len20', 'clean_len20']: .\log\np_random\np_random_beta_70B.log
+2: ['out_len23', 'clean_len23']: .\log\np_random\np_random_random_70B.log
+2: ['out_len28', 'clean_len28']: .\log\np_random\np_random_seed_70B.log
+2: ['out_len11', 'clean_len11']: .\log\np_random\np_random_set_state_70B.log
+2: ['out_len14', 'clean_len14']: .\log\np_rec\np_rec_find_duplicate_70B.log
+2: ['out_len30', 'clean_len30']: .\log\np_strings\np_strings_mod_70B.log
+2: ['out_len17', 'clean_len17']: .\log\np_strings\np_strings_rfind_70B.log
+2: ['out_len33', 'clean_len33']: .\log\np_strings\np_strings_startswith_70B.log
+3: ['out_len35', 'clean_len35']: .\log\np\np_ascontiguousarray_70B.log
+3: ['out_len35', 'clean_len35']: .\log\np\np_asfortranarray_70B.log
+3: ['out_len52', 'clean_len52']: .\log\np\np_var_70B.log
+3: ['out_len32', 'clean_len32']: .\log\np_char\np_char_add_8B.log
+4: ['out_len58', 'clean_len58']: .\log\np_random\np_random_default_rng_70B.log
+5: ['out_len25', 'clean_len25']: .\log\np\np_sum_70B.log
+10: ['out_len56', 'clean_len56']: .\log\np_ma\np_ma_array_70B.log
+13: ['out_len32', 'clean_len32']: .\log\np_random\np_random_multivariate_normal_70B.log
+[13, 10, 5, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -2, -2]
+{'Total Count': 829, 'Unique Values': 10, 'Value Counts': {-2: 2, -1: 4, 0: 608, 1: 142, 2: 65, 3: 4, 4: 1, 5: 1, 10: 1, 13: 1}}
