@@ -109,7 +109,7 @@ def generate_and_log_examples(model_type = 'Llama-3-8B-Instruct-exl2'):
     generator.warmup()
     print("Generator Warmed Up: " + f'{datetime.fromtimestamp(time.time())}')
 
-
+    mod_func_pairs = [["np.ma", "cumsum"], ["np.ma", "prod"]]
     for module, func in mod_func_pairs:
         print(f"Starting work on {module}.{func}")
         prompt = my_pg.create_prompt(module=module, func=func, max_examples=15)
