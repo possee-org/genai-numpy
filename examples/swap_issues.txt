@@ -1,0 +1,52 @@
+I counted how many times "True/False" swapped, then I sorted and viewed any that had more than 1 swap.
+The hope is that the swaps will be 1 (when new examples appear) or zero (if there was no example section)
+I'll run another check after this on comparing original example length to number of same lines.
+
+np_geomspace_70B: geomspace -> geom (Llama 3 wrong)
+np_linalg_tensordot_70B: np.tensordot -> np.linalg.tensordot  Current Example is WRONG and uses wrong function.
+np_lib_scimath_sqrt_70B: emath -> lib.scimath (Wrong again?)
+np_lib_scimath_power_70B: emath -> lib.scimath (Wrong again?)
+np_array_repr_70B: np.array_repr -> np.array  (Llama 3 wrong)
+np_lib_scimath_arctanh_70B: emath -> lib.scimath (Wrong again?) Perhaps docs point to same spot.
+np_ma_diag_70B: has extra white space after examples, so lost a line of white space. NEEDS to have `import numpy as np` removed from current code.
+np_asanyarray_70B: asanyarray -> asarray  (Llama 3 wrong)
+np_asarray_70B: asanyarray -> as  (Llama 3 wrong) but this is in the prose, maybe ` ` related.
+                asanyarray -> asany (Llama 3 wrong)
+np_broadcast_arrays_70B: broadcast_arrays -> broadcast (Llama 3 wrong)
+np_require_70B: C_CONTIGUOUS -> C.contiguous  (caps and _ to ..  Happens more tha nonce.) (Llama 3 wrong)
+np_row_stack_70B: np.vstack -> np.vstack (Wrong again?)
+np_fft_fftn_70B: Added extra white space character `0.+0.j]]` -> ` 0.+0.j]]` in two spots. (Llama 3 wrong)
+np_lib_array_utils_byte_bounds_70B: array_utils -> array.array (Llama 3 wrong)
+np_lib_scimath_arccos_70B: emath -> lib.scimath (Wrong again?)
+np_lib_scimath_arcsin_70B: emath -> lib.scimath (Wrong again?)
+np_lib_scimath_log2_70B: emath -> lib.scimath (Wrong again?)
+np_lib_scimath_logn_70B: emath -> lib.scimath (Wrong again?)
+np_lib_scimath_log_70B: emath -> lib.scimath (Wrong again?)
+np_ma_asanyarray_70B: asanyarray -> asarray (Llama 3 wrong)
+np_ma_compressed_70B: has extra white space after examples, so lost a line of white space. NEEDS to have `import numpy as np` removed from current code.
+np_random_default_rng_70B: NEEDS to have `import numpy as np` removed from current code. It imports it four times... WOW!!!  If this line appears in the original code, then I'll have to manually enter a blank space...
+np_ascontiguousarray_70B: F_CONTIGUOUS -> F_CONTu.x (Llama 3 wrong).  It also DROPPED an entire note from the end. I wonder how often that occurred.
+np_einsum_70B: 1.10.0 -> 1.0.0 (Llama 3 wrong)  This one is hilarious.
+np_hsplit_70B: array([[ 0.,   1.,   2.,   3.] -> array([[ 0.,   1.,   3.,   4.], (Llama 3 wrong)  This is hilariuos. AI skipped the 2, and then counted to 16 instead of 15. Four lines of code wrong.
+np_meshgrid_70B: plt.contourf -> plt.contour (Llama 3 wrong)
+np_outer_70B: Extra white space added on AI side between code chunks without words between them. This probably happens a lot more than I found so far.
+np_std_70B: NEEDS to have `import numpy as np` removed from current code. The other import of `>>> from timeit import timeit` got removed. (Llama 3 wrong)
+np_tril_70B: ]]]) -> ]])   Lost a close bracket. Code won't run... Fun. (Llama 3 wrong)
+np_tril_indices_70B: ]]) -> ])   Lost a close bracket. Code won't run... Fun. (Llama 3 wrong)
+np_triu_indices_70B: diagonals further right -> diagonals further further right  (repeated word) (Llama 3 wrong)
+np_unpackbits_70B: [0, 0, 0, 1, 0]], -> [0,  0, 0, 1, 0]],  Extra white space added (Llama 3 wrong)
+np_var_70B: NEEDS to have `import numpy as np` removed from current code.  Has other import statment, then extra blank line... This one could use cleaning up.
+np_lib_array_utils_normalize_axis_index_70B: from numpy.lib.array_utils import normalize_axis_index -> from numpy.lib.array.set_module_format import set_module_format (Llama 3 wrong) - WOW. Just WOW!
+np_linalg_inv_70B: Llama 3 decided to wrap the text differently.  Why? We'll never know (Llama 3 wrong)
+np_ma_array_70B: has extra white space after examples, so lost a line of white space. It also DROPPED an entire note from the end. (Llama 3 wrong)
+np_polynomial_polynomial_polyvander3d_70B: Blank line captured. Not sure what's up.
+np_random_multivariate_normal_70B: Lots really long comments in examples.  I'm going to have to just add white space to make the commparision (Llama 3 wrong)
+np_random_noncentral_chisquare_70B: values2[0] -> values[0]2  (Llama 3 wrong)
+np_rec_fromrecords_70B: rec.fromrecords -> rec.from (Llama 3 wrong)
+np_strings_title_70B: 'b ca1' -> '1b ca' (Llama 3 wrong)
+np_sum_70B: Didn't add white space from original. (Llama 3 wrong)
+
+
+
+
+In the future, my prompt should specifically state to NOT change the original docstring....

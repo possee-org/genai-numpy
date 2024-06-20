@@ -1,0 +1,16 @@
+np_allclose_70B.log: Need to add a blank line to output if there is a blankline in original. (DONE - now reviewing results)
+np_random_power_70B: Example section not tabbed over. Original Docstring is tabbed over 8 spaces instead of 4. Gonna have to look at that. Make output match input? Caputre Original Examples (that can be processed later)
+np_apply_along_axis_70B: ... not spaced 4 over.
+np_ma_apply_along_axis_70B: ... not spaced 4 over.
+np_quantile_70B: no indent on examples. Really long phrase when examples end.
+np_random_f_70B: Example section not tabbed over. Original Docstring is tabbed over 8 spaces instead of 4.
+np_random_laplace_70B: Example section not tabbed over. Original Docstring is tabbed over 8 spaces instead of 4.
+
+Seems like we need another update to the read in examples function (not the matching function).
+
+np_lib_array_utils_normalize_axis_index_70B:     >>> from numpy.lib.array_utils import normalize_axis_index                       >>> from numpy.lib.array.set_module_format import set_module_format          False 66
+
+Done. I've got them all. I don't have proper indenting.
+The point here was to guarantee that the original docstring was NOT modified, and any new examples were added to the end.
+Formatting has to happen.
+I want to compare the number of lines with the original output and the cleaned output. That needs to happen.
