@@ -572,6 +572,19 @@ def get_prompt_and_merged_example_sections_from_file(file_path, include_output=F
         return prompt, merged, output
     return prompt, merged
 
+# Get the examples sections, but use docstring.
+def get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, docstring, include_output=False):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        log_text = f.read()
+    prompt, output = split_log(log_text)
+    prompt = extract_examples(docstring)
+    output = extract_examples(output)
+    merged = merge_str2_into_str1(prompt, output)
+    if include_output:
+        return prompt, merged, output
+    return prompt, merged
+
+
 # Get the log file path from the mod and func names.
 def get_log_file_path(mod, func, base_dir = '.'):
     path_components = ['log',f'{mod.replace(".","_")}',f'{mod.replace(".","_")}_{func}_70B.log'] # Process all files.
@@ -608,9 +621,13 @@ def create_mod_func_list(mod):
 def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
     #Create the file_path to proper examples/log spot.
     file_path = get_log_file_path(mod, func)
+    # get the docstring
+    docstring = get_docstring(mod, func)
 
     # Grab original examples section, and merged examples section.
     prompt, merged = get_prompt_and_merged_example_sections_from_file(file_path)
+    # Alternatly, use the docstring as original - worse performance?
+    # prompt, merged = get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, docstring)
 
     # Clean and process the merged prompt.
     # Leave original prompt alone (hence skip)
@@ -621,8 +638,6 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
     # We've generated the new examples. Strip the original prompt.
     new_examples = extract_new_examples(prompt, cleaned_merged)
 
-    # get the docstring
-    docstring = get_docstring(mod, func)
 
     # Add new examples to appropriate spot in docstring.
     new_docstring = append_to_section(docstring, 'Examples', new_examples)
@@ -631,7 +646,13 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
     # Somehow include this in the output.
     doc_increase = len(new_docstring.splitlines()) - len(docstring.splitlines())
 
-    files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring,new_docstring)
+    # if docstring is tiny, then don't do anything.
+    if len(docstring.splitlines()) < 5:
+        files_replaced = 'docstring too short'
+    else:
+        files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring,new_docstring)
+        # Strip ends from things before replacing?
+        # files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring.strip(' \n'),new_docstring.strip(' \n'))
     with open(output_append_path, 'a') as file:
         file.write(f'{mod}.{func} - lines added: {doc_increase} - file(s) changed: {files_replaced}' + '\n')
 
