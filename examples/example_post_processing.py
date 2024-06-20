@@ -594,7 +594,10 @@ def extract_new_examples(old_string, new_string):
 
 # Create a list of the form [['np.linalg','det'],['np.linalg','svdvals'],...] containing all functions in a module.
 def create_mod_func_list(mod):
-    tracking_file_path = f"../tools/tracking-lists/log/{mod.replace('.','_')}.log"
+    path_components = ['..','tools','tracking-lists','log',f"{mod.replace('.','_')}.log"]
+    tracking_file_path = os.path.join('.', *path_components)
+    # Linux version
+    # tracking_file_path = f"../tools/tracking-lists/log/{mod.replace('.','_')}.log"
     mod_func_list = []
     with open(tracking_file_path, 'r') as file:
         for line in file:
