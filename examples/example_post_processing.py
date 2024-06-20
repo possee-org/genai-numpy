@@ -5,6 +5,9 @@ import re
 import io
 import sys
 from fuzzywuzzy import fuzz
+# python -m pip install fuzzywuzzy
+# To avoid warnings from fuzzywuzzy:
+# python -m pip install python-Levenshtein
 from collections import deque
 import numpy as np
 import textwrap
@@ -589,33 +592,71 @@ def extract_new_examples(old_string, new_string):
         return new_string[min_length:]
     return ""
 
+# Create a list of the form [['np.linalg','det'],['np.linalg','svdvals'],...] containing all functions in a module.
+def create_mod_func_list(mod):
+    tracking_file_path = f"../tools/tracking-lists/log/{mod.replace('.','_')}.log"
+    mod_func_list = []
+    with open(tracking_file_path, 'r') as file:
+        for line in file:
+            func = line.strip()
+            mod_func_list.append([mod, func])
+    return mod_func_list
 
+def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
+    #Create the file_path to proper examples/log spot.
+    file_path = get_log_file_path(mod, func)
+
+    # Grab original examples section, and merged examples section.
+    prompt, merged = get_prompt_and_merged_example_sections_from_file(file_path)
+
+    # Clean and process the merged prompt.
+    # Leave original prompt alone (hence skip)
+    # The original prompt (part of merged) is needed to run blocks of dependent code.
+    prompt_len = len(prompt.splitlines())
+    cleaned_merged = clean_and_process_text(merged, skip=prompt_len)
+
+    # We've generated the new examples. Strip the original prompt.
+    new_examples = extract_new_examples(prompt, cleaned_merged)
+
+    # get the docstring
+    docstring = get_docstring(mod, func)
+
+    # Add new examples to appropriate spot in docstring.
+    new_docstring = append_to_section(docstring, 'Examples', new_examples)
+
+    # It would be nice to know if this succeeded... It should be longer than the original.
+    # Somehow include this in the output.
+    doc_increase = len(new_docstring.splitlines()) - len(docstring.splitlines())
+
+    files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring,new_docstring)
+    with open(output_append_path, 'a') as file:
+        file.write(f'{mod}.{func} - lines added: {doc_increase} - file(s) changed: {files_replaced}' + '\n')
 
 if __name__ == "__main__":
     ""
     # test_search_and_replace_phrase()
     # test_append_to_section()
-    mod, func = ['np.linalg','svdvals']
 
-    file_path = get_log_file_path(mod, func)
-    prompt, merged = get_prompt_and_merged_example_sections_from_file(file_path)
-    new_examples = extract_new_examples(prompt, merged)
-    # print(repr(new_examples))
-    # print(len(new_examples.splitlines()) > 0)
-    docstring = get_docstring(mod, func)
-    # print(repr(docstring))
+    mod_func_list = create_mod_func_list('np.linalg')
+    # print(mod_func_list)
 
-    new_docstring = append_to_section(docstring, 'Examples', new_examples)
-    # print(repr(new_docstring))
-    # It would be nice to know if this succeeded... It should be longer than the original.
-    # print(len(new_docstring.splitlines()) - len(docstring.splitlines()) > 0)
+    # Manually select some
+    # mod_func_list = [['np.linalg','svdvals']]
 
+    # Path to your numpy/numpy directory. This assume you have numpy/ and genai-numpy/ repos in the same folder.
     numpy_numpy_dir_path_components = ['..','..','numpy','numpy']
     numpy_numpy_dir = os.path.join('.', *numpy_numpy_dir_path_components)
-    # print(numpy_numpy_dir)
+    # Path to where you want a report generated.
+    output_append_path = 'processed_files.txt'
 
-    files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring,new_docstring)
-    print(files_replaced)
+    # Open the file and empty it. The rest of the writes will be appends.
+    with open(output_append_path, 'w') as file:
+        file.write('')
+
+    # Process all the functions in your list
+    for item in mod_func_list:
+        mod, func = item
+        overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path)
 
 
 
