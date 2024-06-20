@@ -7,7 +7,7 @@ from code import InteractiveInterpreter
 from contextlib import redirect_stdout, redirect_stderr
 
 
-
+# This is the only file that was not moved to example_post_processing
 def format_commit_message(text, width=72, tags="[skip actions] [skip azp] [skip cirrus]"):
     """
     Format a commit message by wrapping lines and appending tags.
@@ -80,6 +80,7 @@ def format_commit_message(text, width=72, tags="[skip actions] [skip azp] [skip 
 
     return wrapped_text
 
+# These files have been moved to example_post_processing. They will not be updated here any more, and will be deleted soon.
 
 def remove_python_output(text, *, skip=0):
     """
@@ -136,20 +137,6 @@ def remove_python_output(text, *, skip=0):
     # return cleaned_text.strip()
     # Return the cleaned text preserving extra lines on ends
     return cleaned_text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CapturingInterpreter(InteractiveInterpreter):
