@@ -81,3 +81,6 @@ Thumbs.db
 # Nebari Generateed Files
 .ipynb_checkpoints
 
+# Reports - for genai-numpy
+*/reports/
+
