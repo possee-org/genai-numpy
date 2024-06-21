@@ -14,8 +14,6 @@ import textwrap
 from code import InteractiveInterpreter
 from contextlib import redirect_stdout, redirect_stderr
 
-# Came from this file originally.
-
 # Use to replace an entire docstring with a new docstring.
 def search_and_replace_phrase(directory, old_phrase, new_phrase):
     """
@@ -171,9 +169,6 @@ def append_to_section(docstring: str, section: str, text_to_append: str) -> str:
 
     return '\n'.join(new_lines)
 
-
-# Came from extract_new_examples.py.
-
 # Simple function to split the log into two parts.
 def split_log(text: str):
     """
@@ -312,9 +307,6 @@ def merge_str2_into_str1(str1, str2):
         return ''
 
     return cleaned_lines
-
-
-# Came from tools folder, reviewtools.py file.
 
 # Removes AI generated output from string. Set skip to length of original example section.
 def remove_python_output(text, *, skip=0):
@@ -519,19 +511,68 @@ def get_prompt_and_merged_example_sections_from_file(file_path, include_output=F
         return prompt, merged, output
     return prompt, merged
 
+# Used to pull out lines of text bewteen first and last >>>, with a before and after parameter.
+# AI created
+def extract_quoted_section(input_string, before=0, after=0):
+    lines = input_string.splitlines()
+    lines = [line.strip() for line in lines] # Human added.
+    start_index = None
+    end_index = None
+
+    # Find the start and end indices
+    for i, line in enumerate(lines):
+        if line.startswith('>>>'):
+            if start_index is None:
+                start_index = i
+            end_index = i
+
+    # If no such lines are found, return None
+    if start_index is None or end_index is None:
+        return None
+
+    # Calculate the indices to include the before and after lines
+    start_index = max(start_index - before, 0)
+    end_index = min(end_index + after, len(lines) - 1)
+
+    # Extract the lines between the calculated indices
+    quoted_section = lines[start_index:end_index + 1]
+    return "\n".join(quoted_section)
+
+
+def get_output_examples_when_no_examples_section(output, rshift):
+    # We'll grab the portions of text that have >>> in them.
+    # I don't need anything after new examples.
+    # AI always had any comment above within 2 lines.
+    # If we pulled an extra line of code, that should get stripped later.
+    out_quoted = extract_quoted_section(output, before = 2, after=0)
+    if out_quoted:
+        out_quoted = 'Examples\n--------\n' + out_quoted
+        out_quoted_lines = out_quoted.splitlines()
+        spaces = ' ' * rshift
+        out_quoted_lines = [spaces + line for line in out_quoted_lines]
+        return '\n'.join(out_quoted_lines)
+    return ''
+
 # Get the examples sections, but use docstring.
 def get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, docstring, include_output=False):
     with open(file_path, 'r', encoding='utf-8') as f:
         log_text = f.read()
     prompt, output = split_log(log_text)
-    prompt = extract_examples(docstring)
-    output = extract_examples(output).replace('\\','\\\\')
-    # This line is removing the extra spaces from the docstring...
-    merged = merge_str2_into_str1(prompt, output)
-    if include_output:
-        return prompt, merged, output
-    return prompt, merged
+    prompt_examples = extract_examples(docstring)
+    output_examples = extract_examples(output).replace('\\','\\\\')
 
+    if output_examples.strip(' \n') == '':
+        # print("No examples auto-extracted from:")
+        # print(file_path)
+        rshift = find_indentation(docstring)
+        output_examples = get_output_examples_when_no_examples_section(output, rshift)
+        output_examples = output_examples.replace('\\','\\\\')
+        # print(output_examples)
+
+    merged_examples = merge_str2_into_str1(prompt_examples, output_examples)
+    if include_output:
+        return prompt_examples, merged_examples, output_examples
+    return prompt_examples, merged_examples
 
 # Get the log file path from the mod and func names.
 def get_log_file_path(mod, func, base_dir = '.'):
@@ -608,7 +649,7 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
 if __name__ == "__main__":
     ""
     # Pick an entire module.
-    mod_func_list = create_mod_func_list('np.ma')
+    mod_func_list = create_mod_func_list('np.linalg')
 
     # Or manually select some
     # mod_func_list = [['np.linalg','svdvals'], ['np.linalg','cholesky']]
@@ -617,7 +658,11 @@ if __name__ == "__main__":
     numpy_numpy_dir_path_components = ['..','..','numpy','numpy']
     numpy_numpy_dir = os.path.join('.', *numpy_numpy_dir_path_components)
     # Path to where you want a report generated.
-    output_append_path = 'processed_files.txt'
+    output_append_path = 'reports/processed_files.txt'
+
+    # Ensure the directory exists
+    directory = os.path.dirname(output_append_path)
+    os.makedirs(directory, exist_ok=True)
 
     # Open the file and empty it. The rest of the writes will be appends.
     with open(output_append_path, 'w') as file:
