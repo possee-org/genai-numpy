@@ -62,7 +62,6 @@ def search_and_replace_phrase(directory, old_phrase, new_phrase):
                         # Write the updated content back to the file
                         with open(file_path, 'w', encoding='utf-8') as f_write:
                             f_write.write(new_content)
-
                         # print(f"Replaced text in: {file_path}")
                         files_replaced.append(file_path)
             except (UnicodeDecodeError, FileNotFoundError):
@@ -106,6 +105,10 @@ def append_to_section(docstring: str, section: str, text_to_append: str) -> str:
     new_lines = []
     in_section = False
     section_found = False
+
+    # Don't add anything if it's just blank lines.
+    if text_to_append.strip(' \n') == '':
+        return docstring
 
     section_header = section.strip()
     text_to_append_lines = text_to_append.lstrip('\n').rstrip('\n').split('\n')
@@ -158,93 +161,6 @@ def append_to_section(docstring: str, section: str, text_to_append: str) -> str:
 
     return '\n'.join(new_lines)
 
-# Should be moved out of here sometime.
-def test_append_to_section():
-    # Example usage:
-    docstring = """
-        Summary of the function.
-
-        Parameters
-        ----------
-        x : int
-            Description of parameter `x`.
-        y : float
-            Description of parameter `y`.
-
-        Examples
-        --------
-        First Example:
-
-        >>> np.array([1,2])
-        np.array([1,2])
-
-        Returns
-        -------
-        result : bool
-            Description of the return value.
-    """
-    section = "Examples"
-    text_to_append = """
-
-
-        Second (inserted) Example with lots of newlines before and after:
-        Problems arise when the newlines are not blank.
-
-        >>> np.array([1,3])
-        np.array([1,3])
-
-
-"""
-
-    new_docstring = append_to_section(docstring, section, text_to_append)
-    print(new_docstring)
-    print(repr(new_docstring))
-
-# Should be moved out of here sometime.
-def test_search_and_replace_phrase():
-    directory_to_search = "search_and_replace_test_dir"
-    old_multiline_phrase = """    This is the docstring
-    and I want to see what happens.
-    When someone decides to add text
-    to the bottom
-
-    here is  a new line
-
-    Examples
-    --------
-
-    first examples
-
-    >>> code
-    garbage
-
-    second example
-    >>> more code
-"""
-    new_phrase = """    This is the docstring
-    and I want to see what happens.
-    When someone decides to add text
-    to the bottom
-
-    here is  a new line
-
-    Examples
-    --------
-
-    first examples
-
-    >>> code
-    garbage
-
-    second example
-    >>> more code
-
-    BOOM!!!! This got added. I added it to the end so you can
-    see it added multiple times.
-"""
-    files_replaced = search_and_replace_phrase(directory_to_search, old_multiline_phrase, new_phrase)
-    print("files_replaced:")
-    print(files_replaced)
 
 # Came from extract_new_examples.py.
 
@@ -263,7 +179,7 @@ def extract_examples(text: str):
     """
     Extracts examples from a log file, either prompt or output.
     Use an arbitrary 100 line length to determine if you've left docstring.
-    Removes extra `\n` from right end, and then inserts a single `\n\'.
+    Removes extra `\n` from right end, and then inserts a single `\n'.
     """
     # return text
 
@@ -308,7 +224,7 @@ def extract_examples(text: str):
                 in_examples = True
 
     # Remove extra newlines from the right end, then make sure that one newline is added.
-    return ('\n'.join(new_lines)).rstrip() + '\n'
+    return ('\n'.join(new_lines)).rstrip(' \n') + '\n'
 
 # Merges str1 and str2, keeping str1 the same and appending new stuff from string 2 to end.
 def merge_str2_into_str1(str1, str2):
@@ -379,6 +295,9 @@ def merge_str2_into_str1(str1, str2):
         new_lines.append(new_line)
 
     cleaned_lines = '\n'.join(new_lines)
+    if cleaned_lines.strip(' \n') == '':
+        return ''
+
     return cleaned_lines
 
 
@@ -392,7 +311,11 @@ def remove_python_output(text, *, skip=0):
     Skips checking the first `skip` lines.
     No indentation adjustments are made.
     """
-    # Split the text into lines
+    if text == '':
+        return ''
+
+    # Split the text into lines, adding one line at end.
+    text = text + '\n'
     lines = text.split('\n')
 
     # Initialize an empty list to hold the cleaned lines
@@ -403,7 +326,8 @@ def remove_python_output(text, *, skip=0):
 
     # Iterate through each line
     for i,line in enumerate(lines):
-        if i<skip:
+        # Don't modify lines above skip.
+        if i < skip:
             cleaned_lines.append(line)
         # Check if the line starts with '>>>'
         elif line.strip().startswith('>>>'):
@@ -416,10 +340,14 @@ def remove_python_output(text, *, skip=0):
             # A continuation python block
             cleaned_lines.append(line)
         elif in_code_block and line.strip() == '':
-            # End the code block on encountering a blank line.
+            # End the code block on encountering a blank line. The added one at the start guarantees we will leave.
             in_code_block = False
             cleaned_lines.append(line)
-        elif in_code_block and line.strip().startswith(tuple('ABCDEFGHIJKLMNOPQRSTUVWXYZ')):
+        elif (in_code_block and 
+                  # Start of sentence.
+                  line.strip().startswith(tuple('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) and 
+                  # More than just True/False.
+                  len(line.strip())>12):
             # End the code block on encountering a sentence.
             # AI did not always do this.
             # Also add a blankline.
@@ -434,10 +362,8 @@ def remove_python_output(text, *, skip=0):
             cleaned_lines.append(line)
 
     # Join the cleaned lines back into a single string
-    cleaned_text = '\n'.join(cleaned_lines)
+    cleaned_text = '\n'.join(cleaned_lines).strip('\n') + '\n'
 
-    # Return the cleaned text stripping extra lines off ends
-    # return cleaned_text.strip()
     # Return the cleaned text preserving extra lines on ends
     return cleaned_text
 
@@ -498,6 +424,12 @@ def process_text_block(text_block, *, rshift=0, skip=0):
     command = ''
     in_command = False
 
+    def add_output(output, rshift):
+        for output_line in output.split('\n'):
+            if output_line: # Don't add blank lines.
+                processed_lines.append(' ' * rshift + output_line)
+
+
     for i, line in enumerate(lines):
         match = python_command_pattern.match(line.strip())
         if match:
@@ -505,8 +437,7 @@ def process_text_block(text_block, *, rshift=0, skip=0):
                 output = interpreter.run_command(command.strip())
                 # check skip, write output otherwise.
                 if output and i >= skip:
-                    for output_line in output.split('\n'):
-                        processed_lines.append(' ' * rshift + output_line)
+                    add_output(output, rshift)
             command = match.group(1)
             in_command = True
         elif in_command:
@@ -517,8 +448,7 @@ def process_text_block(text_block, *, rshift=0, skip=0):
                 output = interpreter.run_command(command.strip())
                 # check skip, write output otherwise.
                 if output and i >= skip:
-                    for output_line in output.split('\n'):
-                        processed_lines.append(' ' * rshift + output_line)
+                    add_output(output, rshift)
                 command = ''
                 in_command = False
         # Here is where I write a line - check skip.
@@ -533,8 +463,7 @@ def process_text_block(text_block, *, rshift=0, skip=0):
     if in_command:
         output = interpreter.run_command(command.strip())
         if output:
-            for output_line in output.split('\n'):
-                processed_lines.append(' ' * rshift + output_line)
+            add_output(output, rshift)
         else:
             raise ValueError('Unclosed command')
 
@@ -558,15 +487,18 @@ def clean_and_process_text(text, *, skip=0):
     # Find indent from first nonblank.
     indent = find_indentation(text)
     cleaned_text = remove_python_output(text, skip=skip)
-    return process_text_block(cleaned_text, rshift=indent, skip=skip)
+    processed_text = process_text_block(cleaned_text, rshift=indent, skip=skip)
+    if processed_text.strip(' \n') == '':
+        return ''
+    return processed_text
 
 # Get the examples sections.
 def get_prompt_and_merged_example_sections_from_file(file_path, include_output=False):
     with open(file_path, 'r', encoding='utf-8') as f:
         log_text = f.read()
     prompt, output = split_log(log_text)
-    prompt = extract_examples(prompt)
-    output = extract_examples(output)
+    prompt = extract_examples(prompt).replace('\\','\\\\')
+    output = extract_examples(output).replace('\\','\\\\')
     merged = merge_str2_into_str1(prompt, output)
     if include_output:
         return prompt, merged, output
@@ -578,7 +510,7 @@ def get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, do
         log_text = f.read()
     prompt, output = split_log(log_text)
     prompt = extract_examples(docstring)
-    output = extract_examples(output)
+    output = extract_examples(output).replace('\\','\\\\')
     merged = merge_str2_into_str1(prompt, output)
     if include_output:
         return prompt, merged, output
@@ -591,10 +523,10 @@ def get_log_file_path(mod, func, base_dir = '.'):
     file_path = os.path.join(base_dir, *path_components)
     return file_path
 
-# Get docstring for mod.func
+# Get docstring for mod.func. Makes sure '\\' is replaced with '\\\\'
 def get_docstring(mod, func):
     docstring = eval(mod + '.' + func + '.__doc__')
-    return docstring
+    return docstring.replace('\\','\\\\')
 
 def extract_new_examples(old_string, new_string):
     min_length = min(len(old_string), len(new_string))
@@ -625,9 +557,9 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
     docstring = get_docstring(mod, func)
 
     # Grab original examples section, and merged examples section.
-    prompt, merged = get_prompt_and_merged_example_sections_from_file(file_path)
+    # prompt, merged = get_prompt_and_merged_example_sections_from_file(file_path)
     # Alternatly, use the docstring as original - worse performance?
-    # prompt, merged = get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, docstring)
+    prompt, merged = get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, docstring)
 
     # Clean and process the merged prompt.
     # Leave original prompt alone (hence skip)
@@ -645,6 +577,7 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
     # It would be nice to know if this succeeded... It should be longer than the original.
     # Somehow include this in the output.
     doc_increase = len(new_docstring.splitlines()) - len(docstring.splitlines())
+    new_examples_len = len(new_examples.splitlines())
 
     # if docstring is tiny, then don't do anything.
     if len(docstring.splitlines()) < 5:
@@ -654,7 +587,7 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
         # Strip ends from things before replacing?
         # files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring.strip(' \n'),new_docstring.strip(' \n'))
     with open(output_append_path, 'a') as file:
-        file.write(f'{mod}.{func} - lines added: {doc_increase} - file(s) changed: {files_replaced}' + '\n')
+        file.write(f'{mod}.{func} - lines added: {doc_increase}, {new_examples_len} - file(s) changed: {files_replaced}' + '\n')
 
 if __name__ == "__main__":
     ""
