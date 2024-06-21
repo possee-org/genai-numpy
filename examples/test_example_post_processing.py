@@ -41,7 +41,7 @@ def test_append_to_section():
     print(new_docstring)
     print(repr(new_docstring))
 
-# Should be moved out of here sometime.
+
 def test_search_and_replace_phrase():
     directory_to_search = "search_and_replace_test_dir"
     old_multiline_phrase = """
@@ -62,6 +62,7 @@ def test_search_and_replace_phrase():
 
     second example
     >>> more code
+
     """
     new_phrase = """
     This is the docstring
@@ -82,12 +83,11 @@ def test_search_and_replace_phrase():
     second example
     >>> more code
 
-    BOOM!!!! This got added. I added it to the end so you can
-    see it added multiple times.
+    BOOM!!!! This got added. Each time the test runs,
+    this will be added.
     """
+
     files_replaced = search_and_replace_phrase(directory_to_search, old_multiline_phrase, new_phrase)
-    print(repr(old_multiline_phrase))
-    print(repr(new_phrase))
     print("files_replaced:")
     print(files_replaced)
 

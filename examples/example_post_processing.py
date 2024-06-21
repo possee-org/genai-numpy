@@ -43,6 +43,10 @@ def search_and_replace_phrase(directory, old_phrase, new_phrase):
 
     This docstring and function was generated with AI, with minimal human revision.
     """
+    # This prevents a disastrous insertion of code into every file.
+    if old_phrase.strip(' \n') == '':
+        return r"old_phrase.strip(' \n') is empty. No replacing will happen."
+
     # Convert the old phrase to a regular expression pattern
     pattern = re.compile(re.escape(old_phrase), re.MULTILINE)
 
@@ -114,23 +118,28 @@ def append_to_section(docstring: str, section: str, text_to_append: str) -> str:
         return docstring
 
     section_header = section.strip()
-    text_to_append_lines = text_to_append.lstrip('\n').rstrip('\n').split('\n')
+    # We have to deal with newlines at the start and end. Remove extras for now.
+    text_to_append_lines = text_to_append.strip('\n').split('\n')
 
     for i, line in enumerate(lines):
         stripped_line = line.strip()
 
         if in_section:
-            if line == '' and new_lines[-1] =='': # Avoid double blank lines
-                new_lines.pop()
-            # Check if the current line is the start of a new section. End of docstring dealt with later.
+            # Don't adjust the original docstring. Preserve blank lines, even if incorrect.
+            # Check if the current line is the start of a new section.
+            # End of docstring is dealt with later.
             if i + 1 < len(lines) and lines[i + 1].strip().startswith('---') and len(lines[i + 1].strip()) == len(lines[i].strip()):
                 in_section = False
+                # Remove an extra blank line before adding new content.
                 if not new_lines[-1].strip():  # Remove extra blank line if exists
                     new_lines.pop()
                 for j, append_line in enumerate(text_to_append_lines):
+                    # If there is not a blank line before the new section, add it.
                     if j == 0 and new_lines[-1].strip() != '':
                         new_lines.append('')
+                    # Now just add all the lines from the new section.
                     new_lines.append(append_line)
+                # Put a blank line at the end of the added material.
                 new_lines.append('')
                 in_section = False
 
@@ -142,25 +151,23 @@ def append_to_section(docstring: str, section: str, text_to_append: str) -> str:
                 in_section = True
                 section_found = True
 
-    # We are still in the section at the end of the docstring.
+    # If we are still in the section at the end of the docstring,
+    # then add to that section, and make sure indentation is correct.
+    # Surprising, adding a new examples section is the same code.
     if in_section or not section_found:
-        # If still in section at end of docstring, append text
-        if line == '' and new_lines[-1] =='': # Avoid double blank lines
-            new_lines.pop()
-        if not new_lines[-1].strip():  # Remove extra blank line if exists
+        # Still in section at end of docstring, or a new section will be added.
+        # We need exactly one blank line between previous content and new.
+        while (new_lines[-1].strip() == ''):
             new_lines.pop()
         for j, append_line in enumerate(text_to_append_lines):
+            # If there is not a blank line before the new section, add it.
             if j == 0 and new_lines[-1].strip() != '':
+            # Now just add all the lines from the new section.
                 new_lines.append('')
             new_lines.append(append_line)
-        # Make sure the docstring ends with the correct indentation pattern. We'll have a blank line.
+        # Make sure the docstring ends with blank line followed by correct indentation.
         new_lines.append('')
         new_lines.append(' ' * indentation)
-
-    # if not section_found:
-    #     raise ValueError(f"Section '{section}' not found in the docstring.")
-    #     # Update this so that it creates the section at the end of the docstring.
-    #     # We'll need this for functions that don't have an Examples section.
 
     return '\n'.join(new_lines)
 
@@ -182,6 +189,7 @@ def extract_examples(text: str):
     """
     Extracts examples from a log file, either prompt or output.
     Use an arbitrary 100 line length to determine if you've left docstring.
+    No changes are made to any lines, nor are any blank lines removed.
     Removes extra `\n` from right end, and then inserts a single `\n'.
     """
     # return text
@@ -213,14 +221,16 @@ def extract_examples(text: str):
             # Some code chunks are really long.
             elif line.strip().startswith('>>>'):
                 new_lines.append(line)
-            # This could be a dangerous hack.
+            # This is the end string of each log file.
             elif line.strip().startswith("Response generated in"):
                 in_examples = False
+            # This could be a dangerous hack. It captures the rambling from AI.
             elif len(line) < 100:
                 new_lines.append(line)
             else:
                 in_examples = False
 
+        # We will deal with the colon later. This function just captures what is there.
         if stripped_line == "Examples" or stripped_line == "Examples:":
             if i + 1 < len(lines) and lines[i + 1].strip().startswith('---'): # and len(lines[i + 1].strip()) == len(lines[i].strip()):
                 new_lines.append(line)
@@ -475,10 +485,12 @@ def process_text_block(text_block, *, rshift=0, skip=0):
 # Uses the first non blank line in a multiline string to determine indentation. This is passed as rshift to process_text_block.
 def find_indentation(multiline_string):
     """
-    Generated by AI
+    Generated by AI - Adapted by a human
     """
+    # The first line of the docstring might be improperly indented.
+    # So grab the first non-blank line after that.
     lines = multiline_string.splitlines()
-    for line in lines:
+    for line in lines[1:]:
         stripped_line = line.lstrip()
         if stripped_line:  # Check if the line is not blank
             indentation = len(line) - len(stripped_line)
@@ -514,6 +526,7 @@ def get_prompt_and_merged_example_sections_from_file_and_docstring(file_path, do
     prompt, output = split_log(log_text)
     prompt = extract_examples(docstring)
     output = extract_examples(output).replace('\\','\\\\')
+    # This line is removing the extra spaces from the docstring...
     merged = merge_str2_into_str1(prompt, output)
     if include_output:
         return prompt, merged, output
@@ -595,7 +608,7 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
 if __name__ == "__main__":
     ""
     # Pick an entire module.
-    mod_func_list = create_mod_func_list('np.linalg')
+    mod_func_list = create_mod_func_list('np.ma')
 
     # Or manually select some
     # mod_func_list = [['np.linalg','svdvals'], ['np.linalg','cholesky']]
