@@ -57,7 +57,10 @@ def search_and_replace_phrase(directory, old_phrase, new_phrase):
                     match = pattern.search(content)
                     if match:
                         # Replace the found phrase with the new phrase
-                        new_content = pattern.sub(new_phrase, content)
+                        # This line of code replaces `\\\\` with `\\` new_phrase.
+                        # new_content = pattern.sub(new_phrase, content)
+                        # We have to undo this prematurely. I hope there is a better way than this hack.
+                        new_content = pattern.sub(new_phrase.replace('\\','\\\\'), content)
 
                         # Write the updated content back to the file
                         with open(file_path, 'w', encoding='utf-8') as f_write:
@@ -343,9 +346,9 @@ def remove_python_output(text, *, skip=0):
             # End the code block on encountering a blank line. The added one at the start guarantees we will leave.
             in_code_block = False
             cleaned_lines.append(line)
-        elif (in_code_block and 
+        elif (in_code_block and
                   # Start of sentence.
-                  line.strip().startswith(tuple('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) and 
+                  line.strip().startswith(tuple('ABCDEFGHIJKLMNOPQRSTUVWXYZ')) and
                   # More than just True/False.
                   len(line.strip())>12):
             # End the code block on encountering a sentence.
@@ -591,14 +594,11 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
 
 if __name__ == "__main__":
     ""
-    # test_search_and_replace_phrase()
-    # test_append_to_section()
-
+    # Pick an entire module.
     mod_func_list = create_mod_func_list('np.linalg')
-    # print(mod_func_list)
 
-    # Manually select some
-    # mod_func_list = [['np.linalg','svdvals']]
+    # Or manually select some
+    # mod_func_list = [['np.linalg','svdvals'], ['np.linalg','cholesky']]
 
     # Path to your numpy/numpy directory. This assume you have numpy/ and genai-numpy/ repos in the same folder.
     numpy_numpy_dir_path_components = ['..','..','numpy','numpy']
