@@ -155,13 +155,14 @@ def append_to_section(docstring: str, section: str, text_to_append: str) -> str:
     if in_section or not section_found:
         # Still in section at end of docstring, or a new section will be added.
         # We need exactly one blank line between previous content and new.
-        while (new_lines[-1].strip() == ''):
+        # So remove things from newlines (and make sure there is something to remove)
+        while (new_lines and new_lines[-1].strip() == ''):
             new_lines.pop()
         for j, append_line in enumerate(text_to_append_lines):
             # If there is not a blank line before the new section, add it.
-            if j == 0 and new_lines[-1].strip() != '':
-            # Now just add all the lines from the new section.
+            if j == 0 and new_lines and new_lines[-1].strip() != '':
                 new_lines.append('')
+            # Now just add all the lines from the new section.
             new_lines.append(append_line)
         # Make sure the docstring ends with blank line followed by correct indentation.
         new_lines.append('')
@@ -622,34 +623,44 @@ def overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path):
     # Leave original prompt alone (hence skip)
     # The original prompt (part of merged) is needed to run blocks of dependent code.
     prompt_len = len(prompt.splitlines())
-    cleaned_merged = clean_and_process_text(merged, skip=prompt_len)
+    try:
+        cleaned_merged = clean_and_process_text(merged, skip=prompt_len)
+        # We've generated the new examples. Strip the original prompt.
+        new_examples = extract_new_examples(prompt, cleaned_merged)
 
-    # We've generated the new examples. Strip the original prompt.
-    new_examples = extract_new_examples(prompt, cleaned_merged)
 
+        # Add new examples to appropriate spot in docstring.
+        new_docstring = append_to_section(docstring, 'Examples', new_examples)
 
-    # Add new examples to appropriate spot in docstring.
-    new_docstring = append_to_section(docstring, 'Examples', new_examples)
+        # It would be nice to know if this succeeded... It should be longer than the original.
+        # Somehow include this in the output.
+        doc_increase = len(new_docstring.splitlines()) - len(docstring.splitlines())
+        new_examples_len = len(new_examples.splitlines())
 
-    # It would be nice to know if this succeeded... It should be longer than the original.
-    # Somehow include this in the output.
-    doc_increase = len(new_docstring.splitlines()) - len(docstring.splitlines())
-    new_examples_len = len(new_examples.splitlines())
+        # if docstring is tiny, then don't do anything.
+        if len(docstring.splitlines()) < 5:
+            files_replaced = 'docstring too short'
+        else:
+            files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring,new_docstring)
+            # Strip ends from things before replacing?
+            # files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring.strip(' \n'),new_docstring.strip(' \n'))
+        with open(output_append_path, 'a') as file:
+            file.write(f'{mod}.{func} - lines added: {doc_increase}, {new_examples_len} - file(s) changed: {files_replaced}' + '\n')
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        with open(output_append_path, 'a') as file:
+            file.write(f'{mod}.{func} - lines added: NONE - check assistat generated code for issues.' + '\n')
 
-    # if docstring is tiny, then don't do anything.
-    if len(docstring.splitlines()) < 5:
-        files_replaced = 'docstring too short'
-    else:
-        files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring,new_docstring)
-        # Strip ends from things before replacing?
-        # files_replaced = search_and_replace_phrase(numpy_numpy_dir,docstring.strip(' \n'),new_docstring.strip(' \n'))
-    with open(output_append_path, 'a') as file:
-        file.write(f'{mod}.{func} - lines added: {doc_increase}, {new_examples_len} - file(s) changed: {files_replaced}' + '\n')
 
 if __name__ == "__main__":
-    ""
+    # The code fail with these, even with a try block.
+    skip = [['np','get_include']]
+
     # Pick an entire module.
-    mod_func_list = create_mod_func_list('np.linalg')
+    mod_func_list = create_mod_func_list('np')
+
+    # Start from a specific item (the 'np' namespace has tons)
+    # mod_func_list = mod_func_list[140:]
 
     # Or manually select some
     # mod_func_list = [['np.linalg','svdvals'], ['np.linalg','cholesky']]
@@ -670,8 +681,12 @@ if __name__ == "__main__":
 
     # Process all the functions in your list
     for item in mod_func_list:
-        mod, func = item
-        overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path)
+        if item not in skip:
+            mod, func = item
+            try:
+                overwrite_docstring(mod, func, numpy_numpy_dir, output_append_path)
+            except Exception as e:
+                print(f"An unexpected error occurred in overwrite_docstring({mod}.{func}): {e}")
 
 
 
