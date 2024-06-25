@@ -14,6 +14,81 @@ import textwrap
 from code import InteractiveInterpreter
 from contextlib import redirect_stdout, redirect_stderr
 
+
+# This came from reviewtools.py, and helps format a commit message.
+def format_commit_message(text, width=72, tags="[skip actions] [skip azp] [skip cirrus]"):
+    """
+    Format a commit message by wrapping lines and appending tags.
+
+    Parameters
+    ----------
+    text : str
+        The original commit message text.
+    width : int, optional
+        The maximum line width for wrapping paragraphs. Default is 72.
+    tags : str, optional
+        Tags to append to the commit message. Default is "[skip actions] [skip azp] [skip cirrus]".
+
+    Returns
+    -------
+    str
+        The formatted commit message with wrapped lines and appended tags.
+
+    Notes
+    -----
+    The function performs the following steps:
+    1. Removes newline characters from the start and end of the input text.
+    2. Appends specified tags to the original message.
+    3. Splits the message by newlines to process each line separately.
+    4. Combines lines that are not separated by a blank line into a single paragraph.
+    5. Wraps each paragraph separately to the specified width.
+    6. Joins the wrapped paragraphs with newlines to form the final formatted message.
+    """
+    # Remove newline characters from the start and end of the message
+    text = text.strip('\n')
+
+    # Append tags to the original message
+    message = text + '\n' + tags + '\n'
+
+    # Split the message by newlines to process each line separately
+    lines = message.splitlines()
+
+    # Combine lines that are not separated by a blank line into a single paragraph
+    paragraphs = []
+    current_paragraph = []
+
+    for line in lines:
+        stripped_line = line.strip()
+        if stripped_line == '':
+            if current_paragraph:
+                paragraphs.append(' '.join(current_paragraph))
+                current_paragraph = []
+            paragraphs.append('')
+        elif stripped_line.startswith('-'):
+            if current_paragraph:
+                paragraphs.append(' '.join(current_paragraph))
+                current_paragraph = []
+            paragraphs.append(stripped_line)
+        else:
+            current_paragraph.append(line.strip())
+
+    if current_paragraph:
+        paragraphs.append(' '.join(current_paragraph))
+
+    # Wrap each paragraph separately
+    wrapped_paragraphs = []
+    for paragraph in paragraphs:
+        if paragraph.startswith('-'):
+            wrapped_paragraphs.append(textwrap.fill(paragraph, width=width))
+        else:
+            wrapped_paragraphs.append(textwrap.fill(paragraph, width=width) if paragraph else '')
+
+    # Join the wrapped paragraphs with newlines
+    wrapped_text = '\n'.join(wrapped_paragraphs)
+
+    return wrapped_text
+
+
 # Use to replace an entire docstring with a new docstring.
 def search_and_replace_phrase(directory, old_phrase, new_phrase):
     """
@@ -657,7 +732,7 @@ if __name__ == "__main__":
     skip = [['np','get_include']]
 
     # Pick an entire module.
-    mod_func_list = create_mod_func_list('np')
+    mod_func_list = create_mod_func_list('np.linalg')
 
     # Start from a specific item (the 'np' namespace has tons)
     # mod_func_list = mod_func_list[140:]
