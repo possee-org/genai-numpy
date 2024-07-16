@@ -1,9 +1,7 @@
-import sys
+# generate_notebook.py
+
 import os
-
-# Add the current directory to the system path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
+import nbformat as nbf
 import cheatsheet_prompt as my_pg
 from exllamav2 import (
     ExLlamaV2,
@@ -17,7 +15,6 @@ from exllamav2.generator import (
 )
 import time
 from datetime import datetime
-import nbformat as nbf
 
 def create_jupyter_notebook(module, functions, output_path):
     # Initialize the notebook
@@ -85,11 +82,13 @@ def create_jupyter_notebook(module, functions, output_path):
 
         # Add the generated content to the notebook
         nb.cells.append(nbf.v4.new_markdown_cell(f"## {func} Function"))
-        nb.cells.append(nbf.v4.new_code_cell(output))
+        nb.cells.append(nbf.v4.new_markdown_cell(output))
 
     # Save the notebook
     with open(output_path, 'w') as f:
         nbf.write(nb, f)
+
+    print(f"Notebook saved at {output_path}")
 
 # Example usage
 module = 'np.linalg'
