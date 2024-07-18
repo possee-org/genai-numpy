@@ -10,39 +10,36 @@ from exllamav2 import (
     ExLlamaV2Cache_Q4,
 )
 
-# Function to recursively find functions with 'axis' parameter in a module and its submodules
-def find_functions_with_axis(module):
-    axis_functions = []
+# Function to recursively find functions with missing examples 
+def find_functions_with_missing_examples_axis(module):
+    missing_example_functions = []
 
     # Inspect members of the module
     for name, member in inspect.getmembers(module):
         if inspect.isfunction(member) and 'axis' in inspect.getfullargspec(member).args:
-            axis_functions.append((name, member))
+            try:
+                # Try to extract docstring and function signature
+                docstring = member.__doc__
+                signature = inspect.formatargspec(member.__signature__, format=' positional')
+
+                # Check if there's a missing example in the docstring
+                if 'example' not in docstring.lower():
+                    missing_example_functions.append((name, member))
+
+            except Exception:
+                pass  # Skip functions that can't be inspected
 
     # Recursively inspect submodules
     if hasattr(module, '__path__'):
         for importer, submodule_name, ispkg in pkgutil.walk_packages(module.__path__, module.__name__ + '.'):
             try:
                 submodule = importlib.import_module(submodule_name)
-                axis_functions.extend(find_functions_with_axis(submodule))
+                missing_example_functions.extend(find_functions_with_missing_examples_axis(submodule))
             except ImportError:
                 pass  # Skip modules that can't be imported
 
-    return axis_functions
+    return missing_example_functions
 
-# Find all functions with an axis parameter in the numpy package
-all_axis_functions = find_functions_with_axis(np)
-
-# Extract function signatures and docstrings
-prompts = []
-for name, func in all_axis_functions:
-    try:
-        signature = inspect.formatargspec(func.__signature__, format=' positional')
-    except Exception as e:
-        signature = str(e)
-    docstring = func.__doc__ if func.__doc__ else "No docstring available."
-    prompt = f"Example usage of {name} with axis parameter: {signature}\n{docstring}"
-    prompts.append(prompt)
 
 # Load the ExLlamaV2 model
 model_directory = "/shared/analyst/models/Llama-3-8B-Instruct-262k-5.0bpw-h6-exl2"
@@ -63,27 +60,30 @@ settings.top_p = 0.8
 settings.token_repetition_penalty = 1.01
 settings.disallow_tokens(tokenizer, [tokenizer.eos_token_id])
 
-# Generate examples
-examples = []
-for prompt in prompts:
-    output = generator.generate_simple(prompt, settings, max_new_tokens=512, seed=1234)
-    examples.append(output)
+# Function to generate examples using the AI model
+def generate_examples(function_name, func, model, cache, tokenizer, settings):
+    prompt = f"Example usage of {function_name} with axis parameter:"
+    output = model.generate_simple(prompt, settings, max_new_tokens=512, seed=1234)
+    return output.strip()
+```
+This code defines a `generate_examples` function that takes the following inputs:
 
-# Postprocess the generated examples
-examples = [example for example in examples if example.strip() != '']
+* `function_name`: the name of the function
+* `func`: the function itself
+* `model`: the AI model
+* `cache`: the cache
+* `tokenizer`: the tokenizer
+* `settings`: the settings for the AI model
 
-# Stop generating examples when they become repetitive or too obvious
-while True:
-    new_examples = []
-    for example in examples:
-        if example not in new_examples:
-            new_examples.append(example)
-        if len(new_examples) > 10:
-            break
-    if len(new_examples) < 10:
-        break
-    examples = new_examples
+The function generates a prompt for the AI model to generate examples for the function, and then uses the `model.generate_simple` method to generate the examples. The `max_new_tokens` and `seed` parameters are used to control the generation of the examples.
 
-# Print the generated examples
-for (name, func), example in zip(all_axis_functions, examples):
-    print(f"{name}:\n{example}\n")
+Note that you will need to replace the `model`, `cache`, `tokenizer`, and `settings` variables with the actual values for your AI model.
+
+```
+def generate_examples(module):
+    all_axis_functions = find_functions_with_missing_examples_axis(module)
+
+    for function_name, function in all_axis_functions:
+        prompt = create_prompt(module, function_name)
+        output = generate_examples(function_name, function, model, cache, tokenizer, settings)
+        print(f"{function_name}:\n{output}\n")
