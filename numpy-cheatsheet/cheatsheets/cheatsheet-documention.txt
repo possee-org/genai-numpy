@@ -1,0 +1,11 @@
+This document highlights the procedure for generating cheatsheet for functions in Numpy library
+
+AI tool used: Groq
+Link: https://console.groq.com/playground?model=llama3-70b-8192
+Model used: llama3-70b-8192
+Temprature: 1
+Max token: 1024
+System message: Create a cheatsheet that captures the essential details of the functions in a particular numpy module. The cheatsheet should include Function Description, Parameters, Returns, and Examples. Use markdown format for the cheatsheet, with headers for each section. Use the Pandas cheatsheet template style to create this.
+
+User message: Get the functions under {module} module and generate cheatsheet for each of them. Include an interactive example for each cheatsheet.
+# Replace the `module` in the curly braces with the actually module you want cheatsheet to be generated for.
